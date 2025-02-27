@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pfsa-id"
+version = "0.1.0"
+description = ""
+authors = ["Raymond Wangsa Putra <rwp1byte@gmail.com>"]
+license = "Apache2.0"
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "pytorch-stable"
+url = "https://download.pytorch.org/whl/"
+priority = "supplemental"
+
+[tool.poetry.dependencies]
+python = "^3.7.9"
+spacy = "2.3.5"
+seqeval = "1.2.2"
+numpy = "1.19.5"
+pytorch-crf = "0.7.2"
+torch = "1.10.0+cu111"
+torchtext = "0.6.0"
+jupyter = "^1.1.1"
+wrapt = "1.12.0"
+gensim = "3.8.2"
+matplotlib = "3.3.3"
+pandas = "1.2.0"
+torch-lr-finder = "^0.2.2"
+wandb = "0.9.7"
+dotenv = "^0.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
