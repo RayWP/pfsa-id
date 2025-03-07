@@ -1,0 +1,170 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "from transformers import BertTokenizer, BertForSequenceClassification\n",
+        "import torch\n",
+        "\n",
+        "# Load tokenizer and model from local directory\n",
+        "model_path = \"../bert-base-local\"  # Change this to your local directory\n",
+        "\n",
+        "tokenizer = BertTokenizer.from_pretrained(model_path)\n",
+        "model = BertForSequenceClassification.from_pretrained(model_path)\n",
+        "model.eval()  # Set model to evaluation mode\n",
+        "\n",
+        "# Sample input text\n",
+        "text = \"This is a sample sentence for BERT inference.\"\n",
+        "inputs = tokenizer(text, return_tensors=\"pt\", padding=True, truncation=True)\n",
+        "\n",
+        "# Perform inference\n",
+        "with torch.no_grad():\n",
+        "    outputs = model(**inputs)\n",
+        "\n",
+        "# Get logits and apply softmax to get probabilities\n",
+        "logits = outputs.logits\n",
+        "probs = torch.nn.functional.softmax(logits, dim=-1)\n",
+        "\n",
+        "print(\"Logits:\", logits)\n",
+        "print(\"Probabilities:\", probs)\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Logits: tensor([[ 0.1744,  0.0788, -0.1217,  0.3198,  0.0191, -0.0389]])\nProbabilities: tensor([[0.1827, 0.1660, 0.1359, 0.2113, 0.1564, 0.1476]])\n"
+        }
+      ],
+      "execution_count": 1,
+      "metadata": {
+        "gather": {
+          "logged": 1741256355036
+        }
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import torch\n",
+        "from transformers import BertForTokenClassification, BertTokenizer\n",
+        "\n",
+        "# Load model and tokenizer from local directory\n",
+        "model_path = \"../bert-base-local\"  # Change this to your local directory\n",
+        "model = BertForTokenClassification.from_pretrained(model_path)\n",
+        "tokenizer = BertTokenizer.from_pretrained(model_path)\n",
+        "model.eval()\n",
+        "\n",
+        "# Define label mapping (Update according to your dataset)\n",
+        "label_map = {\n",
+        "    0: \"I-Class\",\n",
+        "    1: \"B-Class\",\n",
+        "    2: \"I-attr\",\n",
+        "    3: \"O\",\n",
+        "    4: \"B-attr\",\n",
+        "    5: \"PAD\",\n",
+        "}\n",
+        "\n",
+        "\n",
+        "# Sample input text\n",
+        "text = \"User should have a username and password.\"\n",
+        "inputs = tokenizer(text, return_tensors=\"pt\")\n",
+        "\n",
+        "# Perform inference\n",
+        "with torch.no_grad():\n",
+        "    outputs = model(**inputs)\n",
+        "\n",
+        "# Get logits and apply softmax\n",
+        "logits = outputs.logits  # [batch_size, seq_len, num_labels]\n",
+        "probs = torch.nn.functional.softmax(logits, dim=-1)\n",
+        "\n",
+        "# Get predicted labels per token\n",
+        "predicted_indices = torch.argmax(probs, dim=-1).squeeze().tolist()\n",
+        "predicted_labels = [label_map.get(idx, \"Unknown\") for idx in predicted_indices]\n",
+        "\n",
+        "# Print results\n",
+        "tokens = tokenizer.convert_ids_to_tokens(inputs[\"input_ids\"].squeeze().tolist())\n",
+        "print(\"Tokens:\", tokens)\n",
+        "print(\"Predicted Labels:\", predicted_labels)\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "Tokens: ['[CLS]', 'user', 'should', 'have', 'a', 'user', '##name', 'and', 'password', '.', '[SEP]']\nPredicted Labels: ['PAD', 'PAD', 'PAD', 'PAD', 'O', 'O', 'O', 'PAD', 'PAD', 'PAD', 'O']\n"
+        }
+      ],
+      "execution_count": 21,
+      "metadata": {
+        "gather": {
+          "logged": 1741257338039
+        }
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "probs"
+      ],
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "execution_count": 22,
+          "data": {
+            "text/plain": "tensor([[[0.0911, 0.0402, 0.0486, 0.1185, 0.0482, 0.6533],\n         [0.0562, 0.0491, 0.0400, 0.2204, 0.0484, 0.5859],\n         [0.0386, 0.0377, 0.0404, 0.2956, 0.0616, 0.5260],\n         [0.0483, 0.0640, 0.0432, 0.3638, 0.0991, 0.3816],\n         [0.0575, 0.0698, 0.0442, 0.3876, 0.0670, 0.3739],\n         [0.0667, 0.0644, 0.0381, 0.3910, 0.0627, 0.3771],\n         [0.0421, 0.0755, 0.0422, 0.4735, 0.0767, 0.2900],\n         [0.0511, 0.0597, 0.0305, 0.2943, 0.0367, 0.5278],\n         [0.0352, 0.0382, 0.0318, 0.3412, 0.0510, 0.5027],\n         [0.0276, 0.0453, 0.0353, 0.2771, 0.0572, 0.5575],\n         [0.1975, 0.1581, 0.0987, 0.3167, 0.1041, 0.1248]]])"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 22,
+      "metadata": {
+        "gather": {
+          "logged": 1741257736109
+        }
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {}
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "custom_37",
+      "language": "python",
+      "display_name": "Python_37"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.7.9",
+      "mimetype": "text/x-python",
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "pygments_lexer": "ipython3",
+      "nbconvert_exporter": "python",
+      "file_extension": ".py"
+    },
+    "microsoft": {
+      "ms_spell_check": {
+        "ms_spell_check_language": "en"
+      },
+      "host": {
+        "AzureML": {
+          "notebookHasBeenCompleted": true
+        }
+      }
+    },
+    "kernel_info": {
+      "name": "custom_37"
+    },
+    "nteract": {
+      "version": "nteract-front-end@1.0.0"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 2
+}

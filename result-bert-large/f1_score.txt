@@ -1,0 +1,2 @@
+Test F1 score: 0.7873
+Test with structure only F1 score: 0.8065
