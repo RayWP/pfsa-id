@@ -1,6 +1,0 @@
-train-val F1 score: 0.4023
-train-val F1 score: 0.7484
-train-val F1 score: 0.7547
-train-val F1 score: 0.7554
-Test F1 score: 0.7554
-Test with structure only F1 score: 0.7780
