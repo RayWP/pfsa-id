@@ -1,0 +1,10 @@
+train-val F1 score: 0.8997
+train-val F1 score: 0.9087
+Test F1 score: 0.8869
+           Class  Precision   Recall  F1-Score
+         B-class   0.626984 0.734884  0.676660
+         I-class   0.621951 0.536842  0.576271
+          B-attr   0.761468 0.592857  0.666667
+          I-attr   0.897727 0.556338  0.686957
+               O   0.931203 0.957117  0.943982
+Overall Accuracy   0.886853 0.886853  0.886853
