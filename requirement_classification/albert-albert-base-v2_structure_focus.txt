@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for albert/albert-base-v2 on structure_focus
+
+Accuracy: 0.7857
+Precision: 0.6805
+Recall: 0.6909
+F1-Score: 0.6645
+
+===== BEST COMBINATION =====
+Model: albert/albert-base-v2
+Label Column: structure_focus
+Epochs: 4, Batch Size: 8, K-Fold: 10

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for justinlamlamlam/softwareengineering on usecase_focus
+
+Accuracy: 0.8410
+Precision: 0.6878
+Recall: 0.6250
+F1-Score: 0.6308
+
+===== BEST COMBINATION =====
+Model: justinlamlamlam/softwareengineering
+Label Column: usecase_focus
+Epochs: 4, Batch Size: 8, K-Fold: 10

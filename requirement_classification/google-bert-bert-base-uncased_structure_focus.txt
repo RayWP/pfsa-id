@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for google-bert/bert-base-uncased on structure_focus
+
+Accuracy: 0.8276
+Precision: 0.7971
+Recall: 0.7500
+F1-Score: 0.7488
+
+===== BEST COMBINATION =====
+Model: google-bert/bert-base-uncased
+Label Column: structure_focus
+Epochs: 12, Batch Size: 8, K-Fold: 5

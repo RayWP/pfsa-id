@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for microsoft/deberta-v3-large on structure_focus
+
+Accuracy: 0.8000
+Precision: 0.7294
+Recall: 0.7026
+F1-Score: 0.7035
+
+===== BEST COMBINATION =====
+Model: microsoft/deberta-v3-large
+Label Column: structure_focus
+Epochs: 4, Batch Size: 8, K-Fold: 5

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for google-bert/bert-base-uncased on usecase_focus
+
+Accuracy: 0.8271
+Precision: 0.7088
+Recall: 0.6496
+F1-Score: 0.6587
+
+===== BEST COMBINATION =====
+Model: google-bert/bert-base-uncased
+Label Column: usecase_focus
+Epochs: 9, Batch Size: 8, K-Fold: 10

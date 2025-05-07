@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for FacebookAI/roberta-large on structure_focus
+
+Accuracy: 0.7931
+Precision: 0.7072
+Recall: 0.6883
+F1-Score: 0.6844
+
+===== BEST COMBINATION =====
+Model: FacebookAI/roberta-large
+Label Column: structure_focus
+Epochs: 12, Batch Size: 8, K-Fold: 5

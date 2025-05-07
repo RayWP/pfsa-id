@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for microsoft/deberta-v3-large on usecase_focus
+
+Accuracy: 0.8276
+Precision: 0.6088
+Recall: 0.6473
+F1-Score: 0.6114
+
+===== BEST COMBINATION =====
+Model: microsoft/deberta-v3-large
+Label Column: usecase_focus
+Epochs: 4, Batch Size: 8, K-Fold: 5

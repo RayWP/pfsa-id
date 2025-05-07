@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for milyiyo/distilbert-base-uncased-finetuned-amazon-review on label
+
+Accuracy: 0.6490
+Precision: 0.3945
+Recall: 0.4485
+F1-Score: 0.4073
+
+===== BEST COMBINATION =====
+Model: milyiyo/distilbert-base-uncased-finetuned-amazon-review
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

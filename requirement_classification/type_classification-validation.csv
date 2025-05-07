@@ -1,0 +1,146 @@
+sentence,structure_focus,usecase_focus,process_focus
+"Analyst : Do you run into any challenges with international addresses , given the wide variation in address formats ?",True,False,False
+"AP : Actually , that is a constant source of confusion and pain .",False,False,False
+"We have had several situations where , due to an incorrect address format , the client did not receive correspondence .",True,True,False
+Analyst : Can you give me some examples of this ?,False,False,False
+AP :,False,False,False
+"Yes , one happened recently .",True,False,False
+"Sometimes , addresses start with a house name or number , but some overseas clients put the city or town first .",True,False,False
+Imagine the confusion of sending something to Paris which we thought was the city but was in fact the house name !,True,False,False
+"The other issue is that overseas zip codes or postal codes , as they are sometimes called , are not always numeric — they can be a combination of numbers and letters .",True,False,False
+Analyst : Tell me about the process when you take on a new client .,False,False,False
+What information do you initially record about that person ?,False,False,False
+"AP : Remember , it ’s not always an individual ; it could be an organization .",False,False,False
+"Analyst : When it ’s an organization , do you always need to know the contact ?",True,False,False
+AP :,True,False,False
+"Yes , and sometimes there are more than one .",True,False,False
+"For each client or representative of an organization , I need to write down their full name and how they prefer their honorific : Mr. , Ms. , Mrs. , Dr. , etc .",True,False,True
+"And of course , their email address , phone number , and postal address , and sometimes we have a primary mailing address that could be different from the billing address .",True,False,False
+Analyst : Could you have a situation where multiple people have the same address ?,False,False,False
+"AP : This does happen , for example , when we contact different employees in the same office .",False,False,True
+"Analyst : What are your other responsibilities , apart from creating cases ?",False,True,False
+"AP : As a case progresses , I need to record all the individuals and organizations that take part in the case activities and the specific role they play .",True,True,True
+Analyst : Is it possible for an individual or organization to participate in multiple actions or events in different cases ?,False,False,False
+AP :,True,False,False
+Yes .,True,False,False
+"Not only that , but some may play different roles within the same case .",True,False,False
+"For example , the same party can be both the defendant and witness in the same case .",True,False,False
+Analyst :,True,False,False
+"So , what are these different types of roles a party can play ?",True,False,False
+"AP : Plaintiff , witness , defendant , judge , an expert in some field , or an attorney .",True,False,False
+Analyst : Can your firm ’s attorneys or judges be considered as parties to the case ?,True,False,False
+AP :,False,False,False
+Absolutely .,False,False,False
+And I must record the information about their involvement as well .,True,True,True
+Analyst : Please tell me about events that occur .,False,False,False
+What information do you record ?,False,False,False
+"AP : All attorneys and legal assistants record their own activities , which include the date and time when an activity occurred , a short description , and a duration , and in the case of witnesses , defendants , and judges , a list of who was involved .",False,False,False
+We also need to indicate if this event is billable or not .,True,False,False
+Analyst : Is there anything else you record for cases ?,False,False,False
+AP :,True,False,False
+"Yes , we need to know which documents were used in a case .",True,False,False
+Romano 's is the finest Italian restaurant in the city .,False,False,False
+Unless you are a celebrity or a good friend of Romano you will need a reservation .,True,True,False
+"A reservation is made for a specific time , date and number of people .",True,False,False
+The reservation also captures the name and phone number of the person making the reservation .,True,False,False
+Each reservation is assigned a unique reservation number .,True,False,False
+There are two categories of reservations at Romano 's : individual reservations and banquet reservations .,True,False,False
+Additional reservation information captured when an individual makes a reservation includes seating preference ( inside or patio ) and smoking preference ( smoking or nonsmoking ) .,True,True,True
+Additional reservation information captured for banquet reservations includes the group name and the method of payment .,True,False,False
+Seating at Romano 's is limited .,False,False,False
+Romano 's has a fixed number of tables .,True,False,False
+Each table is identified by a unique table number .,True,False,False
+"Each of the tables is further described by a unique free form description such as "" located by the North window "" , "" located in front of the fountain "" , "" by the kitchen door "" .",True,False,False
+"Each table is classified as a 2 - person , 4 - person or 6 - person table .",True,False,False
+"When a reservation is made , Romano associates a specific number to the reservation .",True,True,True
+A table can be utilized many times over the evening by many reservations .,True,False,False
+Romano tends to overbook tables .,False,True,False
+"Therefore , there can be overlapping table reservations .",True,False,False
+The management structure at Romano 's is hierarchical .,False,False,False
+There are several restaurant managers who report to Romano .,True,True,False
+The managers are responsible for managing the Maitre'd and the chefs as well as ensuring that the guests have a pleasant dining experience .,True,True,False
+"The Maitre'd is responsible for managing the waiters , bartenders and bus personnel .",True,False,False
+The Chefs are responsible for managing the cooks and dishwashers .,True,False,False
+"Each person working for Romano 's must be classified as either a manager , Maitre'd , waiter , bartender , chef , cook , bus person or dishwasher .",True,False,False
+"Additional information maintained by Romano 's for each person includes the persons name , date of birth and drivers license number .",True,False,False
+When the reservation party arrives at Romano 's the reservation is assigned to one waiter .,True,False,True
+"A waiter can be assigned to many reservations during the course of the evening "" .",True,False,False
+The menu at Romano 's is exquisite .,False,False,False
+There are many exciting and exotic items .,True,False,False
+Each menu item is identified by a unique menu item number .,True,False,False
+"Information maintained by Romano 's for each menu item includes an item description of ( e.g. "" chicken marsala "" , "" fish soup "" , "" endive salad"",""1988 Merlot wine "" , etc . ) , and item prep time .",True,False,False
+"Each menu item is classified by Romano 's as "" appetizer "" , "" entree "" , "" dessert "" or "" beverage "" .",True,False,False
+The price of each menu item can vary based on the time of day .,True,False,False
+"For example , some of the menu items have different lunch and dinner prices .",True,False,False
+Some of the menu items change prices for happy hour .,True,False,False
+"In order to calculate the check at the end of the dinner , the waiter maintains a list , by reservation number , of the menu items ordered and the time that the menu item was ordered .",True,True,False
+"In other words , each reservation can be associated with many menu items and a menu item can be associated with many reservations .",True,False,False
+"In addition to menu items , Romano 's maintains a list of the food items that are utilized by the restaurant such as chicken , mushrooms , bread sticks , red sauce , cream sauce , etc .",True,False,False
+Food items are utilized in the preparation of menu items .,True,False,False
+Each food item is identified by a unique food item number .,True,False,False
+The Right - Way Rental Truck Company rents small moving trucks and trailers for local and one - way usage .,False,True,False
+We have 347 rental offices across the western United States .,True,False,False
+"Our rental stock includes a total of 5,78 vehicles including various types of trucks and trailers .",True,False,False
+We need to implement a system to track our rental agreements and our vehicle assignments .,True,False,False
+Each rental office rents vehicles that they have in stock to customers ready to take possession of the vehicle .,True,True,False
+"We do n’t take reservations , or speculate on when the customer will return rented vehicles .",False,True,False
+"The central office oversees the vehicle distribution , and directs transfers of vehicles from one rental office to another .",True,True,False
+Each rental office has an office name like “ Littleton Right - Way ” .,True,False,False
+Each office also has a unique three digit office number .,True,False,False
+We also keep each office ’s address .,True,False,False
+"Each office is a home office for some of our vehicles , and each vehicle is based out of a single home office .",True,False,False
+"Each vehicle has a vehicle i d , state of registration , and a license plate registration number .",True,False,False
+"We have five different types of vehicles : 36 trucks , 24 ’ trucks , 10 ’ trucks , 8 ’ covered trailers , and 6 ’ open trailers .",True,False,False
+"Yes , we do have a vehicle type code .",True,False,False
+"For all our vehicles , we need to track the last maintenance date , and expiration date of its registration .",True,False,False
+"For our trucks , we need to know the current odometer reading , the gas tank capacity , and whether or not it has a working radio .",True,False,False
+"For long moves , customers really prefer a radio .",False,False,False
+"We log the current mileage just before we rent a truck , and then again when it is returned .",True,True,False
+"Most of our rental agreements are for individual customers , but a rental agreement can either be for an individual or for a company .",True,False,False
+We do rent a small percentage of our trucks to companies .,False,False,False
+We assign each company an identifying company number and track the company ’s name and address .,True,False,False
+"No , we do n’t need to worry about any additional information about a company .",False,False,False
+Our corporate sales group handles all that information separately .,True,False,False
+"For each individual customer , we record the customer ’s name , home phone , address , and driver ’s license state , number , and expiration date .",True,True,False
+We like to keep track of all our customers .,False,False,False
+"If a customer damaged a vehicle , abandoned it , or did n’t fully pay the bill , then we tag the customer as a poor risk , and wo n’t rent to that customer again .",True,True,True
+"We only allow a single individual or company for a given rental agreement , and we write a separate rental agreement for each vehicle .",True,False,False
+"Yes , we do have customers rent two or more vehicles at the same time .",True,True,False
+Each rental agreement is identified by the originating rental office number and a rental agreement number .,True,False,False
+"We also need to track the rental date , the anticipated duration of the rental , the originating rental office , the drop - off rental office , the amount of the deposit paid , the quoted daily rental rate , and the quoted rate per mile .",True,False,False
+"Of course for the trailers , there is n’t a mileage charge .",True,False,False
+"No , we do n’t need to automate the financial side of our business , just our rental agreement tracking and vehicle assignment functions .",False,False,False
+"Geological samples are retrieved from the field and then processed in the laboratory to determine various properties , including chemistry , mineralogy , age , and petrophysical properties like density , porosity , permeability .",True,False,True
+"Samples obtained as part of economic activities , such as mineral exploration , are usually processed in commercial assay and chemistry labs .",True,False,False
+"For QA / QC purposes , each batch of samples will have a number of control samples inserted , for which the concentration of particular chemical species are already known .",True,False,False
+"For confidentiality reasons the location information associated with each sample is not provided to the lab , but must be re - attached during the interpretation phase .",True,False,True
+"During processing , many derived samples will be generated by various physical and chemical procedures .",True,False,False
+"In some cases the derived samples are strict sub - samples , whose intensive properties are intended to be the same as the parent .",True,False,False
+"In other cases , the split is ' biased ' , with the derived sample intended to select a specific sub - sample , defined by a particular particle size , density , magnetic properties , etc .",True,False,False
+"The link from the derived sample to the parent sample must be preserved , and the link from the parent to the location from which it was obtained also .",True,False,False
+"In some cases the location is associated with another sampling artifact , such as a drill - hole or traverse or cruise , with the latter carrying the detailed location information .",True,False,False
+"In a research context some samples have a particularly high - value , having been obtained by an expensive process ( involving drilling or ships or spacecraft ) or from a location that is hard to visit ( remote , offshore , in space ) .",True,False,False
+These samples are sometimes sub - divided and distributed to multiple research teams or labs for different specialized observations .,False,True,True
+"Each lab will run its own LIMS system , which will usually assign a local identifier for the sample .",True,False,False
+"When the results of these observations are reported , it is necessary that observations from different labs can be correlated with each other , so that the complete picture around each sample can be assembled .",True,False,True
+"These stories focus on sensing applications involving ex - situ sampling , where a location is visited and a specimen obtained using some sampling process , then transported to one or more laboratories where it is processed into one or more sub - samples and various observations made .",True,False,True
+"Sample identity is usually key , and the relationships between samples , between samples and other artifacts of the sampling process , and also with other geographic features or locations .",True,False,False
+The sampling time and analysis and reporting time are all different .,True,False,False
+"Similar process apply to botanical sampling , and to environmental sampling ( water , air , dust ) .",True,False,False
+"The clinic basically schedules patients , provides services for them , and bills them for those services .",True,True,False
+"New patients fill out a form listing their name , address , telephone numbers , allergies , and state of mind prior to scheduling their first appointment .",True,True,True
+Existing patients are normally scheduled for their next appointment as they depart from their current appointment .,False,False,True
+"When the office staff forget to do this , a desk worker has to call the patient to set up a date .",False,True,True
+Schedules are entered into a central appointment book ; patient records ( including contact information ) are kept in paper files .,True,False,True
+"Appointments are for one of three procedures : dental hygiene , cavities and fillings , and oral surgery ( including root canals and tooth extractions ) .",True,False,False
+"For each procedure the patient needs to be prepared and supplies need to be collected ( e.g. , probes , drill bits , cements , resins , etc . ) .",True,False,False
+"For a hygienist 's appointment , preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck .",False,False,True
+"For oral surgery , anesthesia of various strengths are normally administered prior to operation .",False,False,True
+Only for oral surgery procedures is it necessary to ask the patient to wait for up to twenty minutes before performing a post - operative check .,False,False,False
+"Billing is always done by the month , and bills are always sent by mail to patients ' contact addresses .",True,True,True
+Checks are received by mail .,False,False,False
+HMO - funded patients are asked to make a copayment at the time that they leave the office .,True,True,True
+Each patient also generates a reimbursement request to an insurance company .,True,True,False
+Insurance companies and HMOs send their checks by mail three months after receiving a reimbursement request .,True,False,True
+The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms .,True,True,False
+Supplies and tools are stored in a standard layout in each room .,True,False,False

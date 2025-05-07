@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for FacebookAI/roberta-large on label
+
+Accuracy: 0.6852
+Precision: 0.4789
+Recall: 0.4942
+F1-Score: 0.4690
+
+===== BEST COMBINATION =====
+Model: FacebookAI/roberta-large
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

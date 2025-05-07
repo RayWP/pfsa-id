@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for albert/albert-base-v2 on label
+
+Accuracy: 0.6348
+Precision: 0.4189
+Recall: 0.4306
+F1-Score: 0.4096
+
+===== BEST COMBINATION =====
+Model: albert/albert-base-v2
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

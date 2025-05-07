@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for albert/albert-large-v2 on structure_focus
+
+Accuracy: 0.7931
+Precision: 0.7041
+Recall: 0.6883
+F1-Score: 0.6817
+
+===== BEST COMBINATION =====
+Model: albert/albert-large-v2
+Label Column: structure_focus
+Epochs: 12, Batch Size: 8, K-Fold: 5

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for ProsusAI/finbert on structure_focus
+
+Accuracy: 0.7793
+Precision: 0.7126
+Recall: 0.6792
+F1-Score: 0.6863
+
+===== BEST COMBINATION =====
+Model: ProsusAI/finbert
+Label Column: structure_focus
+Epochs: 9, Batch Size: 8, K-Fold: 5

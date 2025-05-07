@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for ProsusAI/finbert on label
+
+Accuracy: 0.6643
+Precision: 0.4853
+Recall: 0.4826
+F1-Score: 0.4658
+
+===== BEST COMBINATION =====
+Model: ProsusAI/finbert
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

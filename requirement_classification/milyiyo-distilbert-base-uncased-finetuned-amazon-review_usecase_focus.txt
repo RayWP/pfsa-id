@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for milyiyo/distilbert-base-uncased-finetuned-amazon-review on usecase_focus
+
+Accuracy: 0.8490
+Precision: 0.7003
+Recall: 0.6705
+F1-Score: 0.6671
+
+===== BEST COMBINATION =====
+Model: milyiyo/distilbert-base-uncased-finetuned-amazon-review
+Label Column: usecase_focus
+Epochs: 4, Batch Size: 8, K-Fold: 10

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for ProsusAI/finbert on usecase_focus
+
+Accuracy: 0.8281
+Precision: 0.6845
+Recall: 0.6492
+F1-Score: 0.6472
+
+===== BEST COMBINATION =====
+Model: ProsusAI/finbert
+Label Column: usecase_focus
+Epochs: 12, Batch Size: 8, K-Fold: 10

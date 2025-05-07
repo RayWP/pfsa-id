@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for answerdotai/ModernBERT-large on structure_focus
+
+Accuracy: 0.7862
+Precision: 0.7340
+Recall: 0.6351
+F1-Score: 0.6446
+
+===== BEST COMBINATION =====
+Model: answerdotai/ModernBERT-large
+Label Column: structure_focus
+Epochs: 3, Batch Size: 8, K-Fold: 5

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for justinlamlamlam/softwareengineering on label
+
+Accuracy: 0.7110
+Precision: 0.5440
+Recall: 0.5385
+F1-Score: 0.5193
+
+===== BEST COMBINATION =====
+Model: justinlamlamlam/softwareengineering
+Label Column: label
+Epochs: 9, Batch Size: 8, K-Fold: 10

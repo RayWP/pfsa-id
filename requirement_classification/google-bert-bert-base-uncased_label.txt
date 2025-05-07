@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for google-bert/bert-base-uncased on label
+
+Accuracy: 0.6786
+Precision: 0.5319
+Recall: 0.4921
+F1-Score: 0.4835
+
+===== BEST COMBINATION =====
+Model: google-bert/bert-base-uncased
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

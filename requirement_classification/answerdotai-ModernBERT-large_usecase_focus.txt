@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for answerdotai/ModernBERT-large on usecase_focus
+
+Accuracy: 0.8281
+Precision: 0.6729
+Recall: 0.5917
+F1-Score: 0.5990
+
+===== BEST COMBINATION =====
+Model: answerdotai/ModernBERT-large
+Label Column: usecase_focus
+Epochs: 4, Batch Size: 8, K-Fold: 10

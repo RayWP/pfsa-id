@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for PHILIPPUNI/distilbert-amazon-software-reviews-finetuned on label
+
+Accuracy: 0.6700
+Precision: 0.4426
+Recall: 0.4459
+F1-Score: 0.4273
+
+===== BEST COMBINATION =====
+Model: PHILIPPUNI/distilbert-amazon-software-reviews-finetuned
+Label Column: label
+Epochs: 12, Batch Size: 8, K-Fold: 10

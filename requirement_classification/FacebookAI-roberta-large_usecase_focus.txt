@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for FacebookAI/roberta-large on usecase_focus
+
+Accuracy: 0.8057
+Precision: 0.5961
+Recall: 0.5909
+F1-Score: 0.5723
+
+===== BEST COMBINATION =====
+Model: FacebookAI/roberta-large
+Label Column: usecase_focus
+Epochs: 12, Batch Size: 8, K-Fold: 10

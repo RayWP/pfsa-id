@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for albert/albert-base-v2 on usecase_focus
+
+Accuracy: 0.7862
+Precision: 0.6032
+Recall: 0.5866
+F1-Score: 0.5896
+
+===== BEST COMBINATION =====
+Model: albert/albert-base-v2
+Label Column: usecase_focus
+Epochs: 12, Batch Size: 8, K-Fold: 5

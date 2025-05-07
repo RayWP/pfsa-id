@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for microsoft/deberta-v3-large on label
+
+Accuracy: 0.6648
+Precision: 0.4718
+Recall: 0.4940
+F1-Score: 0.4665
+
+===== BEST COMBINATION =====
+Model: microsoft/deberta-v3-large
+Label Column: label
+Epochs: 9, Batch Size: 8, K-Fold: 10

@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for answerdotai/ModernBERT-large on label
+
+Accuracy: 0.7062
+Precision: 0.5689
+Recall: 0.5126
+F1-Score: 0.5142
+
+===== BEST COMBINATION =====
+Model: answerdotai/ModernBERT-large
+Label Column: label
+Epochs: 9, Batch Size: 8, K-Fold: 10

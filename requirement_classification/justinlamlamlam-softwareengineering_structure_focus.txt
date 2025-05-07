@@ -1,0 +1,11 @@
+Best Hyperparameter Combination for justinlamlamlam/softwareengineering on structure_focus
+
+Accuracy: 0.8069
+Precision: 0.7647
+Recall: 0.6877
+F1-Score: 0.7026
+
+===== BEST COMBINATION =====
+Model: justinlamlamlam/softwareengineering
+Label Column: structure_focus
+Epochs: 12, Batch Size: 8, K-Fold: 5
