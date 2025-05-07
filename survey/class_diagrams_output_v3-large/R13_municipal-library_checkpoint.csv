@@ -1,0 +1,18 @@
+,sentence,useful
+0,We want to automate the management of a small municipal library,0
+1," For this, we analyzed its operation to obtain the following list of rules and statements: Members have a first name (character string) and a surname (character string)",1
+2, The library consists of a set of documents and a set of patrons,1
+3, Members are subscribed or unsubscribed on a simple request,0
+4, New documents are added to the library regularly,0
+5, These documents are either journals or volumes,1
+6," Volumes are either dictionaries, books or comics",1
+7, The documents are characterized by a title (character string),1
+8, Volumes also have an author (character string),1
+9, Bds also have a recipient name (character string),1
+10," The newspapers have, in addition to the characteristics of the documents, a date of publication (a date)",1
+11, Only books can be borrowed,0
+12, A member can borrow or return a book,0
+13, Members can borrow books (and only books) and it must be possible to know at any time which books a member has borrowed,0
+14, A member can borrow a maximum of 3 books,0
+15, The return date for a borrowed book is fixed at the time of the loan,0
+16, This date can be extended upon request,0

@@ -1,0 +1,14 @@
+,entity_group,score,word,start,end
+0,class,0.88247156,Members,90,98
+1,attr,0.97789633,first name,105,116
+2,attr,0.9767047,surname,141,149
+3,class,0.90648574,library,173,181
+4,class,0.71828663,documents,202,212
+5,class,0.9030188,patrons,225,233
+6,class,0.58040005,documents,240,250
+7,class,0.65227306,documents,336,346
+8,attr,0.9749468,title,369,375
+9,attr,0.9477801,author,416,423
+10,attr,0.96324813,recipient name,459,474
+11,attr,0.75639325,characteristics,534,550
+12,attr,0.97885174,date of publication,570,590

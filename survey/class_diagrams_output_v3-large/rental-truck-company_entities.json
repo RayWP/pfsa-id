@@ -1,0 +1,533 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.6517306566238403,
+      "start": 43,
+      "end": 52
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.4974585771560669,
+      "start": 123,
+      "end": 130
+    },
+    {
+      "entity_group": "class",
+      "word": "rental agreements",
+      "score": 0.5900518894195557,
+      "start": 143,
+      "end": 161
+    },
+    {
+      "entity_group": "attr",
+      "word": "vehicle assignments",
+      "score": 0.5565139651298523,
+      "start": 169,
+      "end": 189
+    },
+    {
+      "entity_group": "class",
+      "word": "rental office",
+      "score": 0.9227961897850037,
+      "start": 195,
+      "end": 209
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.7374318242073059,
+      "start": 215,
+      "end": 224
+    },
+    {
+      "entity_group": "class",
+      "word": "customers",
+      "score": 0.945188045501709,
+      "start": 251,
+      "end": 261
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicle",
+      "score": 0.6573434472084045,
+      "start": 293,
+      "end": 301
+    },
+    {
+      "entity_group": "class",
+      "word": "central",
+      "score": 0.5629978775978088,
+      "start": 306,
+      "end": 314
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.6454852223396301,
+      "start": 381,
+      "end": 390
+    },
+    {
+      "entity_group": "class",
+      "word": "rental office",
+      "score": 0.9509282112121582,
+      "start": 399,
+      "end": 413
+    },
+    {
+      "entity_group": "class",
+      "word": "rental office",
+      "score": 0.8411337733268738,
+      "start": 430,
+      "end": 444
+    },
+    {
+      "entity_group": "attr",
+      "word": "office name",
+      "score": 0.7697528600692749,
+      "start": 451,
+      "end": 463
+    },
+    {
+      "entity_group": "class",
+      "word": "office",
+      "score": 0.9226599931716919,
+      "start": 496,
+      "end": 503
+    },
+    {
+      "entity_group": "attr",
+      "word": "office number",
+      "score": 0.9587416648864746,
+      "start": 533,
+      "end": 547
+    },
+    {
+      "entity_group": "class",
+      "word": "office",
+      "score": 0.9198542237281799,
+      "start": 566,
+      "end": 573
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9617941379547119,
+      "start": 575,
+      "end": 583
+    },
+    {
+      "entity_group": "class",
+      "word": "office",
+      "score": 0.8474892377853394,
+      "start": 589,
+      "end": 596
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.4688588082790375,
+      "start": 629,
+      "end": 638
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicle",
+      "score": 0.8137308359146118,
+      "start": 648,
+      "end": 656
+    },
+    {
+      "entity_group": "class",
+      "word": "home office",
+      "score": 0.6797583699226379,
+      "start": 681,
+      "end": 693
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicle",
+      "score": 0.8811326026916504,
+      "start": 699,
+      "end": 707
+    },
+    {
+      "entity_group": "attr",
+      "word": "vehicle id",
+      "score": 0.9870214462280273,
+      "start": 713,
+      "end": 724
+    },
+    {
+      "entity_group": "attr",
+      "word": "state of registration",
+      "score": 0.9510897994041443,
+      "start": 725,
+      "end": 747
+    },
+    {
+      "entity_group": "attr",
+      "word": "license plate",
+      "score": 0.9538739919662476,
+      "start": 754,
+      "end": 768
+    },
+    {
+      "entity_group": "attr",
+      "word": "registration number",
+      "score": 0.7307548522949219,
+      "start": 768,
+      "end": 788
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.7285721898078918,
+      "start": 921,
+      "end": 930
+    },
+    {
+      "entity_group": "attr",
+      "word": "last maintenance date",
+      "score": 0.717089831829071,
+      "start": 952,
+      "end": 974
+    },
+    {
+      "entity_group": "attr",
+      "word": "expiration date",
+      "score": 0.954534649848938,
+      "start": 979,
+      "end": 995
+    },
+    {
+      "entity_group": "attr",
+      "word": "registration",
+      "score": 0.8516029119491577,
+      "start": 1002,
+      "end": 1015
+    },
+    {
+      "entity_group": "attr",
+      "word": "odometer reading",
+      "score": 0.9784743785858154,
+      "start": 1060,
+      "end": 1077
+    },
+    {
+      "entity_group": "attr",
+      "word": "gas tank capacity",
+      "score": 0.925994873046875,
+      "start": 1082,
+      "end": 1100
+    },
+    {
+      "entity_group": "class",
+      "word": "agreements",
+      "score": 0.5580854415893555,
+      "start": 1163,
+      "end": 1174
+    },
+    {
+      "entity_group": "class",
+      "word": "customers",
+      "score": 0.7935706973075867,
+      "start": 1193,
+      "end": 1203
+    },
+    {
+      "entity_group": "class",
+      "word": "rental agreement",
+      "score": 0.8486570715904236,
+      "start": 1210,
+      "end": 1227
+    },
+    {
+      "entity_group": "class",
+      "word": "company",
+      "score": 0.8154945373535156,
+      "start": 1292,
+      "end": 1300
+    },
+    {
+      "entity_group": "attr",
+      "word": "company number",
+      "score": 0.9010176062583923,
+      "start": 1315,
+      "end": 1330
+    },
+    {
+      "entity_group": "class",
+      "word": "company",
+      "score": 0.49563461542129517,
+      "start": 1344,
+      "end": 1352
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.7077022194862366,
+      "start": 1354,
+      "end": 1359
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9644832015037537,
+      "start": 1363,
+      "end": 1371
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9358577728271484,
+      "start": 1459,
+      "end": 1468
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9658166170120239,
+      "start": 1483,
+      "end": 1492
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.7806674242019653,
+      "start": 1494,
+      "end": 1499
+    },
+    {
+      "entity_group": "attr",
+      "word": "home phone",
+      "score": 0.9352103471755981,
+      "start": 1500,
+      "end": 1511
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9619817733764648,
+      "start": 1512,
+      "end": 1520
+    },
+    {
+      "entity_group": "attr",
+      "word": "driver",
+      "score": 0.9665122032165527,
+      "start": 1525,
+      "end": 1532
+    },
+    {
+      "entity_group": "attr",
+      "word": "s license",
+      "score": 0.9444921016693115,
+      "start": 1533,
+      "end": 1542
+    },
+    {
+      "entity_group": "attr",
+      "word": "state",
+      "score": 0.9304563999176025,
+      "start": 1542,
+      "end": 1548
+    },
+    {
+      "entity_group": "attr",
+      "word": "number",
+      "score": 0.5071589946746826,
+      "start": 1549,
+      "end": 1556
+    },
+    {
+      "entity_group": "attr",
+      "word": "expiration date",
+      "score": 0.9699052572250366,
+      "start": 1561,
+      "end": 1577
+    },
+    {
+      "entity_group": "class",
+      "word": "individual",
+      "score": 0.47741594910621643,
+      "start": 1601,
+      "end": 1612
+    },
+    {
+      "entity_group": "class",
+      "word": "company",
+      "score": 0.7002208232879639,
+      "start": 1615,
+      "end": 1623
+    },
+    {
+      "entity_group": "class",
+      "word": "rental agreement",
+      "score": 0.847661018371582,
+      "start": 1635,
+      "end": 1652
+    },
+    {
+      "entity_group": "class",
+      "word": "rental agreement",
+      "score": 0.8401609659194946,
+      "start": 1677,
+      "end": 1694
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicle",
+      "score": 0.9514240622520447,
+      "start": 1703,
+      "end": 1711
+    },
+    {
+      "entity_group": "class",
+      "word": "rental agreement",
+      "score": 0.7626442909240723,
+      "start": 1717,
+      "end": 1734
+    },
+    {
+      "entity_group": "attr",
+      "word": "originating rental office number",
+      "score": 0.7695615291595459,
+      "start": 1755,
+      "end": 1788
+    },
+    {
+      "entity_group": "attr",
+      "word": "rental agreement number",
+      "score": 0.9222001433372498,
+      "start": 1794,
+      "end": 1818
+    },
+    {
+      "entity_group": "attr",
+      "word": "rental date",
+      "score": 0.7877761125564575,
+      "start": 1845,
+      "end": 1857
+    },
+    {
+      "entity_group": "attr",
+      "word": "duration",
+      "score": 0.8895524144172668,
+      "start": 1874,
+      "end": 1883
+    },
+    {
+      "entity_group": "attr",
+      "word": "rental",
+      "score": 0.37805047631263733,
+      "start": 1890,
+      "end": 1897
+    },
+    {
+      "entity_group": "attr",
+      "word": "originating rental office",
+      "score": 0.8231713175773621,
+      "start": 1902,
+      "end": 1928
+    },
+    {
+      "entity_group": "attr",
+      "word": "drop-off rental office",
+      "score": 0.6246527433395386,
+      "start": 1933,
+      "end": 1956
+    },
+    {
+      "entity_group": "attr",
+      "word": "amount",
+      "score": 0.7279679179191589,
+      "start": 1961,
+      "end": 1968
+    },
+    {
+      "entity_group": "attr",
+      "word": "deposit paid",
+      "score": 0.730757474899292,
+      "start": 1975,
+      "end": 1988
+    },
+    {
+      "entity_group": "attr",
+      "word": "quoted",
+      "score": 0.7035661935806274,
+      "start": 1993,
+      "end": 2000
+    },
+    {
+      "entity_group": "attr",
+      "word": "daily rental rate",
+      "score": 0.7891416549682617,
+      "start": 2000,
+      "end": 2018
+    },
+    {
+      "entity_group": "attr",
+      "word": "rate",
+      "score": 0.7269803285598755,
+      "start": 2034,
+      "end": 2039
+    }
+  ],
+  "summary": {
+    "class": [
+      "vehicles",
+      "system",
+      "rental agreements",
+      "rental office",
+      "customers",
+      "vehicle",
+      "central",
+      "office",
+      "home office",
+      "agreements",
+      "rental agreement",
+      "company",
+      "customer",
+      "individual"
+    ],
+    "attr": [
+      "vehicle assignments",
+      "office name",
+      "office number",
+      "address",
+      "vehicle id",
+      "state of registration",
+      "license plate",
+      "registration number",
+      "last maintenance date",
+      "expiration date",
+      "registration",
+      "odometer reading",
+      "gas tank capacity",
+      "company number",
+      "name",
+      "home phone",
+      "driver",
+      "s license",
+      "state",
+      "number",
+      "originating rental office number",
+      "rental agreement number",
+      "rental date",
+      "duration",
+      "rental",
+      "originating rental office",
+      "drop-off rental office",
+      "amount",
+      "deposit paid",
+      "quoted",
+      "daily rental rate",
+      "rate"
+    ]
+  },
+  "document_class": " Our rental stock includes a total of 5,780 vehicles including various types of trucks and trailers  We need to implement a system to track our rental agreements and our vehicle assignments  Each rental office rents vehicles that they have in stock to customers ready to take possession of the vehicle  The central office oversees the vehicle distribution, and directs transfers of vehicles from one rental office to another  Each rental office has an office name like “Littleton Right-Way”  Each office also has a unique three digit office number  We also keep each office’s address  Each office is a home office for some of our vehicles, and each vehicle is based out of a single home office  Each vehicle has a vehicle id, state of registration, and a license plate registration number  We have five different types of vehicles: 36 trucks, 24’ trucks, 10’ trucks, 8’ covered trailers, and 6’ open trailers  For all our vehicles, we need to track the last maintenance date, and expiration date of its registration  For our trucks, we need to know the current odometer reading, the gas tank capacity, and whether or not it has a working radio  Most of our rental agreements are for individual customers, but a rental agreement can either be for an individual or for a company  We assign each company an identifying company number and track the company’s name and address  Our corporate sales group handles all that information separately  For each individual customer, we record the customer’s name, home phone, address, and driver’s license state, number, and expiration date  We only allow a single individual or company for a given rental agreement, and we write a separate rental agreement for each vehicle  Each rental agreement is identified by the originating rental office number and a rental agreement number  We also need to track the rental date, the anticipated duration of the rental, the originating rental office, the drop-off rental office, the amount of the deposit paid, the quoted daily rental rate, and the quoted rate per mile"
+}

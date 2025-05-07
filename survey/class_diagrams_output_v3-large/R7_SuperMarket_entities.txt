@@ -1,0 +1,135 @@
+Document: R7_SuperMarket.txt
+
+Classes identified:
+--------------------
+- product
+- customer
+- customers
+- supermarket
+- stock
+- store
+- forms
+- products
+- form
+- supplier
+- supermarkets
+- cashier
+- group
+- shelf
+- clients
+- basket
+- goods
+- machine
+- controller
+- transactions
+- client
+- invoice
+- order
+- bakery
+- agent
+- items
+- forma invoice
+
+Attributes identified:
+--------------------
+- type
+- number
+- expiration date
+- group
+- price
+- ingredients
+- total
+- quantities
+- category
+- orders
+
+Detailed Entities:
+--------------------
+Type: class, Word: product, Score: 0.8270
+Type: class, Word: customer, Score: 0.9432
+Type: class, Word: product, Score: 0.8521
+Type: class, Word: customers, Score: 0.8409
+Type: class, Word: supermarket, Score: 0.6501
+Type: attr, Word: type, Score: 0.9363
+Type: class, Word: product, Score: 0.7922
+Type: class, Word: product, Score: 0.7203
+Type: class, Word: stock, Score: 0.6300
+Type: class, Word: store, Score: 0.7716
+Type: attr, Word: number, Score: 0.7528
+Type: class, Word: forms, Score: 0.6096
+Type: class, Word: product, Score: 0.7751
+Type: class, Word: products, Score: 0.7340
+Type: attr, Word: number, Score: 0.5220
+Type: class, Word: form, Score: 0.7379
+Type: class, Word: product, Score: 0.6300
+Type: class, Word: supplier, Score: 0.4865
+Type: class, Word: products, Score: 0.7320
+Type: class, Word: supermarkets, Score: 0.6021
+Type: class, Word: product, Score: 0.4789
+Type: attr, Word: expiration date, Score: 0.9003
+Type: class, Word: products, Score: 0.5582
+Type: attr, Word: group, Score: 0.6409
+Type: class, Word: product, Score: 0.8409
+Type: class, Word: products, Score: 0.7251
+Type: class, Word: cashier, Score: 0.6776
+Type: class, Word: group, Score: 0.5299
+Type: class, Word: supermarket, Score: 0.5483
+Type: class, Word: shelf, Score: 0.6075
+Type: class, Word: products, Score: 0.6190
+Type: class, Word: clients, Score: 0.6460
+Type: class, Word: customers, Score: 0.5934
+Type: class, Word: supermarket, Score: 0.6351
+Type: class, Word: product, Score: 0.5385
+Type: class, Word: group, Score: 0.5274
+Type: class, Word: clients, Score: 0.5326
+Type: class, Word: products, Score: 0.5002
+Type: class, Word: basket, Score: 0.9069
+Type: class, Word: goods, Score: 0.4760
+Type: attr, Word: price, Score: 0.9462
+Type: attr, Word: expiration date, Score: 0.9724
+Type: attr, Word: ingredients, Score: 0.9410
+Type: class, Word: cashier, Score: 0.6221
+Type: class, Word: cashier, Score: 0.8877
+Type: class, Word: machine, Score: 0.8582
+Type: class, Word: group, Score: 0.6356
+Type: class, Word: product, Score: 0.9185
+Type: class, Word: controller, Score: 0.5390
+Type: class, Word: product, Score: 0.8704
+Type: class, Word: cashier, Score: 0.9085
+Type: class, Word: transactions, Score: 0.7299
+Type: class, Word: client, Score: 0.7755
+Type: class, Word: customer, Score: 0.5027
+Type: class, Word: machine, Score: 0.5904
+Type: class, Word: customer, Score: 0.8963
+Type: attr, Word: total, Score: 0.9119
+Type: class, Word: invoice, Score: 0.7951
+Type: class, Word: customer, Score: 0.9516
+Type: class, Word: client, Score: 0.6208
+Type: class, Word: supermarket, Score: 0.6494
+Type: class, Word: order, Score: 0.8463
+Type: class, Word: bakery, Score: 0.7910
+Type: class, Word: agent, Score: 0.4987
+Type: class, Word: goods, Score: 0.5369
+Type: attr, Word: quantities, Score: 0.8458
+Type: attr, Word: category, Score: 0.7926
+Type: class, Word: product, Score: 0.6450
+Type: attr, Word: number, Score: 0.6374
+Type: attr, Word: orders, Score: 0.3666
+Type: class, Word: invoice, Score: 0.8295
+Type: class, Word: order, Score: 0.9640
+Type: class, Word: customer, Score: 0.9267
+Type: class, Word: product, Score: 0.4914
+Type: class, Word: customers, Score: 0.8629
+Type: class, Word: items, Score: 0.6313
+Type: class, Word: product, Score: 0.7200
+Type: class, Word: forma invoice, Score: 0.6163
+Type: class, Word: product, Score: 0.4414
+Type: attr, Word: total, Score: 0.7525
+Type: class, Word: customer, Score: 0.8633
+Type: class, Word: customer, Score: 0.9263
+Type: class, Word: cashier, Score: 0.5299
+Type: class, Word: cashier, Score: 0.6070
+Type: class, Word: customer, Score: 0.9296
+Type: class, Word: customers, Score: 0.6977
+Type: class, Word: cashier, Score: 0.5524
+Type: class, Word: customer, Score: 0.7887

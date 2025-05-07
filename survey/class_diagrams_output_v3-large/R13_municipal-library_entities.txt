@@ -1,0 +1,34 @@
+Document: R13_municipal-library.txt
+
+Classes identified:
+--------------------
+- Members
+- library
+- documents
+- patrons
+
+Attributes identified:
+--------------------
+- first name
+- surname
+- title
+- author
+- recipient name
+- characteristics
+- date of publication
+
+Detailed Entities:
+--------------------
+Type: class, Word: Members, Score: 0.8825
+Type: attr, Word: first name, Score: 0.9779
+Type: attr, Word: surname, Score: 0.9767
+Type: class, Word: library, Score: 0.9065
+Type: class, Word: documents, Score: 0.7183
+Type: class, Word: patrons, Score: 0.9030
+Type: class, Word: documents, Score: 0.5804
+Type: class, Word: documents, Score: 0.6523
+Type: attr, Word: title, Score: 0.9749
+Type: attr, Word: author, Score: 0.9478
+Type: attr, Word: recipient name, Score: 0.9632
+Type: attr, Word: characteristics, Score: 0.7564
+Type: attr, Word: date of publication, Score: 0.9789

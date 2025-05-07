@@ -1,0 +1,50 @@
+Document: dental-clinic.txt
+
+Classes identified:
+--------------------
+- patients
+- form
+- appointment book
+- patient records
+- Appointments
+- procedure
+- patient
+- clinic
+- supplies inventory
+- procedures
+- rooms
+
+Attributes identified:
+--------------------
+- name
+- address
+- telephone numbers
+- allergies
+- state of mind
+- Schedules
+- contact information
+- contact addresses
+
+Detailed Entities:
+--------------------
+Type: class, Word: patients, Score: 0.7892
+Type: class, Word: form, Score: 0.5100
+Type: attr, Word: name, Score: 0.9383
+Type: attr, Word: address, Score: 0.9777
+Type: attr, Word: telephone numbers, Score: 0.9809
+Type: attr, Word: allergies, Score: 0.9541
+Type: attr, Word: state of mind, Score: 0.8882
+Type: attr, Word: Schedules, Score: 0.4992
+Type: class, Word: appointment book, Score: 0.6042
+Type: class, Word: patient records, Score: 0.6984
+Type: attr, Word: contact information, Score: 0.9726
+Type: class, Word: Appointments, Score: 0.5825
+Type: class, Word: procedure, Score: 0.6691
+Type: class, Word: patient, Score: 0.7791
+Type: class, Word: patients, Score: 0.7766
+Type: attr, Word: contact addresses, Score: 0.7696
+Type: class, Word: patient, Score: 0.8304
+Type: class, Word: clinic, Score: 0.6555
+Type: class, Word: supplies inventory, Score: 0.5621
+Type: class, Word: procedures, Score: 0.4417
+Type: class, Word: rooms, Score: 0.3482

@@ -1,0 +1,31 @@
+Document: R26_BlockCard.txt
+
+Classes identified:
+--------------------
+- account
+- kiosk
+- Customer
+- Users
+- cards
+- system
+- user
+- card
+
+Attributes identified:
+--------------------
+- card status
+
+Detailed Entities:
+--------------------
+Type: class, Word: account, Score: 0.8096
+Type: class, Word: kiosk, Score: 0.6752
+Type: class, Word: Customer, Score: 0.9307
+Type: class, Word: Users, Score: 0.7174
+Type: class, Word: cards, Score: 0.5260
+Type: class, Word: system, Score: 0.8634
+Type: attr, Word: card status, Score: 0.8900
+Type: class, Word: user, Score: 0.9653
+Type: class, Word: card, Score: 0.9507
+Type: class, Word: user, Score: 0.9455
+Type: class, Word: card, Score: 0.7723
+Type: attr, Word: card status, Score: 0.8631

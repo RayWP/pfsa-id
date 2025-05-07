@@ -1,0 +1,30 @@
+,entity_group,score,word,start,end
+0,class,0.9251273,user,59,64
+1,class,0.5310418,search,76,83
+2,attr,0.8311953,term,83,88
+3,class,0.61852217,torrent websites,138,155
+4,class,0.49838322,software,205,214
+5,class,0.84585774,query,298,304
+6,class,0.9061674,torrent,329,337
+7,class,0.53290117,program,348,356
+8,attr,0.9033022,website,401,409
+9,attr,0.8690167,seeds,410,416
+10,attr,0.89127016,peers,417,423
+11,attr,0.96372473,size,424,429
+12,attr,0.87774336,date posted,430,442
+13,attr,0.8732149,link,449,454
+14,class,0.513922,webpage,462,470
+15,class,0.60025054,search bar,530,541
+16,class,0.8751603,streaming,548,558
+17,attr,0.88556045,seeds,569,575
+18,attr,0.6676998,peers,579,585
+19,attr,0.8636837,file size,590,600
+20,attr,0.90088224,date posted,605,617
+21,attr,0.86814606,link,624,629
+22,attr,0.9548963,size,674,679
+23,attr,0.89733374,date,680,684
+24,attr,0.7311384,alphabet,685,693
+25,attr,0.7561145,order,697,703
+26,attr,0.66826695,column,722,729
+27,class,0.89022356,user,774,779
+28,class,0.5520419,results,795,803
