@@ -1,0 +1,64 @@
+Document: dental-clinic.txt
+
+Classes identified:
+--------------------
+- clinic
+- patients
+- services
+- form
+- first appointment
+- central appointment book
+- patient records
+- Appointments
+- procedures
+- procedure
+- patient
+- bills
+- reimbursement request
+- insurance
+- supplies inventory file
+- rooms
+
+Attributes identified:
+--------------------
+- name
+- address
+- telephone numbers
+- allergies
+- state of mind
+- contact information
+- supplies
+- contact addresses
+
+Detailed Entities:
+--------------------
+Type: class, Word: clinic, Score: 0.9977
+Type: class, Word: patients, Score: 0.9988
+Type: class, Word: services, Score: 0.6783
+Type: class, Word: services, Score: 0.9338
+Type: class, Word: patients, Score: 0.8327
+Type: class, Word: form, Score: 0.9955
+Type: attr, Word: name, Score: 0.9986
+Type: attr, Word: address, Score: 0.9996
+Type: attr, Word: telephone numbers, Score: 0.9996
+Type: attr, Word: allergies, Score: 0.9941
+Type: attr, Word: state of mind, Score: 0.9581
+Type: class, Word: first appointment, Score: 0.8878
+Type: class, Word: central appointment book, Score: 0.9869
+Type: class, Word: patient records, Score: 0.8626
+Type: attr, Word: contact information, Score: 0.9991
+Type: class, Word: Appointments, Score: 0.8836
+Type: class, Word: procedures, Score: 0.9221
+Type: class, Word: procedure, Score: 0.9991
+Type: class, Word: patient, Score: 0.9990
+Type: attr, Word: supplies, Score: 0.8799
+Type: class, Word: bills, Score: 0.7916
+Type: class, Word: patients, Score: 0.9966
+Type: attr, Word: contact addresses, Score: 0.7711
+Type: class, Word: patient, Score: 0.9996
+Type: class, Word: reimbursement request, Score: 0.9574
+Type: class, Word: insurance, Score: 0.9917
+Type: class, Word: clinic, Score: 0.9979
+Type: class, Word: supplies inventory file, Score: 0.9811
+Type: class, Word: procedures, Score: 0.9847
+Type: class, Word: rooms, Score: 0.9438

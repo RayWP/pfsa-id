@@ -1,0 +1,357 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.8460537195205688,
+      "start": 59,
+      "end": 64
+    },
+    {
+      "entity_group": "attr",
+      "word": "search term",
+      "score": 0.6854768991470337,
+      "start": 76,
+      "end": 88
+    },
+    {
+      "entity_group": "class",
+      "word": "User",
+      "score": 0.7433573007583618,
+      "start": 406,
+      "end": 411
+    },
+    {
+      "entity_group": "class",
+      "word": "torrent",
+      "score": 0.712593674659729,
+      "start": 421,
+      "end": 429
+    },
+    {
+      "entity_group": "class",
+      "word": "box",
+      "score": 0.6367902755737305,
+      "start": 434,
+      "end": 438
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.8663938641548157,
+      "start": 444,
+      "end": 451
+    },
+    {
+      "entity_group": "class",
+      "word": "torrent",
+      "score": 0.6374000310897827,
+      "start": 470,
+      "end": 478
+    },
+    {
+      "entity_group": "class",
+      "word": "search",
+      "score": 0.6542277336120605,
+      "start": 510,
+      "end": 517
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.8375205993652344,
+      "start": 533,
+      "end": 538
+    },
+    {
+      "entity_group": "attr",
+      "word": "search term",
+      "score": 0.8286616802215576,
+      "start": 549,
+      "end": 561
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.8390479683876038,
+      "start": 585,
+      "end": 592
+    },
+    {
+      "entity_group": "class",
+      "word": "torrent",
+      "score": 0.6160048246383667,
+      "start": 613,
+      "end": 621
+    },
+    {
+      "entity_group": "attr",
+      "word": "search term",
+      "score": 0.4167240262031555,
+      "start": 659,
+      "end": 671
+    },
+    {
+      "entity_group": "class",
+      "word": "query",
+      "score": 0.5736027956008911,
+      "start": 689,
+      "end": 695
+    },
+    {
+      "entity_group": "class",
+      "word": "torrent",
+      "score": 0.8276033997535706,
+      "start": 720,
+      "end": 728
+    },
+    {
+      "entity_group": "class",
+      "word": "program",
+      "score": 0.6065263152122498,
+      "start": 739,
+      "end": 747
+    },
+    {
+      "entity_group": "attr",
+      "word": "website",
+      "score": 0.9301303029060364,
+      "start": 792,
+      "end": 800
+    },
+    {
+      "entity_group": "attr",
+      "word": "seeds",
+      "score": 0.8894039392471313,
+      "start": 801,
+      "end": 807
+    },
+    {
+      "entity_group": "attr",
+      "word": "peers",
+      "score": 0.9091923832893372,
+      "start": 808,
+      "end": 814
+    },
+    {
+      "entity_group": "attr",
+      "word": "size",
+      "score": 0.9598071575164795,
+      "start": 815,
+      "end": 820
+    },
+    {
+      "entity_group": "attr",
+      "word": "date posted",
+      "score": 0.8916115760803223,
+      "start": 821,
+      "end": 833
+    },
+    {
+      "entity_group": "attr",
+      "word": "link",
+      "score": 0.9184349179267883,
+      "start": 840,
+      "end": 845
+    },
+    {
+      "entity_group": "class",
+      "word": "webpage",
+      "score": 0.46518343687057495,
+      "start": 853,
+      "end": 861
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.7550340890884399,
+      "start": 866,
+      "end": 871
+    },
+    {
+      "entity_group": "attr",
+      "word": "column",
+      "score": 0.762843668460846,
+      "start": 918,
+      "end": 925
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.49439677596092224,
+      "start": 938,
+      "end": 945
+    },
+    {
+      "entity_group": "class",
+      "word": "results",
+      "score": 0.6527767181396484,
+      "start": 955,
+      "end": 963
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.6418872475624084,
+      "start": 998,
+      "end": 1003
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.5474017262458801,
+      "start": 1040,
+      "end": 1047
+    },
+    {
+      "entity_group": "class",
+      "word": "search",
+      "score": 0.6178354024887085,
+      "start": 1088,
+      "end": 1095
+    },
+    {
+      "entity_group": "class",
+      "word": "search",
+      "score": 0.5923870205879211,
+      "start": 1155,
+      "end": 1162
+    },
+    {
+      "entity_group": "class",
+      "word": "streaming",
+      "score": 0.6197967529296875,
+      "start": 1173,
+      "end": 1183
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.8138803839683533,
+      "start": 1299,
+      "end": 1304
+    },
+    {
+      "entity_group": "class",
+      "word": "torrent",
+      "score": 0.8480480313301086,
+      "start": 1325,
+      "end": 1333
+    },
+    {
+      "entity_group": "attr",
+      "word": "no of",
+      "score": 0.7381028532981873,
+      "start": 1386,
+      "end": 1393
+    },
+    {
+      "entity_group": "attr",
+      "word": "seeds",
+      "score": 0.607900083065033,
+      "start": 1393,
+      "end": 1399
+    },
+    {
+      "entity_group": "attr",
+      "word": "peers",
+      "score": 0.783808171749115,
+      "start": 1403,
+      "end": 1409
+    },
+    {
+      "entity_group": "attr",
+      "word": "file size",
+      "score": 0.8955949544906616,
+      "start": 1414,
+      "end": 1424
+    },
+    {
+      "entity_group": "attr",
+      "word": "date posted",
+      "score": 0.904346227645874,
+      "start": 1429,
+      "end": 1441
+    },
+    {
+      "entity_group": "attr",
+      "word": "link",
+      "score": 0.8182304501533508,
+      "start": 1448,
+      "end": 1453
+    },
+    {
+      "entity_group": "class",
+      "word": "search",
+      "score": 0.5780763030052185,
+      "start": 1498,
+      "end": 1505
+    },
+    {
+      "entity_group": "attr",
+      "word": "size",
+      "score": 0.956333339214325,
+      "start": 1603,
+      "end": 1608
+    },
+    {
+      "entity_group": "attr",
+      "word": "date",
+      "score": 0.8838452696800232,
+      "start": 1609,
+      "end": 1613
+    },
+    {
+      "entity_group": "attr",
+      "word": "alphabet",
+      "score": 0.6576611995697021,
+      "start": 1614,
+      "end": 1622
+    },
+    {
+      "entity_group": "attr",
+      "word": "order",
+      "score": 0.6641194224357605,
+      "start": 1626,
+      "end": 1632
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.721680760383606,
+      "start": 1703,
+      "end": 1708
+    }
+  ],
+  "summary": {
+    "class": [
+      "user",
+      "User",
+      "torrent",
+      "box",
+      "system",
+      "search",
+      "query",
+      "program",
+      "webpage",
+      "results",
+      "streaming"
+    ],
+    "attr": [
+      "search term",
+      "website",
+      "seeds",
+      "peers",
+      "size",
+      "date posted",
+      "link",
+      "column",
+      "no of",
+      "file size",
+      "date",
+      "alphabet",
+      "order"
+    ]
+  },
+  "document_class": "System Features Torrent Search Description and Priority The user will give a search term that will search through a database of compatible torrent websites added by the development team  The results of this search will be displayed as web links in a tab on the program's main window  This is one of the software's main features and therefore has a high priority for development  Stimulus/Response Sequences User ticks the torrent tick box – the system will now query the torrent websites in its database when a search is started  The user enters the search term and starts the search – system sends queries to the torrent websites in its database based on the search term  Results for this query will then be sent to the torrent tab in the program, where they will display information such as website, seeds, peers, size, date posted, and a link for the webpage  The user sorts the search results by clicking once on a column header – the system sorts all results in descending/ascending order  The user clicks on the next page button – the system displays the next set of results for the search  Functional Requirements Torrent search will share the same search bar as the streaming search  REQ-2: The database of torrent sites can be updated via the internet  There will be a tick box to allow the user to choose to include torrent searching in the search  The query will retrieve the no  of seeds and peers, the file size, the date posted, and a link to the webpage  If no results are found on a search, it will display the message \"No results were found for this search \" Results will be arranged in size/date/alphabetical order by clicking on the column headers  There will be a page button for the user to navigate the results"
+}

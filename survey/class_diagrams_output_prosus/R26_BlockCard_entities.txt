@@ -1,0 +1,53 @@
+Document: R26_BlockCard.txt
+
+Classes identified:
+--------------------
+- card
+- cards
+- customers
+- account
+- Customer
+- Users
+- system
+- user
+- banking staff
+- cardholder
+
+Attributes identified:
+--------------------
+- card status
+- reason
+- reasons
+
+Detailed Entities:
+--------------------
+Type: class, Word: card, Score: 0.7936
+Type: class, Word: cards, Score: 0.4738
+Type: class, Word: customers, Score: 0.8324
+Type: class, Word: card, Score: 0.7952
+Type: class, Word: account, Score: 0.9004
+Type: class, Word: Customer, Score: 0.9138
+Type: class, Word: Users, Score: 0.5996
+Type: class, Word: cards, Score: 0.6002
+Type: class, Word: card, Score: 0.8546
+Type: class, Word: system, Score: 0.5446
+Type: attr, Word: card status, Score: 0.9210
+Type: class, Word: user, Score: 0.9057
+Type: class, Word: card, Score: 0.9213
+Type: class, Word: user, Score: 0.8660
+Type: class, Word: card, Score: 0.4847
+Type: attr, Word: card status, Score: 0.9035
+Type: class, Word: system, Score: 0.6395
+Type: attr, Word: reason, Score: 0.7699
+Type: attr, Word: reasons, Score: 0.5936
+Type: class, Word: user, Score: 0.8522
+Type: class, Word: user, Score: 0.8263
+Type: class, Word: system, Score: 0.4907
+Type: class, Word: user, Score: 0.8719
+Type: class, Word: system, Score: 0.6589
+Type: class, Word: user, Score: 0.9149
+Type: class, Word: card, Score: 0.9256
+Type: class, Word: card, Score: 0.8995
+Type: class, Word: system, Score: 0.7257
+Type: class, Word: banking staff, Score: 0.5888
+Type: class, Word: cardholder, Score: 0.9579

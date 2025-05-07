@@ -1,0 +1,49 @@
+,sentence,useful
+0,SchlockBuster video is a chain of video rental stores,0
+1, A unique storeID identifies each store,1
+2, Additional information about each store is the store address and phone number,1
+3, SchlockBuster has many employees,0
+4, An employee ID identifies each employee,1
+5," Additional information about an employee is the employee's name, address, and phone number",1
+6, Each employee has at least one and could have many phone numbers,1
+7," Each employee's phone number is classified by a phone number type, such as an office phone number, home phone number, beeper number, etc",1
+8, An employee can have many phone numbers but only one per phone number type,0
+9," Each employee is classified as one type of employee: ""manager,"" ""cashier,"" or ""stocker",1
+10," An employee type such as ""manager,"" ""cashier,"" or ""stocker"" can classify many employees",1
+11, A store can employ many employees,0
+12, An employee must be employed by one and only one store,0
+13," There are numerous video titles (Braveheart, Lion King, Waterworld, etc",0
+14,) available to SchlockBuster from many video distributors,0
+15, SchlockBuster maintains a listing of titles by a title ID,1
+16," Additional information for each title includes the title's name, run time(such as 120 minutes), and rating (G, PG, R)",1
+17, SchlockBuster maintains a listing of distributors by distributor ID,1
+18, Additional information about a distributor includes the distributor's name and phone number,1
+19, A video title is available from one and only one distributor,0
+20, A distributor can provide many video titles,0
+21, Each SchlockBuster store can carry many titles,0
+22, Many stores can carry a title,1
+23, All stores carry not all titles,0
+24," In other words, stores can carry many of the same titles, and some can carry titles that other stores do not",0
+25," SchlockBuster also maintains, by store, the amount (rental rate) that the store charges to customers to rent the title",0
+26, This implies that each store can set its rental price for each title,0
+27, A store can stock multiple copies (the physical cassette cartridge) of the same title,1
+28," In other words, store 101 can maintain five physical cartridges of ""Mission Impossible",0
+29,""" A cartridge ID number identifies each cartridge",1
+30, A cartridge utilization count is also maintained for each cartridge,1
+31, The utilization count represents the number of times a cartridge has been rented,0
+32, A cartridge status classifies each cartridge,1
+33," The domain of cartridge status is Available"", ""Rented,"" and ""Broken",1
+34,""" A status type can apply to many cartridges",1
+35, SchlockBuster maintains a record of each of its customers,0
+36, A unique customer ID identifies each customer,1
+37, Additional information maintained about each customer is the customer's name and the customer's phone number,1
+38, Each customer is associated with the store where they enrolled as members to receive their SchlockBuster Video card,1
+39, A customer can rent a video from any store,0
+40," This relationship allows Schlockbuster to credit a portion of each rental amount to the home store of the member, regardless of where the video is rented",0
+41, SchlockBuster maintains a record of each rental transaction,0
+42, A rental ID number identifies each rental transaction,1
+43, Each rental transaction is associated with one and only one customer,0
+44, Each rental transaction is associated with (rented from) one and only one store,1
+45, Each rental transaction also captures the rental date and total rental amount,1
+46, Each rental transaction is associated with one or more rental transaction detail lines,1
+47," Each rental transaction detail line captures the id of the cartridge being rented, the due date of the cartridge being rented, and the actual return date",1

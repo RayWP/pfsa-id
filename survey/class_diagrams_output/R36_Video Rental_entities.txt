@@ -1,0 +1,159 @@
+Document: R36_Video Rental.txt
+
+Classes identified:
+--------------------
+- store
+- employee
+- manager
+- cashier
+- stock
+- stocker
+- employees
+- distributors
+- distributor
+- stores
+- cartridge
+- cartridges
+- customer
+- rental transaction
+- rental
+- transaction
+- rental transaction detail lines
+
+Attributes identified:
+--------------------
+- storeID
+- store
+- address
+- phone number
+- employee ID
+- employee
+- name
+- phone numbers
+- phone number type
+- office phone number
+- home phone number
+- beeper number
+- type
+- employee type
+- titles
+- title ID
+- title
+- run time
+- rating
+- distributor ID
+- distributor
+- cartridge ID number
+- cartridge
+- utilization count
+- status
+- cartridge status
+- Available
+- Rented
+- Broken
+- status type
+- customer ID
+- customer
+- rental ID number
+- rental date
+- total rental amount
+- transaction detail
+- id
+- rented
+- due date
+- actual return date
+
+Detailed Entities:
+--------------------
+Type: attr, Word: storeID, Score: 0.9978
+Type: class, Word: store, Score: 0.9945
+Type: class, Word: store, Score: 0.9927
+Type: attr, Word: store, Score: 0.9988
+Type: attr, Word: address, Score: 0.9520
+Type: attr, Word: phone number, Score: 0.9996
+Type: attr, Word: employee ID, Score: 0.9946
+Type: class, Word: employee, Score: 0.9968
+Type: class, Word: employee, Score: 0.9992
+Type: attr, Word: employee, Score: 0.9972
+Type: attr, Word: name, Score: 0.9847
+Type: attr, Word: address, Score: 0.9995
+Type: attr, Word: phone number, Score: 0.9993
+Type: class, Word: employee, Score: 0.9988
+Type: attr, Word: phone numbers, Score: 0.9810
+Type: class, Word: employee, Score: 0.9954
+Type: attr, Word: phone number, Score: 0.9972
+Type: attr, Word: phone number type, Score: 0.9835
+Type: attr, Word: office phone number, Score: 0.9735
+Type: attr, Word: home phone number, Score: 0.9980
+Type: attr, Word: beeper number, Score: 0.8945
+Type: class, Word: employee, Score: 0.9981
+Type: attr, Word: type, Score: 0.9054
+Type: class, Word: employee, Score: 0.9754
+Type: class, Word: manager, Score: 0.7652
+Type: class, Word: cashier, Score: 0.9297
+Type: class, Word: stock, Score: 0.3866
+Type: attr, Word: employee type, Score: 0.7553
+Type: class, Word: manager, Score: 0.7436
+Type: class, Word: cashier, Score: 0.9341
+Type: class, Word: stocker, Score: 0.8842
+Type: class, Word: employees, Score: 0.9994
+Type: attr, Word: titles, Score: 0.9968
+Type: attr, Word: title ID, Score: 0.9926
+Type: attr, Word: title, Score: 0.7917
+Type: attr, Word: title, Score: 0.9992
+Type: attr, Word: name, Score: 0.9850
+Type: attr, Word: run time, Score: 0.9847
+Type: attr, Word: rating, Score: 0.9995
+Type: class, Word: distributors, Score: 0.8734
+Type: attr, Word: distributor ID, Score: 0.9986
+Type: class, Word: distributor, Score: 0.9965
+Type: attr, Word: distributor, Score: 0.9619
+Type: attr, Word: name, Score: 0.9756
+Type: attr, Word: phone number, Score: 0.9995
+Type: class, Word: stores, Score: 0.9984
+Type: attr, Word: title, Score: 0.9853
+Type: class, Word: store, Score: 0.9867
+Type: attr, Word: title, Score: 0.9895
+Type: attr, Word: cartridge ID number, Score: 0.9995
+Type: class, Word: cartridge, Score: 0.9764
+Type: attr, Word: cartridge, Score: 0.9267
+Type: attr, Word: utilization count, Score: 0.8112
+Type: class, Word: cartridge, Score: 0.9947
+Type: attr, Word: cartridge, Score: 0.8337
+Type: attr, Word: status, Score: 0.5359
+Type: class, Word: cartridge, Score: 0.9894
+Type: attr, Word: cartridge status, Score: 0.8471
+Type: attr, Word: Available, Score: 0.8874
+Type: attr, Word: Rented, Score: 0.9704
+Type: attr, Word: Broken, Score: 0.6882
+Type: attr, Word: status type, Score: 0.9970
+Type: class, Word: cartridges, Score: 0.9987
+Type: attr, Word: customer ID, Score: 0.9964
+Type: class, Word: customer, Score: 0.9982
+Type: class, Word: customer, Score: 0.9996
+Type: attr, Word: customer, Score: 0.9962
+Type: attr, Word: name, Score: 0.8141
+Type: attr, Word: customer, Score: 0.9782
+Type: attr, Word: phone number, Score: 0.9978
+Type: class, Word: customer, Score: 0.9997
+Type: class, Word: store, Score: 0.9818
+Type: attr, Word: rental ID number, Score: 0.9995
+Type: class, Word: rental transaction, Score: 0.8701
+Type: class, Word: rental, Score: 0.9036
+Type: class, Word: transaction, Score: 0.6962
+Type: class, Word: store, Score: 0.9996
+Type: class, Word: rental, Score: 0.8388
+Type: class, Word: transaction, Score: 0.4906
+Type: attr, Word: rental date, Score: 0.9909
+Type: attr, Word: total rental amount, Score: 0.9990
+Type: class, Word: rental, Score: 0.9288
+Type: class, Word: transaction, Score: 0.7088
+Type: class, Word: rental transaction detail lines, Score: 0.7518
+Type: class, Word: rental, Score: 0.8477
+Type: attr, Word: transaction detail, Score: 0.5956
+Type: attr, Word: id, Score: 0.9985
+Type: class, Word: cartridge, Score: 0.7365
+Type: attr, Word: rented, Score: 0.5368
+Type: attr, Word: due date, Score: 0.9991
+Type: class, Word: cartridge, Score: 0.9448
+Type: attr, Word: actual return date, Score: 0.9989

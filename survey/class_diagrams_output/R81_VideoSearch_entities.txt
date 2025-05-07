@@ -1,0 +1,71 @@
+Document: R81_VideoSearch.txt
+
+Classes identified:
+--------------------
+- user
+- search
+- torrent websites
+- Results
+- query
+- torrent
+- tab
+- program
+- Torrent search
+- search bar
+- streaming search
+- results
+
+Attributes identified:
+--------------------
+- Description
+- Priority
+- term
+- compatible
+- website
+- seeds
+- peers
+- size
+- date posted
+- link
+- file
+- link to
+- webpage
+- date
+- alphabetical order
+
+Detailed Entities:
+--------------------
+Type: attr, Word: Description, Score: 0.9453
+Type: attr, Word: Priority, Score: 0.9630
+Type: class, Word: user, Score: 0.9992
+Type: class, Word: search, Score: 0.8692
+Type: attr, Word: term, Score: 0.9820
+Type: attr, Word: compatible, Score: 0.9246
+Type: class, Word: torrent websites, Score: 0.6818
+Type: class, Word: Results, Score: 0.7990
+Type: class, Word: query, Score: 0.9995
+Type: class, Word: torrent, Score: 0.9992
+Type: class, Word: tab, Score: 0.6590
+Type: class, Word: program, Score: 0.9992
+Type: attr, Word: website, Score: 0.9998
+Type: attr, Word: seeds, Score: 0.9989
+Type: attr, Word: peers, Score: 0.9960
+Type: attr, Word: size, Score: 0.9996
+Type: attr, Word: date posted, Score: 0.9743
+Type: attr, Word: link, Score: 0.9975
+Type: class, Word: Torrent search, Score: 0.9957
+Type: class, Word: search bar, Score: 0.9827
+Type: class, Word: streaming search, Score: 0.6898
+Type: attr, Word: seeds, Score: 0.9938
+Type: attr, Word: peers, Score: 0.7591
+Type: attr, Word: file, Score: 0.9966
+Type: attr, Word: size, Score: 0.6992
+Type: attr, Word: date posted, Score: 0.9718
+Type: attr, Word: link to, Score: 0.7583
+Type: attr, Word: webpage, Score: 0.5216
+Type: class, Word: Results, Score: 0.9935
+Type: attr, Word: size, Score: 0.9998
+Type: attr, Word: date, Score: 0.9941
+Type: attr, Word: alphabetical order, Score: 0.8904
+Type: class, Word: user, Score: 0.9997
+Type: class, Word: results, Score: 0.9975

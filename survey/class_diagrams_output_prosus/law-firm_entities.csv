@@ -1,0 +1,35 @@
+,entity_group,score,word,start,end
+0,attr,0.6852792,address,58,66
+1,class,0.9298946,client,78,85
+2,attr,0.90765035,house name,151,162
+3,attr,0.6587077,number,165,172
+4,attr,0.9617506,city,207,212
+5,attr,0.9249615,town,215,220
+6,attr,0.922576,city,304,309
+7,attr,0.9330715,house name,329,340
+8,attr,0.73858404,zip codes,374,384
+9,attr,0.92142135,postal codes,387,400
+10,attr,0.55364376,contact,571,579
+11,class,0.905619,client,637,644
+12,class,0.43947032,representative,647,662
+13,class,0.70690346,organization,668,681
+14,attr,0.9361501,full name,709,719
+15,attr,0.55587494,honorific,745,755
+16,attr,0.9851473,email address,803,817
+17,attr,0.9800008,phone number,818,831
+18,attr,0.980755,postal address,836,851
+19,attr,0.88341075,primary,876,884
+20,attr,0.81949246,mailing address,884,900
+21,attr,0.7685461,billing address,933,949
+22,class,0.73762417,case,1033,1038
+23,class,0.64048076,organizations,1091,1105
+24,class,0.5296667,case,1241,1246
+25,class,0.5221265,party,1269,1275
+26,class,0.46841547,defendant,1291,1301
+27,class,0.55214137,case,1325,1330
+28,class,0.53793436,Plaintiff,1406,1416
+29,class,0.43316677,witness,1417,1425
+30,class,0.51085424,defendant,1426,1436
+31,class,0.5039283,attorney,1475,1484
+32,class,0.66241646,case,1562,1567
+33,class,0.71984184,event,1684,1690

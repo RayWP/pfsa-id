@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.7671670913696289,
+      "start": 30,
+      "end": 39
+    },
+    {
+      "entity_group": "class",
+      "word": "form",
+      "score": 0.5129148364067078,
+      "start": 127,
+      "end": 132
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9359733462333679,
+      "start": 146,
+      "end": 151
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9768760800361633,
+      "start": 152,
+      "end": 160
+    },
+    {
+      "entity_group": "attr",
+      "word": "telephone numbers",
+      "score": 0.9799717664718628,
+      "start": 161,
+      "end": 179
+    },
+    {
+      "entity_group": "attr",
+      "word": "allergies",
+      "score": 0.951353907585144,
+      "start": 180,
+      "end": 190
+    },
+    {
+      "entity_group": "attr",
+      "word": "state of mind",
+      "score": 0.8734545707702637,
+      "start": 195,
+      "end": 209
+    },
+    {
+      "entity_group": "attr",
+      "word": "Schedules",
+      "score": 0.4978381097316742,
+      "start": 254,
+      "end": 264
+    },
+    {
+      "entity_group": "class",
+      "word": "appointment book",
+      "score": 0.5615592002868652,
+      "start": 291,
+      "end": 308
+    },
+    {
+      "entity_group": "class",
+      "word": "patient records",
+      "score": 0.6936794519424438,
+      "start": 309,
+      "end": 325
+    },
+    {
+      "entity_group": "attr",
+      "word": "contact information",
+      "score": 0.9706357717514038,
+      "start": 336,
+      "end": 356
+    },
+    {
+      "entity_group": "class",
+      "word": "Appointments",
+      "score": 0.5898870825767517,
+      "start": 382,
+      "end": 395
+    },
+    {
+      "entity_group": "class",
+      "word": "procedure",
+      "score": 0.6085856556892395,
+      "start": 540,
+      "end": 550
+    },
+    {
+      "entity_group": "class",
+      "word": "patient",
+      "score": 0.7590494155883789,
+      "start": 554,
+      "end": 562
+    },
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.7843287587165833,
+      "start": 742,
+      "end": 751
+    },
+    {
+      "entity_group": "attr",
+      "word": "contact addresses",
+      "score": 0.7516351938247681,
+      "start": 752,
+      "end": 770
+    },
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.5082437992095947,
+      "start": 811,
+      "end": 820
+    },
+    {
+      "entity_group": "class",
+      "word": "patient",
+      "score": 0.8623209595680237,
+      "start": 895,
+      "end": 903
+    },
+    {
+      "entity_group": "class",
+      "word": "request",
+      "score": 0.5459079742431641,
+      "start": 934,
+      "end": 942
+    },
+    {
+      "entity_group": "class",
+      "word": "insurance",
+      "score": 0.6242852210998535,
+      "start": 948,
+      "end": 958
+    },
+    {
+      "entity_group": "class",
+      "word": "reimbursement request",
+      "score": 0.7504144906997681,
+      "start": 1053,
+      "end": 1075
+    },
+    {
+      "entity_group": "class",
+      "word": "clinic",
+      "score": 0.742700457572937,
+      "start": 1080,
+      "end": 1087
+    },
+    {
+      "entity_group": "class",
+      "word": "supplies inventory",
+      "score": 0.46522730588912964,
+      "start": 1099,
+      "end": 1118
+    },
+    {
+      "entity_group": "class",
+      "word": "procedures",
+      "score": 0.4425511360168457,
+      "start": 1202,
+      "end": 1213
+    },
+    {
+      "entity_group": "class",
+      "word": "rooms",
+      "score": 0.4316980838775635,
+      "start": 1213,
+      "end": 1219
+    },
+    {
+      "entity_group": "class",
+      "word": "room",
+      "score": 0.7338492274284363,
+      "start": 1279,
+      "end": 1284
+    }
+  ],
+  "summary": {
+    "class": [
+      "patients",
+      "form",
+      "appointment book",
+      "patient records",
+      "Appointments",
+      "procedure",
+      "patient",
+      "request",
+      "insurance",
+      "reimbursement request",
+      "clinic",
+      "supplies inventory",
+      "procedures",
+      "rooms",
+      "room"
+    ],
+    "attr": [
+      "name",
+      "address",
+      "telephone numbers",
+      "allergies",
+      "state of mind",
+      "Schedules",
+      "contact information",
+      "contact addresses"
+    ]
+  },
+  "document_class": "The clinic basically schedules patients, provides services for them, and bills them for those services  New patients fill out a form listing their name, address, telephone numbers, allergies, and state of mind prior to scheduling their first appointment  Schedules are entered into a central appointment book; patient records (including contact information) are kept in paper files  Appointments are for one of three procedures: dental hygiene, cavities and fillings, and oral surgery (including root canals and tooth extractions)  For each procedure the patient needs to be prepared and supplies need to be collected (e g , probes, drill bits, cements, resins, etc )  Billing is always done by the month, and bills are always sent by mail to patients' contact addresses  Checks are received by mail  HMO-funded patients are asked to make a copayment at the time that they leave the office  Each patient also generates a reimbursement request to an insurance company  Insurance companies and HMOs send their checks by mail three months after receiving a reimbursement request  The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms  Supplies and tools are stored in a standard layout in each room"
+}

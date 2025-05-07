@@ -1,0 +1,129 @@
+Document: rental-truck-company.txt
+
+Classes identified:
+--------------------
+- rental offices
+- vehicles
+- rental agreements
+- rental office
+- customers
+- vehicle
+- customer
+- office
+- home office
+- truck
+- agreements
+- rental agreement
+- company
+
+Attributes identified:
+--------------------
+- vehicle assignments
+- office name
+- office number
+- address
+- vehicle id
+- state of registration
+- license plate
+- registration number
+- vehicle type code
+- last maintenance date
+- expiration date
+- registration
+- odometer reading
+- gas tank capacity
+- mileage
+- company number
+- name
+- home phone
+- driver
+- s license
+- state
+- number
+- originating rental office number
+- rental agreement number
+- rental date
+- duration
+- rental
+- originating rental office
+- drop-off rental office
+- amount
+- deposit
+- quoted
+- daily rental rate
+- rate per
+
+Detailed Entities:
+--------------------
+Type: class, Word: rental offices, Score: 0.7388
+Type: class, Word: vehicles, Score: 0.6777
+Type: class, Word: rental agreements, Score: 0.5202
+Type: attr, Word: vehicle assignments, Score: 0.5674
+Type: class, Word: rental office, Score: 0.8964
+Type: class, Word: vehicles, Score: 0.6810
+Type: class, Word: customers, Score: 0.9067
+Type: class, Word: vehicle, Score: 0.6285
+Type: class, Word: customer, Score: 0.9444
+Type: class, Word: vehicles, Score: 0.5860
+Type: class, Word: rental office, Score: 0.9415
+Type: class, Word: rental office, Score: 0.8271
+Type: attr, Word: office name, Score: 0.7966
+Type: class, Word: office, Score: 0.9252
+Type: attr, Word: office number, Score: 0.9576
+Type: class, Word: office, Score: 0.9182
+Type: attr, Word: address, Score: 0.9628
+Type: class, Word: office, Score: 0.8339
+Type: class, Word: vehicles, Score: 0.4327
+Type: class, Word: vehicle, Score: 0.7881
+Type: class, Word: home office, Score: 0.5963
+Type: class, Word: vehicle, Score: 0.8896
+Type: attr, Word: vehicle id, Score: 0.9856
+Type: attr, Word: state of registration, Score: 0.9381
+Type: attr, Word: license plate, Score: 0.9512
+Type: attr, Word: registration number, Score: 0.7474
+Type: attr, Word: vehicle type code, Score: 0.9802
+Type: class, Word: vehicles, Score: 0.7185
+Type: attr, Word: last maintenance date, Score: 0.6844
+Type: attr, Word: expiration date, Score: 0.9544
+Type: attr, Word: registration, Score: 0.8334
+Type: attr, Word: odometer reading, Score: 0.9764
+Type: attr, Word: gas tank capacity, Score: 0.9098
+Type: attr, Word: mileage, Score: 0.9035
+Type: class, Word: truck, Score: 0.8463
+Type: class, Word: agreements, Score: 0.5194
+Type: class, Word: customers, Score: 0.7373
+Type: class, Word: rental agreement, Score: 0.8249
+Type: class, Word: company, Score: 0.8166
+Type: attr, Word: company number, Score: 0.9007
+Type: class, Word: company, Score: 0.5073
+Type: attr, Word: name, Score: 0.7187
+Type: attr, Word: address, Score: 0.9649
+Type: class, Word: customer, Score: 0.9322
+Type: class, Word: customer, Score: 0.9565
+Type: attr, Word: name, Score: 0.7684
+Type: attr, Word: home phone, Score: 0.9252
+Type: attr, Word: address, Score: 0.9620
+Type: attr, Word: driver, Score: 0.9612
+Type: attr, Word: s license, Score: 0.9389
+Type: attr, Word: state, Score: 0.9334
+Type: attr, Word: number, Score: 0.5136
+Type: attr, Word: expiration date, Score: 0.9713
+Type: class, Word: company, Score: 0.6933
+Type: class, Word: rental agreement, Score: 0.8150
+Type: class, Word: rental agreement, Score: 0.8180
+Type: class, Word: vehicle, Score: 0.9265
+Type: class, Word: customers, Score: 0.8762
+Type: class, Word: vehicles, Score: 0.8136
+Type: class, Word: rental agreement, Score: 0.7570
+Type: attr, Word: originating rental office number, Score: 0.7744
+Type: attr, Word: rental agreement number, Score: 0.9287
+Type: attr, Word: rental date, Score: 0.7698
+Type: attr, Word: duration, Score: 0.8930
+Type: attr, Word: rental, Score: 0.3876
+Type: attr, Word: originating rental office, Score: 0.8312
+Type: attr, Word: drop-off rental office, Score: 0.6465
+Type: attr, Word: amount, Score: 0.6894
+Type: attr, Word: deposit, Score: 0.9039
+Type: attr, Word: quoted, Score: 0.6939
+Type: attr, Word: daily rental rate, Score: 0.7965
+Type: attr, Word: rate per, Score: 0.5775

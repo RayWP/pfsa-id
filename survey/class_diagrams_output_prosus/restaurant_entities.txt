@@ -1,0 +1,105 @@
+Document: restaurant.txt
+
+Classes identified:
+--------------------
+- reservation
+- tables
+- table
+- reservations
+- table reservations
+- restaurant managers
+- managers
+- guests
+- manager
+- person
+- reservation party
+- waiter
+- tree
+- menu
+- menu item
+- food
+
+Attributes identified:
+--------------------
+- time
+- date
+- number of people
+- name
+- phone number
+- reservation number
+- reservation
+- seating preference
+- smoking preference
+- group name
+- method of payment
+- table number
+- number
+- date of birth
+- drivers license number
+- menu item number
+- item description
+- item prep time
+- beverage
+- item
+- food
+- food item number
+
+Detailed Entities:
+--------------------
+Type: class, Word: reservation, Score: 0.7701
+Type: attr, Word: time, Score: 0.9061
+Type: attr, Word: date, Score: 0.9203
+Type: attr, Word: number of people, Score: 0.8463
+Type: class, Word: reservation, Score: 0.8514
+Type: attr, Word: name, Score: 0.6850
+Type: attr, Word: phone number, Score: 0.9588
+Type: class, Word: reservation, Score: 0.7439
+Type: class, Word: reservation, Score: 0.8939
+Type: attr, Word: reservation number, Score: 0.9575
+Type: attr, Word: reservation, Score: 0.4939
+Type: class, Word: reservation, Score: 0.7342
+Type: attr, Word: seating preference, Score: 0.9567
+Type: attr, Word: smoking preference, Score: 0.7694
+Type: attr, Word: group name, Score: 0.9700
+Type: attr, Word: method of payment, Score: 0.8878
+Type: class, Word: tables, Score: 0.5344
+Type: class, Word: table, Score: 0.7672
+Type: attr, Word: table number, Score: 0.9515
+Type: class, Word: tables, Score: 0.4875
+Type: class, Word: table, Score: 0.7381
+Type: class, Word: reservation, Score: 0.8637
+Type: attr, Word: number, Score: 0.7761
+Type: class, Word: reservation, Score: 0.9159
+Type: class, Word: table, Score: 0.9250
+Type: class, Word: reservations, Score: 0.6643
+Type: class, Word: table reservations, Score: 0.4577
+Type: class, Word: restaurant managers, Score: 0.6585
+Type: class, Word: managers, Score: 0.5153
+Type: class, Word: guests, Score: 0.6296
+Type: class, Word: manager, Score: 0.5265
+Type: class, Word: person, Score: 0.5306
+Type: attr, Word: name, Score: 0.4758
+Type: attr, Word: date of birth, Score: 0.8565
+Type: attr, Word: drivers license number, Score: 0.9536
+Type: class, Word: reservation party, Score: 0.5484
+Type: class, Word: reservation, Score: 0.9069
+Type: class, Word: waiter, Score: 0.9030
+Type: class, Word: waiter, Score: 0.9210
+Type: class, Word: reservations, Score: 0.8634
+Type: attr, Word: menu item number, Score: 0.8206
+Type: attr, Word: item description, Score: 0.8490
+Type: attr, Word: item prep time, Score: 0.7284
+Type: class, Word: tree, Score: 0.3573
+Type: attr, Word: beverage, Score: 0.3530
+Type: class, Word: waiter, Score: 0.6933
+Type: attr, Word: reservation number, Score: 0.9675
+Type: attr, Word: time, Score: 0.6005
+Type: class, Word: menu, Score: 0.5488
+Type: attr, Word: item, Score: 0.4044
+Type: class, Word: reservation, Score: 0.9083
+Type: class, Word: menu, Score: 0.4593
+Type: class, Word: menu item, Score: 0.4564
+Type: class, Word: reservations, Score: 0.7280
+Type: attr, Word: food, Score: 0.5284
+Type: class, Word: food, Score: 0.5143
+Type: attr, Word: food item number, Score: 0.7648

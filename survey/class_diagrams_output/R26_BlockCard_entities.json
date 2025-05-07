@@ -1,0 +1,97 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "account",
+      "score": 0.9974870681762695,
+      "start": 149,
+      "end": 157
+    },
+    {
+      "entity_group": "class",
+      "word": "kiosk",
+      "score": 0.9991878867149353,
+      "start": 247,
+      "end": 253
+    },
+    {
+      "entity_group": "attr",
+      "word": "Cards",
+      "score": 0.5962057113647461,
+      "start": 387,
+      "end": 393
+    },
+    {
+      "entity_group": "class",
+      "word": "Customer",
+      "score": 0.9981557726860046,
+      "start": 400,
+      "end": 409
+    },
+    {
+      "entity_group": "class",
+      "word": "Users",
+      "score": 0.9973074197769165,
+      "start": 409,
+      "end": 415
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.9965831637382507,
+      "start": 507,
+      "end": 514
+    },
+    {
+      "entity_group": "attr",
+      "word": "card status",
+      "score": 0.9923291206359863,
+      "start": 531,
+      "end": 543
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.9926022887229919,
+      "start": 552,
+      "end": 557
+    },
+    {
+      "entity_group": "class",
+      "word": "card",
+      "score": 0.9994958639144897,
+      "start": 576,
+      "end": 581
+    },
+    {
+      "entity_group": "class",
+      "word": "user",
+      "score": 0.9897260069847107,
+      "start": 586,
+      "end": 591
+    },
+    {
+      "entity_group": "attr",
+      "word": "card status",
+      "score": 0.8755936622619629,
+      "start": 637,
+      "end": 649
+    }
+  ],
+  "summary": {
+    "class": [
+      "account",
+      "kiosk",
+      "Customer",
+      "Users",
+      "system",
+      "user",
+      "card"
+    ],
+    "attr": [
+      "Cards",
+      "card status"
+    ]
+  },
+  "document_class": " There will be two separate applications for the mobile platforms, which are Android and iOS  They should have the same function and features for the account creation process  The project will also contain the back-end communication system for the kiosk and branches  Requirements Menu Placement The \"Block Card\" process should be under the \"Cards\" menu  It should be added after the \"My Cards\" page  Customer Users can have four types of cards: debit, credit, virtual and supplementary  Software System The system should check the card status when the user blocks the desired card  The user can initiate the card-blocking process if the card status is available  The blocking reasons can be stolen, missing, and others"
+}

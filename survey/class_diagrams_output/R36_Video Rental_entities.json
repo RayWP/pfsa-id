@@ -1,0 +1,712 @@
+{
+  "entities": [
+    {
+      "entity_group": "attr",
+      "word": "storeID",
+      "score": 0.9977631568908691,
+      "start": 9,
+      "end": 17
+    },
+    {
+      "entity_group": "class",
+      "word": "store",
+      "score": 0.9945125579833984,
+      "start": 33,
+      "end": 39
+    },
+    {
+      "entity_group": "class",
+      "word": "store",
+      "score": 0.9926820397377014,
+      "start": 74,
+      "end": 80
+    },
+    {
+      "entity_group": "attr",
+      "word": "store",
+      "score": 0.9987555742263794,
+      "start": 87,
+      "end": 93
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9519823789596558,
+      "start": 93,
+      "end": 101
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number",
+      "score": 0.9996357560157776,
+      "start": 105,
+      "end": 118
+    },
+    {
+      "entity_group": "attr",
+      "word": "employee ID",
+      "score": 0.994599461555481,
+      "start": 122,
+      "end": 134
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.9967535138130188,
+      "start": 150,
+      "end": 159
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.999188244342804,
+      "start": 192,
+      "end": 201
+    },
+    {
+      "entity_group": "attr",
+      "word": "employee",
+      "score": 0.9972475171089172,
+      "start": 208,
+      "end": 217
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9847249388694763,
+      "start": 219,
+      "end": 224
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9995085000991821,
+      "start": 225,
+      "end": 233
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number",
+      "score": 0.9992653131484985,
+      "start": 238,
+      "end": 251
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.9987855553627014,
+      "start": 257,
+      "end": 266
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone numbers",
+      "score": 0.9810327291488647,
+      "start": 303,
+      "end": 317
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.9953675270080566,
+      "start": 323,
+      "end": 332
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number",
+      "score": 0.99718177318573,
+      "start": 334,
+      "end": 347
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number type",
+      "score": 0.9834871292114258,
+      "start": 366,
+      "end": 384
+    },
+    {
+      "entity_group": "attr",
+      "word": "office phone number",
+      "score": 0.9734757542610168,
+      "start": 396,
+      "end": 416
+    },
+    {
+      "entity_group": "attr",
+      "word": "home phone number",
+      "score": 0.9980054497718811,
+      "start": 417,
+      "end": 435
+    },
+    {
+      "entity_group": "attr",
+      "word": "beeper number",
+      "score": 0.8944874405860901,
+      "start": 436,
+      "end": 450
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.9981069564819336,
+      "start": 461,
+      "end": 470
+    },
+    {
+      "entity_group": "attr",
+      "word": "type",
+      "score": 0.9054317474365234,
+      "start": 491,
+      "end": 496
+    },
+    {
+      "entity_group": "class",
+      "word": "employee",
+      "score": 0.9754006862640381,
+      "start": 499,
+      "end": 508
+    },
+    {
+      "entity_group": "class",
+      "word": "manager",
+      "score": 0.7652232646942139,
+      "start": 511,
+      "end": 518
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.929680347442627,
+      "start": 522,
+      "end": 529
+    },
+    {
+      "entity_group": "class",
+      "word": "stock",
+      "score": 0.3866409659385681,
+      "start": 536,
+      "end": 541
+    },
+    {
+      "entity_group": "attr",
+      "word": "employee type",
+      "score": 0.7553184032440186,
+      "start": 547,
+      "end": 561
+    },
+    {
+      "entity_group": "class",
+      "word": "manager",
+      "score": 0.743569552898407,
+      "start": 571,
+      "end": 578
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.9340770244598389,
+      "start": 582,
+      "end": 589
+    },
+    {
+      "entity_group": "class",
+      "word": "stocker",
+      "score": 0.8841537833213806,
+      "start": 596,
+      "end": 603
+    },
+    {
+      "entity_group": "class",
+      "word": "employees",
+      "score": 0.9994474053382874,
+      "start": 622,
+      "end": 632
+    },
+    {
+      "entity_group": "attr",
+      "word": "titles",
+      "score": 0.9967923760414124,
+      "start": 670,
+      "end": 677
+    },
+    {
+      "entity_group": "attr",
+      "word": "title ID",
+      "score": 0.9926458597183228,
+      "start": 682,
+      "end": 691
+    },
+    {
+      "entity_group": "attr",
+      "word": "title",
+      "score": 0.7916961312294006,
+      "start": 724,
+      "end": 730
+    },
+    {
+      "entity_group": "attr",
+      "word": "title",
+      "score": 0.9992305040359497,
+      "start": 743,
+      "end": 749
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9850467443466187,
+      "start": 751,
+      "end": 756
+    },
+    {
+      "entity_group": "attr",
+      "word": "run time",
+      "score": 0.9846752285957336,
+      "start": 757,
+      "end": 766
+    },
+    {
+      "entity_group": "attr",
+      "word": "rating",
+      "score": 0.999464213848114,
+      "start": 792,
+      "end": 799
+    },
+    {
+      "entity_group": "class",
+      "word": "distributors",
+      "score": 0.8734353184700012,
+      "start": 848,
+      "end": 861
+    },
+    {
+      "entity_group": "attr",
+      "word": "distributor ID",
+      "score": 0.9986304044723511,
+      "start": 864,
+      "end": 879
+    },
+    {
+      "entity_group": "class",
+      "word": "distributor",
+      "score": 0.9965062141418457,
+      "start": 911,
+      "end": 923
+    },
+    {
+      "entity_group": "attr",
+      "word": "distributor",
+      "score": 0.9618772268295288,
+      "start": 936,
+      "end": 948
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9756313562393188,
+      "start": 950,
+      "end": 955
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number",
+      "score": 0.9995051026344299,
+      "start": 959,
+      "end": 972
+    },
+    {
+      "entity_group": "class",
+      "word": "stores",
+      "score": 0.9984301924705505,
+      "start": 978,
+      "end": 985
+    },
+    {
+      "entity_group": "attr",
+      "word": "title",
+      "score": 0.9852513074874878,
+      "start": 997,
+      "end": 1003
+    },
+    {
+      "entity_group": "class",
+      "word": "store",
+      "score": 0.9867305755615234,
+      "start": 1006,
+      "end": 1012
+    },
+    {
+      "entity_group": "attr",
+      "word": "title",
+      "score": 0.9895291924476624,
+      "start": 1084,
+      "end": 1090
+    },
+    {
+      "entity_group": "attr",
+      "word": "cartridge ID number",
+      "score": 0.9995374083518982,
+      "start": 1094,
+      "end": 1114
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridge",
+      "score": 0.9763750433921814,
+      "start": 1130,
+      "end": 1140
+    },
+    {
+      "entity_group": "attr",
+      "word": "cartridge",
+      "score": 0.9266741871833801,
+      "start": 1143,
+      "end": 1153
+    },
+    {
+      "entity_group": "attr",
+      "word": "utilization count",
+      "score": 0.8112267255783081,
+      "start": 1153,
+      "end": 1171
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridge",
+      "score": 0.9946594834327698,
+      "start": 1199,
+      "end": 1209
+    },
+    {
+      "entity_group": "attr",
+      "word": "cartridge",
+      "score": 0.8336815237998962,
+      "start": 1212,
+      "end": 1222
+    },
+    {
+      "entity_group": "attr",
+      "word": "status",
+      "score": 0.535879373550415,
+      "start": 1222,
+      "end": 1229
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridge",
+      "score": 0.9893617033958435,
+      "start": 1245,
+      "end": 1255
+    },
+    {
+      "entity_group": "attr",
+      "word": "cartridge status",
+      "score": 0.8470664024353027,
+      "start": 1270,
+      "end": 1287
+    },
+    {
+      "entity_group": "attr",
+      "word": "Available",
+      "score": 0.8874187469482422,
+      "start": 1290,
+      "end": 1300
+    },
+    {
+      "entity_group": "attr",
+      "word": "Rented",
+      "score": 0.9703938961029053,
+      "start": 1304,
+      "end": 1310
+    },
+    {
+      "entity_group": "attr",
+      "word": "Broken",
+      "score": 0.68815016746521,
+      "start": 1318,
+      "end": 1324
+    },
+    {
+      "entity_group": "attr",
+      "word": "status type",
+      "score": 0.9970134496688843,
+      "start": 1328,
+      "end": 1340
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridges",
+      "score": 0.9986623525619507,
+      "start": 1358,
+      "end": 1369
+    },
+    {
+      "entity_group": "attr",
+      "word": "customer ID",
+      "score": 0.9964467883110046,
+      "start": 1379,
+      "end": 1391
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9982205033302307,
+      "start": 1407,
+      "end": 1416
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9996347427368164,
+      "start": 1462,
+      "end": 1471
+    },
+    {
+      "entity_group": "attr",
+      "word": "customer",
+      "score": 0.9962363839149475,
+      "start": 1478,
+      "end": 1487
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.8140730857849121,
+      "start": 1489,
+      "end": 1494
+    },
+    {
+      "entity_group": "attr",
+      "word": "customer",
+      "score": 0.9781585931777954,
+      "start": 1502,
+      "end": 1511
+    },
+    {
+      "entity_group": "attr",
+      "word": "phone number",
+      "score": 0.9978477954864502,
+      "start": 1513,
+      "end": 1526
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9996597766876221,
+      "start": 1532,
+      "end": 1541
+    },
+    {
+      "entity_group": "class",
+      "word": "store",
+      "score": 0.9817954897880554,
+      "start": 1564,
+      "end": 1570
+    },
+    {
+      "entity_group": "attr",
+      "word": "rental ID number",
+      "score": 0.9994997978210449,
+      "start": 1646,
+      "end": 1663
+    },
+    {
+      "entity_group": "class",
+      "word": "rental transaction",
+      "score": 0.8700896501541138,
+      "start": 1679,
+      "end": 1698
+    },
+    {
+      "entity_group": "class",
+      "word": "rental",
+      "score": 0.9035850763320923,
+      "start": 1704,
+      "end": 1711
+    },
+    {
+      "entity_group": "class",
+      "word": "transaction",
+      "score": 0.6962403059005737,
+      "start": 1711,
+      "end": 1723
+    },
+    {
+      "entity_group": "class",
+      "word": "store",
+      "score": 0.9996337890625,
+      "start": 1773,
+      "end": 1779
+    },
+    {
+      "entity_group": "class",
+      "word": "rental",
+      "score": 0.8388329744338989,
+      "start": 1785,
+      "end": 1792
+    },
+    {
+      "entity_group": "class",
+      "word": "transaction",
+      "score": 0.49059078097343445,
+      "start": 1792,
+      "end": 1804
+    },
+    {
+      "entity_group": "attr",
+      "word": "rental date",
+      "score": 0.9909107685089111,
+      "start": 1822,
+      "end": 1834
+    },
+    {
+      "entity_group": "attr",
+      "word": "total rental amount",
+      "score": 0.9989811778068542,
+      "start": 1838,
+      "end": 1858
+    },
+    {
+      "entity_group": "class",
+      "word": "rental",
+      "score": 0.9288378953933716,
+      "start": 1864,
+      "end": 1871
+    },
+    {
+      "entity_group": "class",
+      "word": "transaction",
+      "score": 0.7088226079940796,
+      "start": 1871,
+      "end": 1883
+    },
+    {
+      "entity_group": "class",
+      "word": "rental transaction detail lines",
+      "score": 0.7517954111099243,
+      "start": 1914,
+      "end": 1946
+    },
+    {
+      "entity_group": "class",
+      "word": "rental",
+      "score": 0.847707211971283,
+      "start": 1952,
+      "end": 1959
+    },
+    {
+      "entity_group": "attr",
+      "word": "transaction detail",
+      "score": 0.5956457853317261,
+      "start": 1959,
+      "end": 1978
+    },
+    {
+      "entity_group": "attr",
+      "word": "id",
+      "score": 0.9985437393188477,
+      "start": 1996,
+      "end": 1999
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridge",
+      "score": 0.7364634275436401,
+      "start": 2006,
+      "end": 2016
+    },
+    {
+      "entity_group": "attr",
+      "word": "rented",
+      "score": 0.5367646217346191,
+      "start": 2022,
+      "end": 2029
+    },
+    {
+      "entity_group": "attr",
+      "word": "due date",
+      "score": 0.9991105198860168,
+      "start": 2034,
+      "end": 2043
+    },
+    {
+      "entity_group": "class",
+      "word": "cartridge",
+      "score": 0.9448114037513733,
+      "start": 2050,
+      "end": 2060
+    },
+    {
+      "entity_group": "attr",
+      "word": "actual return date",
+      "score": 0.9989109039306641,
+      "start": 2082,
+      "end": 2101
+    }
+  ],
+  "summary": {
+    "class": [
+      "store",
+      "employee",
+      "manager",
+      "cashier",
+      "stock",
+      "stocker",
+      "employees",
+      "distributors",
+      "distributor",
+      "stores",
+      "cartridge",
+      "cartridges",
+      "customer",
+      "rental transaction",
+      "rental",
+      "transaction",
+      "rental transaction detail lines"
+    ],
+    "attr": [
+      "storeID",
+      "store",
+      "address",
+      "phone number",
+      "employee ID",
+      "employee",
+      "name",
+      "phone numbers",
+      "phone number type",
+      "office phone number",
+      "home phone number",
+      "beeper number",
+      "type",
+      "employee type",
+      "titles",
+      "title ID",
+      "title",
+      "run time",
+      "rating",
+      "distributor ID",
+      "distributor",
+      "cartridge ID number",
+      "cartridge",
+      "utilization count",
+      "status",
+      "cartridge status",
+      "Available",
+      "Rented",
+      "Broken",
+      "status type",
+      "customer ID",
+      "customer",
+      "rental ID number",
+      "rental date",
+      "total rental amount",
+      "transaction detail",
+      "id",
+      "rented",
+      "due date",
+      "actual return date"
+    ]
+  },
+  "document_class": " A unique storeID identifies each store  Additional information about each store is the store address and phone number  An employee ID identifies each employee  Additional information about an employee is the employee's name, address, and phone number  Each employee has at least one and could have many phone numbers  Each employee's phone number is classified by a phone number type, such as an office phone number, home phone number, beeper number, etc  Each employee is classified as one type of employee: \"manager,\" \"cashier,\" or \"stocker  An employee type such as \"manager,\" \"cashier,\" or \"stocker\" can classify many employees  SchlockBuster maintains a listing of titles by a title ID  Additional information for each title includes the title's name, run time(such as 120 minutes), and rating (G, PG, R)  SchlockBuster maintains a listing of distributors by distributor ID  Additional information about a distributor includes the distributor's name and phone number  Many stores can carry a title  A store can stock multiple copies (the physical cassette cartridge) of the same title \" A cartridge ID number identifies each cartridge  A cartridge utilization count is also maintained for each cartridge  A cartridge status classifies each cartridge  The domain of cartridge status is Available\", \"Rented,\" and \"Broken \" A status type can apply to many cartridges  A unique customer ID identifies each customer  Additional information maintained about each customer is the customer's name and the customer's phone number  Each customer is associated with the store where they enrolled as members to receive their SchlockBuster Video card  A rental ID number identifies each rental transaction  Each rental transaction is associated with (rented from) one and only one store  Each rental transaction also captures the rental date and total rental amount  Each rental transaction is associated with one or more rental transaction detail lines  Each rental transaction detail line captures the id of the cartridge being rented, the due date of the cartridge being rented, and the actual return date"
+}

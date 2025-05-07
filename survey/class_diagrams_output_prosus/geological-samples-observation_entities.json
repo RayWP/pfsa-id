@@ -1,0 +1,298 @@
+{
+  "entities": [
+    {
+      "entity_group": "attr",
+      "word": "properties",
+      "score": 0.6812855005264282,
+      "start": 105,
+      "end": 116
+    },
+    {
+      "entity_group": "attr",
+      "word": "chemistry",
+      "score": 0.7814478278160095,
+      "start": 127,
+      "end": 137
+    },
+    {
+      "entity_group": "attr",
+      "word": "mineralogy",
+      "score": 0.8604738116264343,
+      "start": 138,
+      "end": 149
+    },
+    {
+      "entity_group": "attr",
+      "word": "age",
+      "score": 0.9783638119697571,
+      "start": 150,
+      "end": 154
+    },
+    {
+      "entity_group": "attr",
+      "word": "petrophysical properties",
+      "score": 0.7949705719947815,
+      "start": 159,
+      "end": 184
+    },
+    {
+      "entity_group": "attr",
+      "word": "density",
+      "score": 0.9727970361709595,
+      "start": 189,
+      "end": 197
+    },
+    {
+      "entity_group": "attr",
+      "word": "porosity",
+      "score": 0.928236186504364,
+      "start": 198,
+      "end": 207
+    },
+    {
+      "entity_group": "attr",
+      "word": "permeability",
+      "score": 0.8281999826431274,
+      "start": 208,
+      "end": 221
+    },
+    {
+      "entity_group": "attr",
+      "word": "concentration",
+      "score": 0.8850404620170593,
+      "start": 466,
+      "end": 480
+    },
+    {
+      "entity_group": "attr",
+      "word": "chemical species",
+      "score": 0.7340883016586304,
+      "start": 494,
+      "end": 511
+    },
+    {
+      "entity_group": "attr",
+      "word": "location information",
+      "score": 0.9168339967727661,
+      "start": 562,
+      "end": 583
+    },
+    {
+      "entity_group": "class",
+      "word": "sample",
+      "score": 0.8470966815948486,
+      "start": 604,
+      "end": 611
+    },
+    {
+      "entity_group": "attr",
+      "word": "properties",
+      "score": 0.4592949151992798,
+      "start": 873,
+      "end": 884
+    },
+    {
+      "entity_group": "class",
+      "word": "sample",
+      "score": 0.45474931597709656,
+      "start": 1025,
+      "end": 1031
+    },
+    {
+      "entity_group": "attr",
+      "word": "particle size",
+      "score": 0.9616369009017944,
+      "start": 1056,
+      "end": 1070
+    },
+    {
+      "entity_group": "attr",
+      "word": "density",
+      "score": 0.9312542676925659,
+      "start": 1071,
+      "end": 1079
+    },
+    {
+      "entity_group": "attr",
+      "word": "magnetic properties",
+      "score": 0.9312375783920288,
+      "start": 1080,
+      "end": 1100
+    },
+    {
+      "entity_group": "attr",
+      "word": "location",
+      "score": 0.7530653476715088,
+      "start": 1215,
+      "end": 1224
+    },
+    {
+      "entity_group": "attr",
+      "word": "location",
+      "score": 0.45139071345329285,
+      "start": 1275,
+      "end": 1284
+    },
+    {
+      "entity_group": "attr",
+      "word": "location information",
+      "score": 0.8652539253234863,
+      "start": 1412,
+      "end": 1433
+    },
+    {
+      "entity_group": "class",
+      "word": "lab",
+      "score": 0.5358578562736511,
+      "start": 1666,
+      "end": 1670
+    },
+    {
+      "entity_group": "class",
+      "word": "system",
+      "score": 0.5128533840179443,
+      "start": 1692,
+      "end": 1699
+    },
+    {
+      "entity_group": "attr",
+      "word": "local identifier",
+      "score": 0.7570880651473999,
+      "start": 1728,
+      "end": 1745
+    },
+    {
+      "entity_group": "class",
+      "word": "sample",
+      "score": 0.8427455425262451,
+      "start": 1753,
+      "end": 1760
+    },
+    {
+      "entity_group": "class",
+      "word": "observations",
+      "score": 0.5091189742088318,
+      "start": 1787,
+      "end": 1800
+    },
+    {
+      "entity_group": "class",
+      "word": "observations",
+      "score": 0.4520873427391052,
+      "start": 1835,
+      "end": 1848
+    },
+    {
+      "entity_group": "class",
+      "word": "sample",
+      "score": 0.7749117016792297,
+      "start": 1944,
+      "end": 1951
+    },
+    {
+      "entity_group": "class",
+      "word": "location",
+      "score": 0.567227303981781,
+      "start": 2049,
+      "end": 2058
+    },
+    {
+      "entity_group": "class",
+      "word": "specimen",
+      "score": 0.9297693967819214,
+      "start": 2075,
+      "end": 2084
+    },
+    {
+      "entity_group": "attr",
+      "word": "Sample",
+      "score": 0.5832669138908386,
+      "start": 2249,
+      "end": 2256
+    },
+    {
+      "entity_group": "class",
+      "word": "samples",
+      "score": 0.6640341281890869,
+      "start": 2311,
+      "end": 2319
+    },
+    {
+      "entity_group": "class",
+      "word": "samples",
+      "score": 0.5644799470901489,
+      "start": 2328,
+      "end": 2336
+    },
+    {
+      "entity_group": "attr",
+      "word": "geographic",
+      "score": 0.6980290412902832,
+      "start": 2401,
+      "end": 2412
+    },
+    {
+      "entity_group": "attr",
+      "word": "locations",
+      "score": 0.506632924079895,
+      "start": 2424,
+      "end": 2434
+    },
+    {
+      "entity_group": "attr",
+      "word": "sampling time",
+      "score": 0.8618595600128174,
+      "start": 2439,
+      "end": 2453
+    },
+    {
+      "entity_group": "attr",
+      "word": "analysis",
+      "score": 0.487742155790329,
+      "start": 2457,
+      "end": 2466
+    },
+    {
+      "entity_group": "attr",
+      "word": "time",
+      "score": 0.720119059085846,
+      "start": 2480,
+      "end": 2485
+    }
+  ],
+  "summary": {
+    "class": [
+      "sample",
+      "lab",
+      "system",
+      "observations",
+      "location",
+      "specimen",
+      "samples"
+    ],
+    "attr": [
+      "properties",
+      "chemistry",
+      "mineralogy",
+      "age",
+      "petrophysical properties",
+      "density",
+      "porosity",
+      "permeability",
+      "concentration",
+      "chemical species",
+      "location information",
+      "particle size",
+      "magnetic properties",
+      "location",
+      "local identifier",
+      "Sample",
+      "geographic",
+      "locations",
+      "sampling time",
+      "analysis",
+      "time"
+    ]
+  },
+  "document_class": "Geological samples are retrieved from the field and then processed in the laboratory to determine various properties, including chemistry, mineralogy, age, and petrophysical properties like density, porosity, permeability  Samples obtained as part of economic activities, such as mineral exploration, are usually processed in commercial assay and chemistry labs  For QA/QC purposes, each batch of samples will have a number of control samples inserted, for which the concentration of particular chemical species are already known  For confidentiality reasons the location information associated with each sample is not provided to the lab, but must be re-attached during the interpretation phase  During processing, many derived samples will be generated by various physical and chemical procedures  In some cases the derived samples are strict sub-samples, whose intensive properties are intended to be the same as the parent  In other cases, the split is 'biased', with the derived sample intended to select a specific sub-sample, defined by a particular particle size, density, magnetic properties, etc  The link from the derived sample to the parent sample must be preserved, and the link from the parent to the location from which it was obtained also  In some cases the location is associated with another sampling artifact, such as a drill-hole or traverse or cruise, with the latter carrying the detailed location information  In a research context some samples have a particularly high-value, having been obtained by an expensive process (involving drilling or ships or spacecraft) or from a location that is hard to visit (remote, offshore, in space)  Each lab will run its own LIMS system, which will usually assign a local identifier for the sample  When the results of these observations are reported, it is necessary that observations from different labs can be correlated with each other, so that the complete picture around each sample can be assembled  These stories focus on sensing applications involving ex-situ sampling, where a location is visited and a specimen obtained using some sampling process, then transported to one or more laboratories where it is processed into one or more sub-samples and various observations made  Sample identity is usually key, and the relationships between samples, between samples and other artifacts of the sampling process, and also with other geographic features or locations  The sampling time and analysis and reporting time are all different  Similar process apply to botanical sampling, and to environmental sampling (water, air, dust)"
+}

@@ -1,0 +1,31 @@
+,entity_group,score,word,start,end
+0,class,0.9976829,clinic,3,10
+1,class,0.9987803,patients,30,39
+2,class,0.6782599,services,49,58
+3,class,0.9338008,services,93,102
+4,class,0.8327159,patients,107,116
+5,class,0.9954786,form,127,132
+6,attr,0.9986493,name,146,151
+7,attr,0.9996493,address,152,160
+8,attr,0.9996372,telephone numbers,161,179
+9,attr,0.9941135,allergies,180,190
+10,attr,0.95808965,state of mind,195,209
+11,class,0.8877713,first appointment,235,253
+12,class,0.986856,central appointment book,283,308
+13,class,0.86256933,patient records,309,325
+14,attr,0.9990948,contact information,336,356
+15,class,0.88357043,Appointments,382,395
+16,class,0.9221409,procedures,416,427
+17,class,0.9991385,procedure,540,550
+18,class,0.99895346,patient,554,562
+19,attr,0.87991196,supplies,587,596
+20,class,0.7916493,bills,705,711
+21,class,0.99658465,patients,738,747
+22,attr,0.7711091,contact addresses,748,766
+23,class,0.9995666,patient,772,780
+24,class,0.9573983,reimbursement request,797,819
+25,class,0.9917053,insurance,825,835
+26,class,0.9978818,clinic,848,855
+27,class,0.9810944,supplies inventory file,867,891
+28,class,0.98465735,procedures,970,981
+29,class,0.9437859,rooms,981,987

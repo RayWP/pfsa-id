@@ -1,0 +1,116 @@
+,entity_group,score,word,start,end
+0,class,0.6590919,video rental stores,33,53
+1,attr,0.71206665,storeID,63,71
+2,class,0.9232243,store,87,93
+3,class,0.90113974,store,128,134
+4,attr,0.56850123,store address,141,155
+5,attr,0.87342346,phone number,159,172
+6,class,0.56090176,employees,196,206
+7,attr,0.6847468,employee ID,210,222
+8,class,0.8996848,employee,238,247
+9,class,0.94235885,employee,280,289
+10,class,0.8059666,employee,296,305
+11,attr,0.50533164,name,307,312
+12,attr,0.9132088,address,313,321
+13,attr,0.93947524,phone number,326,339
+14,class,0.90362936,employee,345,354
+15,attr,0.71056277,phone numbers,391,405
+16,class,0.880252,employee,411,420
+17,attr,0.8879275,phone number,422,435
+18,attr,0.9150429,phone number type,454,472
+19,attr,0.63707924,office phone number,484,504
+20,attr,0.7024317,home phone number,505,523
+21,attr,0.74338174,beeper number,524,538
+22,class,0.91785145,employee,547,556
+23,attr,0.71531504,phone numbers,570,584
+24,attr,0.82482654,phone number type,601,619
+25,class,0.895411,employee,625,634
+26,attr,0.5946791,type,655,660
+27,class,0.8544941,employee,663,672
+28,class,0.49497578,employee,711,720
+29,attr,0.9168873,type,720,725
+30,class,0.8243966,employees,786,796
+31,class,0.88209623,employee,800,809
+32,class,0.9380259,store,846,852
+33,class,0.5520982,titles,1021,1028
+34,attr,0.8876896,title ID,1033,1042
+35,class,0.84340996,title,1075,1081
+36,attr,0.85627896,title,1094,1100
+37,attr,0.598028,name,1102,1107
+38,attr,0.9579111,run time,1108,1117
+39,attr,0.935286,rating,1143,1150
+40,class,0.7976296,distributors,1199,1212
+41,attr,0.8118675,distributor ID,1215,1230
+42,class,0.9208484,distributor,1262,1274
+43,class,0.5386297,distributor,1287,1299
+44,attr,0.6920025,name,1301,1306
+45,attr,0.94482267,phone number,1310,1323
+46,class,0.764332,video title,1326,1338
+47,class,0.9333624,distributor,1373,1385
+48,class,0.94972485,distributor,1388,1400
+49,class,0.6315956,video titles,1417,1430
+50,class,0.9103156,store,1450,1456
+51,class,0.6864065,stores,1484,1491
+52,class,0.6421922,title,1503,1509
+53,class,0.49722952,stores,1559,1566
+54,class,0.90700644,store,1686,1692
+55,attr,0.9413821,rental rate,1706,1717
+56,class,0.8540267,store,1727,1733
+57,class,0.66239953,customers,1744,1754
+58,class,0.5625977,title,1766,1772
+59,class,0.9085054,store,1796,1802
+60,attr,0.93680406,rental price,1814,1827
+61,class,0.80851394,title,1836,1842
+62,class,0.8940653,store,1845,1851
+63,class,0.43345398,cartridge,1900,1910
+64,class,0.5592865,title,1923,1929
+65,class,0.50504327,store,1946,1952
+66,attr,0.93178946,cartridge ID number,2021,2041
+67,class,0.9116944,cartridge,2057,2067
+68,attr,0.74948937,cartridge utilization count,2070,2098
+69,class,0.88558275,cartridge,2126,2136
+70,attr,0.77114,utilization count,2141,2159
+71,class,0.9200673,cartridge,2192,2202
+72,attr,0.67673224,cartridge status,2221,2238
+73,class,0.89956933,cartridge,2254,2264
+74,class,0.56822246,cartridge,2279,2289
+75,attr,0.69532984,status,2289,2296
+76,attr,0.5242569,ed,2317,2319
+77,attr,0.9262023,status type,2337,2349
+78,class,0.86759424,cartridges,2367,2378
+79,class,0.9032768,customers,2427,2437
+80,attr,0.8926196,customer ID,2447,2459
+81,class,0.95230997,customer,2475,2484
+82,class,0.94642067,customer,2530,2539
+83,attr,0.614701,customer,2546,2555
+84,attr,0.52571166,name,2557,2562
+85,class,0.63484186,customer,2570,2579
+86,attr,0.97551686,phone number,2581,2594
+87,class,0.9776654,customer,2600,2609
+88,class,0.9470935,store,2632,2638
+89,class,0.9682133,customer,2714,2723
+90,class,0.9119595,video,2734,2740
+91,class,0.9001292,store,2749,2755
+92,attr,0.47747773,rental amount,2823,2837
+93,attr,0.5185131,home,2844,2849
+94,class,0.57883364,store,2849,2855
+95,class,0.95996183,member,2862,2869
+96,class,0.8909177,video,2894,2900
+97,class,0.60162616,rental transaction,2952,2971
+98,attr,0.92335564,rental ID number,2974,2991
+99,class,0.67209053,rental transaction,3007,3026
+100,class,0.6421696,rental transaction,3032,3051
+101,class,0.96198034,customer,3087,3096
+102,class,0.60519844,rental transaction,3102,3121
+103,class,0.94150597,store,3171,3177
+104,class,0.5391244,rental transaction,3183,3202
+105,attr,0.7038785,rental date,3220,3232
+106,attr,0.9639843,total rental amount,3236,3256
+107,class,0.6668298,rental transaction,3262,3281
+108,class,0.74437904,rental transaction detail,3312,3338
+109,class,0.84087384,rental transaction,3350,3369
+110,attr,0.698883,id,3394,3397
+111,class,0.89135075,cartridge,3404,3414
+112,attr,0.96294,due date,3432,3441
+113,class,0.84577286,cartridge,3448,3458
+114,attr,0.927897,actual return date,3480,3499

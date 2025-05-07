@@ -1,0 +1,53 @@
+Document: law-firm.txt
+
+Classes identified:
+--------------------
+- clients
+- organization
+- client
+- event
+
+Attributes identified:
+--------------------
+- addresses
+- house name
+- number
+- city
+- town
+- zip codes
+- postal codes
+- contact
+- representative
+- full name
+- honorific
+- email address
+- phone number
+- postal address
+- primary mailing address
+- billing address
+
+Detailed Entities:
+--------------------
+Type: attr, Word: addresses, Score: 0.9930
+Type: attr, Word: house name, Score: 0.9990
+Type: attr, Word: number, Score: 0.9996
+Type: class, Word: clients, Score: 0.9398
+Type: attr, Word: city, Score: 0.9998
+Type: attr, Word: town, Score: 0.9997
+Type: attr, Word: city, Score: 0.9984
+Type: attr, Word: house name, Score: 0.9982
+Type: attr, Word: zip codes, Score: 0.9923
+Type: attr, Word: postal codes, Score: 0.9977
+Type: class, Word: organization, Score: 0.9309
+Type: attr, Word: contact, Score: 0.9981
+Type: class, Word: client, Score: 0.9998
+Type: attr, Word: representative, Score: 0.6769
+Type: class, Word: organization, Score: 0.9928
+Type: attr, Word: full name, Score: 0.9983
+Type: attr, Word: honorific, Score: 0.5196
+Type: attr, Word: email address, Score: 0.9996
+Type: attr, Word: phone number, Score: 0.9998
+Type: attr, Word: postal address, Score: 0.9980
+Type: attr, Word: primary mailing address, Score: 0.9984
+Type: attr, Word: billing address, Score: 0.9845
+Type: class, Word: event, Score: 0.9908
