@@ -1,0 +1,62 @@
+,entity_group,score,word,start,end
+0,class,0.5375961,persons,27,35
+1,class,0.7651779,policies,45,54
+2,attr,0.94268626,contact info,60,73
+3,class,0.9630022,person,214,221
+4,class,0.7074981,policies,228,237
+5,class,0.48862702,vehicles,238,247
+6,class,0.43071532,dwellings,248,258
+7,attr,0.9219616,addresses,259,269
+8,attr,0.96030235,contact info,274,287
+9,class,0.6254827,Person,360,367
+10,class,0.6906865,policy objects,408,423
+11,class,0.6241709,Person,436,443
+12,class,0.8703167,policy,528,535
+13,class,0.8420944,Person,552,559
+14,class,0.77978635,policy object,565,579
+15,class,0.8831407,Person,586,593
+16,class,0.76492214,policy object,629,643
+17,class,0.92998326,customer,674,683
+18,attr,0.8865822,contact information,781,801
+19,attr,0.97885287,Phone Numbers,802,816
+20,attr,0.9511494,Addresses,817,827
+21,attr,0.90843934,Emails,832,839
+22,class,0.6672349,contact,854,862
+23,attr,0.5368847,contactPoint,885,898
+24,attr,0.9569063,contact information,954,974
+25,class,0.6882051,policy,985,992
+26,class,0.63290614,Person,1101,1108
+27,attr,0.87507033,Email,1131,1136
+28,attr,0.8196991,Phone,1143,1148
+29,attr,0.90772855,Address,1155,1162
+30,attr,0.44888508,Vehicle,1169,1176
+31,class,0.6268503,objects,1239,1247
+32,class,0.90267146,policy,1254,1261
+33,class,0.5621792,objects,1278,1286
+34,class,0.8930571,policy,1308,1315
+35,class,0.9031572,policy,1385,1392
+36,attr,0.6330003,Person info,1415,1427
+37,class,0.9064012,policy,1436,1443
+38,attr,0.4627922,info,1448,1453
+39,attr,0.8164762,contacts,1471,1480
+40,attr,0.38805854,vehicles,1484,1493
+41,class,0.8058072,policies,1693,1702
+42,class,0.86789834,policies,1726,1735
+43,class,0.43014038,cies,1802,1806
+44,class,0.5112625,party,1831,1837
+45,attr,0.9008793,name,1843,1848
+46,attr,0.83968604,name,1901,1906
+47,class,0.94260496,company,1920,1928
+48,class,0.32737303,police,1933,1940
+49,attr,0.49046373,s,1940,1941
+50,attr,0.91144943,contact info,1950,1963
+51,class,0.6047076,vehicles,1972,1981
+52,class,0.9053813,policy,1990,1997
+53,class,0.73050046,Person,2011,2018
+54,class,0.7930578,company,2022,2030
+55,class,0.74454474,policy object,2234,2248
+56,class,0.8750009,policy,2289,2296
+57,attr,0.92394626,contact points,2301,2316
+58,attr,0.9644608,description,2388,2400
+59,attr,0.93309927,names,2404,2410
+60,class,0.545552,physical,2450,2459
