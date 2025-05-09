@@ -1,0 +1,46 @@
+@startuml
+' Define Library and its associations
+class Library {
+  - documents: Set<Document>
+  - patrons: Set<Member>
+}
+
+' Define Member (or Patron)
+class Member {
+  - firstName: String
+  - surname: String
+}
+
+' Abstract Document class
+abstract class Document {
+  - title: String
+}
+
+' Journal (newspaper) with publication date
+class Journal {
+  - publicationDate: Date
+}
+Document <|-- Journal
+
+' Volume is a kind of Document and has an author
+abstract class Volume {
+  - author: String
+}
+Document <|-- Volume
+
+' Specific types of Volume
+class Dictionary
+Volume <|-- Dictionary
+
+class Book
+Volume <|-- Book
+
+class Comic {
+  - recipientName: String
+}
+Volume <|-- Comic
+
+' Associations in Library
+Library "1" o-- "*" Document
+Library "1" o-- "*" Member
+@enduml

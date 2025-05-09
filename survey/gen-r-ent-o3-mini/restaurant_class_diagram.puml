@@ -1,113 +1,155 @@
 @startuml
 
-' -----------------------------
-' Reservation Classes
-' -----------------------------
-class Reservation {
-  - reservationNumber: String
-  - date: Date
-  - time: Time
-  - numberOfPeople: Integer
-  - customerName: String
-  - phoneNumber: String
+'========================
+' Classes for Reservations
+'========================
+abstract class Reservation {
+  - reservationNumber : int
+  - date : Date
+  - time : Time
+  - numberOfPeople : int
+  - guestName : String
+  - phoneNumber : String
+  + confirmReservation() : void
+  + cancelReservation() : void
 }
 
 class IndividualReservation {
-  - seatingPreference: String
-  - smokingPreference: String
+  - seatingPreference : String " (inside or patio)"
+  - smokingPreference : String " (smoking or nonsmoking)"
+  + chooseSeating() : void
 }
+IndividualReservation --|> Reservation
 
 class BanquetReservation {
-  - groupName: String
-  - methodOfPayment: String
+  - groupName : String
+  - methodOfPayment : String
+  + arrangeBanquet() : void
 }
+BanquetReservation --|> Reservation
 
-Reservation <|-- IndividualReservation
-Reservation <|-- BanquetReservation
-
-' -----------------------------
+'========================
 ' Table Class
-' -----------------------------
+'========================
 class Table {
-  - tableNumber: String
-  - description: String
-  - capacity: Integer   ' (2, 4 or 6 persons)
+  - tableNumber : int
+  - description : String "e.g., 'located by the North window'"
+  - capacity : int "2, 4 or 6 persons"
+  + assignReservation(reservation: Reservation) : void
 }
 
-' -----------------------------
-' Person and Employee Classes
-' -----------------------------
-class Person {
-  - name: String
-  - dateOfBirth: Date
-  - driversLicenseNumber: String
+'========================
+' Order / ReservationOrder Class
+'========================
+' This class represents the order of a menu item for a reservation at a given time.
+class Order {
+  - orderTime : Time
+  + addMenuItem(menuItem: MenuItem) : void
+  + removeMenuItem(menuItem: MenuItem) : void
 }
 
-class Manager
-class Maitre_d
-class Waiter
-class Bartender
-class Chef
-class Cook
-class BusPerson
-class Dishwasher
+' Each Reservation can have multiple Orders.
+Reservation "1" *-- "0..*" Order : contains
+Order --> MenuItem : orders >
 
-Person <|-- Manager
-Person <|-- Maitre_d
-Person <|-- Waiter
-Person <|-- Bartender
-Person <|-- Chef
-Person <|-- Cook
-Person <|-- BusPerson
-Person <|-- Dishwasher
-
-' Association: A waiter may serve many reservations.
-Reservation --> "1" Waiter : servedBy
-Waiter --> "*" Reservation : serves
-
-' Managerial relationships
-Manager "1" -- "*" Maitre_d : manages
-Manager "1" -- "*" Chef : manages
-
-Maitre_d "1" -- "*" Waiter : manages
-Maitre_d "1" -- "*" Bartender : manages
-Maitre_d "1" -- "*" BusPerson : manages
-
-Chef "1" -- "*" Cook : manages
-Chef "1" -- "*" Dishwasher : manages
-
-' -----------------------------
-' Menu Item and Food Item Classes
-' -----------------------------
+'========================
+' Menu & MenuItem Classes
+'========================
 class MenuItem {
-  - menuItemNumber: String
-  - itemDescription: String
-  - itemPrepTime: Integer
-  - category: String    ' e.g., appetizer, entree, dessert, beverage
-  - lunchPrice: Decimal
-  - dinnerPrice: Decimal
+  - menuItemNumber : int
+  - itemDescription : String
+  - itemPrepTime : int "in minutes"
+  - type : String "appetizer, entree, dessert or beverage"
+  + getPrice(timeOfDay: String) : double
 }
 
+'========================
+' FoodItem Class
+'========================
 class FoodItem {
-  - foodItemNumber: String
-  - foodName: String
+  - foodItemNumber : int
+  - name : String "e.g., chicken, mushrooms, etc."
 }
 
-' Many-to-many association: A MenuItem is prepared from one or more FoodItems,
-' and a FoodItem can be used in many MenuItems.
-MenuItem " *" -- " *" FoodItem : uses
+' A many-to-many relationship: MenuItem uses many FoodItems and a FoodItem
+' can be used in many MenuItems.
+MenuItem "0..*" -- "0..*" FoodItem : utilizes
 
-' -----------------------------
-' Reservation Orders (Association Class)
-' -----------------------------
-' To capture the list of menu items ordered (with time ordered) for each reservation.
-class ReservationOrder {
-  - orderTime: Time
+'========================
+' Person and Employee Hierarchy
+'========================
+class Person {
+  - name : String
+  - dateOfBirth : Date
+  - driversLicenseNumber : String
+  + updateDetails() : void
 }
 
-' Link ReservationOrder with Reservation and MenuItem
-Reservation "1" -- "*" ReservationOrder : has
-ReservationOrder --> Reservation : for
-ReservationOrder --> MenuItem : orders
+class Manager {
+  + manageStaff() : void
+}
+Manager --|> Person
+
+class MaitreD {
+  + manageWaitStaff() : void
+}
+MaitreD --|> Person
+
+class Waiter {
+  + takeOrder(order: Order) : void
+}
+Waiter --|> Person
+
+class Bartender {
+  + serveDrink() : void
+}
+Bartender --|> Person
+
+class Chef {
+  + prepareDish(menuItem: MenuItem) : void
+}
+Chef --|> Person
+
+class Cook {
+  + cookDish(menuItem: MenuItem) : void
+}
+Cook --|> Person
+
+class BusPerson {
+  + clearTable(table: Table) : void
+}
+BusPerson --|> Person
+
+class Dishwasher {
+  + washDishes() : void
+}
+Dishwasher --|> Person
+
+'========================
+' Organizational Relationships among Staff
+'========================
+' Several restaurant managers report to Romano.
+' A manager manages the Maitre'd and the Chefs.
+Manager "1" o-- "0..*" MaitreD : supervises
+Manager "1" o-- "0..*" Chef : supervises
+
+' The Maitre'd is responsible for managing Waiters, Bartenders and BusPersons.
+MaitreD "1" o-- "0..*" Waiter : manages
+MaitreD "1" o-- "0..*" Bartender : manages
+MaitreD "1" o-- "0..*" BusPerson : manages
+
+' The Chefs are responsible for managing Cooks and Dishwashers.
+Chef "1" o-- "0..*" Cook : manages
+Chef "1" o-- "0..*" Dishwasher : manages
+
+'========================
+' Waiter to Reservation Association
+'========================
+' A Waiter can be assigned to many Reservations.
+Waiter "1" -- "0..*" Reservation : serves
+
+@startuml_note
+Note over Reservation, Waiter : A reservation may be served by one or more waiters\nthroughout the evening.
+@enduml_note
 
 @enduml

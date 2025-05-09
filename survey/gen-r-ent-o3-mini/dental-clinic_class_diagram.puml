@@ -1,79 +1,107 @@
 @startuml
 
-' Clinic aggregates several items: appointment book, patient records, supplies inventory, and procedure rooms.
+' Clinic class aggregates core modules
 class Clinic {
-  + name: String
+  - name : String
+  + schedulePatient(p: Patient) : void
+  + processBilling() : void
+  + manageSuppliesInventory() : void
 }
-  
-' The appointment book aggregates appointments.
-class AppointmentBook {
-  + schedules: List<Appointment>
-}
-  
-' Appointments are scheduled for a specific patient and a procedure.
-class Appointment {
-  + date: Date
-  + time: String
-}
-  
-' Patients have personal details and receive a form upon registration.
+
+' Patient registration & information
 class Patient {
-  + name: String
-  + address: String
-  + telephoneNumbers: String
-  + allergies: String
-  + stateOfMind: String
-  + contactInformation: String
-  + contactAddress: String
+  - name : String
+  - address : String
+  - telephoneNumbers : List<String>
+  - allergies : String
+  - stateOfMind : String
+  + fillForm() : Form
+  + requestAppointment() : void
 }
-  
-' New patients complete a form; the form collects basic patient details.
+
+' Form used by new patients for registration
 class Form {
-  + name: String
-  + address: String
-  + telephoneNumbers: String
-  + allergies: String
-  + stateOfMind: String
+  - name : String
+  - address : String
+  - telephoneNumbers : List<String>
+  - allergies : String
+  - stateOfMind : String
+  + submit() : void
 }
 
-' Patient records keep paper file information about patients.
-class PatientRecords {
-  + contactInformation: String
+' AppointmentBook holds all schedules
+class AppointmentBook {
+  - schedules : List<Appointment>
+  + addAppointment(appt: Appointment) : void
+  + removeAppointment(appt: Appointment) : void
+  + getAppointments() : List<Appointment>
 }
 
-' A procedure represents a type of treatment.
-class Procedure {
-  + type: String     ' e.g., "dental hygiene", "cavities and fillings", "oral surgery"
-  + requiredSupplies: String  ' e.g., probes, drill bits, cements, resins, etc.
+' Each appointment links a patient and a procedure
+class Appointment {
+  - date : Date
+  - time : Time
+  - procedure : Procedure
+  - patient : Patient
+  + schedule() : void
+  + cancel() : void
 }
 
-' Supplies inventory is maintained weekly.
+' PatientRecord keeping contact information and history
+class PatientRecord {
+  - contactInformation : String
+  + updateRecord() : void
+}
+
+' Abstract Procedure, with concrete procedure types used in appointments
+abstract class Procedure {
+  + preparePatient() : void
+  + collectSupplies() : void
+  + performProcedure() : void
+}
+
+' Concrete procedure classes
+class DentalHygiene
+class CavitiesAndFillings
+class OralSurgery
+
+DentalHygiene --|> Procedure
+CavitiesAndFillings --|> Procedure
+OralSurgery --|> Procedure
+
+' SuppliesInventory updated weekly by inspecting procedure rooms
 class SuppliesInventory {
-  + lastInspectionDate: Date
-  + suppliesList: String
+  - lastInspectionDate : Date
+  + updateInventory() : void
 }
 
-' Rooms in which procedures are performed.
+' Rooms holding supplies for procedures
 class Room {
-  + roomNumber: String
-  + description: String
+  - name : String
+  - supplies : List<String>
+  + inspectRoom() : void
 }
 
 ' Relationships
+' A Clinic has an AppointmentBook, manages SuppliesInventory, and keeps PatientRecords
+Clinic "1" -- "1" AppointmentBook : contains
+Clinic "1" -- "1" SuppliesInventory : maintains
+Clinic "1" -- "*" PatientRecord : keeps
 
-Clinic --> AppointmentBook : "manages"
-Clinic --> PatientRecords : "stores"
-Clinic --> SuppliesInventory : "tracks"
-Clinic --> Room : "contains"
+' AppointmentBook aggregates many Appointments
+AppointmentBook "1" o-- "*" Appointment
 
-AppointmentBook "1" --> "*" Appointment : "has"
-Appointment --> Patient : "for"
-Appointment --> Procedure : "involves"
+' Each Appointment is associated with one Patient and one Procedure
+Appointment "1" --> "1" Patient : for
+Appointment "1" --> "1" Procedure : involves
 
-Patient --> Form : "submits"
-PatientRecords "1" --> "1" Patient : "corresponds to"
+' A Patient fills out a Form during registration
+Patient "1" --> "1" Form : fills
 
-SuppliesInventory --> Room : "inspected in"
-Procedure --> SuppliesInventory : "draws supplies from"
+' A Patient has (or is linked to) a PatientRecord
+Patient "1" -- "0..1" PatientRecord : has
+
+' SuppliesInventory inspects multiple Rooms
+SuppliesInventory "1" o-- "*" Room : inspects
 
 @enduml

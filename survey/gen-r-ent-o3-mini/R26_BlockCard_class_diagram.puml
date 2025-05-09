@@ -1,66 +1,53 @@
 @startuml
 
-' Define Application Classes for Mobile Platforms
-abstract class MobileApp {
-  +createAccount()
-}
-class AndroidApp extends MobileApp
-class iOSApp extends MobileApp
-
-' Define Account related class
+' Define classes
 class Account {
-  ' Attributes for account creation can be added here
+  +createAccount()
+  +updateAccount()
 }
 
-' Define User Hierarchy
-class User {
-  ' Generic user attributes (e.g., username, password)
-}
-class Customer extends User {
-  - account: Account
-  - cards: Cards
-}
-
-' Define Cards container and individual Card
-class Cards {
-  - cardList: List<Card>
-}
-class Card {
-  - cardStatus: String  ' e.g., available, blocked, stolen, missing, etc.
-  ' Blocking reasons: stolen, missing, others can be processed in block()
-  +block(reason: String): void
-}
-
-' Define Back-end Communication Classes
-class System {
-  +checkCardStatus(card: Card): Boolean
-  ' The system verifies card status before blocking
-}
 class Kiosk {
-  ' Represents the kiosk terminal; communicates with System for backend operations
+  +connectToBackend()
 }
 
-' Define Associations
+class System {
+  +checkCardStatus(card: Card): boolean
+  +processBlockCard(card: Card, reason: String)
+}
 
-' A Customer has an Account and a collection of Cards
-Customer --> Account : "has"
-Customer --> Cards : "owns"
+class User {
+  +username: String
+  +password: String
+  +register()
+  +login()
+}
 
-' Cards is a container for Card objects
-Cards --> "*" Card : "contains"
+class Customer {
+  +getCards(): List<Card>
+}
 
-' The System checks the card status when a customer initiates a block.
-System ..> Card : "checks status"
+class Card {
+  +cardStatus: String
+  +cardType: String
+  +blockCard(reason: String)
+  +checkStatus(): String
+}
 
-' The Kiosk communicates with the System.
-Kiosk --> System : "communicates with"
+' Define relationships
 
-' The mobile applications (Android & iOS) use Account creation process.
-MobileApp <-- AndroidApp
-MobileApp <-- iOSApp
-Customer .. MobileApp : "registers via"
+' Customer is a type of User
+Customer --|> User
 
-' Note: The "Block Card" function is assumed to be accessible under the "Cards" menu in UI.
-' This behavior is implemented in the Card.block(reason) method after status validation.
+' A User (Customer) has an Account (composition)
+User *-- Account
+
+' A Customer can have multiple Cards (aggregation)
+Customer "1" -- "0..*" Card
+
+' Kiosk communicates with System
+Kiosk --> System
+
+' System interacts with Card (invokes methods)
+System ..> Card : checks/blocks
 
 @enduml

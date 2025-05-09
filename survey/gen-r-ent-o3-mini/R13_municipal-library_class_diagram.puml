@@ -1,0 +1,73 @@
+@startuml
+' Define Library class with its attributes and methods
+class Library {
+  - documents: Set<Document>
+  - patrons: Set<Patron>
+  + addDocument(doc: Document)
+  + removeDocument(doc: Document)
+  + addPatron(p: Patron)
+  + removePatron(p: Patron)
+}
+
+' Define Document as an abstract class with a title attribute
+abstract class Document {
+  - title: String
+  + getTitle(): String
+}
+
+' Documents can be either Journals or Volumes.
+' Journal with an additional date of publication.
+class Journal extends Document {
+  - dateOfPublication: Date
+  + getDateOfPublication(): Date
+}
+
+' Volume is a kind of Document with an author.
+class Volume extends Document {
+  - author: String
+  + getAuthor(): String
+}
+
+' Volumes can be specialized as Dictionary, Book or Comic.
+class Dictionary extends Volume
+class Book extends Volume
+
+' Comics (Bds) have an extra attribute for recipient name.
+class Comic extends Volume {
+  - recipientName: String
+  + getRecipientName(): String
+}
+
+' Define Member with first name and surname plus some methods.
+class Member {
+  - firstName: String
+  - surname: String
+  + checkoutDocument(doc: Document)
+  + returnDocument(doc: Document)
+}
+
+' Define Patron with first name and surname plus additional methods.
+class Patron {
+  - firstName: String
+  - surname: String
+  + borrowDocument(doc: Document)
+  + reserveDocument(doc: Document)
+}
+
+' Relationships
+' Library aggregates Documents
+Library "1" o-- "*" Document : contains
+
+' Library aggregates Patrons
+Library "1" o-- "*" Patron : contains
+
+' Inheritance for Volume specializations
+Volume <|-- Dictionary
+Volume <|-- Book
+Volume <|-- Comic
+
+' Document specialization inheritance
+Document <|-- Journal
+Document <|-- Volume
+
+@enduml

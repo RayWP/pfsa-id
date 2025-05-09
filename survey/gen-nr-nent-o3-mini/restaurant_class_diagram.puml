@@ -1,0 +1,117 @@
+@startuml
+
+' **********************
+' Classes for Reservations
+' **********************
+class Reservation {
+  - reservationNumber : int
+  - date : Date
+  - time : Time
+  - numberOfPeople : int
+  - name : String
+  - phoneNumber : String
+}
+
+class IndividualReservation {
+  - seatingPreference : String   ' e.g., inside or patio
+  - smokingPreference : String     ' smoking or nonsmoking
+}
+IndividualReservation --|> Reservation
+
+class BanquetReservation {
+  - groupName : String
+  - methodOfPayment : String
+}
+BanquetReservation --|> Reservation
+
+' Optional association: A reservation may be assigned a table
+class Table {
+  - tableNumber : int
+  - description : String   ' e.g., "located by the North window"
+  - tableType : String     ' e.g., "2-person", "4-person", "6-person"
+}
+
+Reservation "0..1" --> "1" Table : reservedTable
+
+' **********************************
+' Classes for Menu Items and Ordering
+' **********************************
+class MenuItem {
+  - menuItemNumber : int
+  - description : String
+  - prepTime : int   ' in minutes
+  - category : String  ' appetizer, entree, dessert, beverage
+}
+
+' A menu item can have different prices based on time-of-day
+class Price {
+  - timePeriod : String   ' e.g., lunch or dinner
+  - price : double
+}
+MenuItem "1" -- "*" Price : has
+
+' To capture each menu item ordered with its order time we use an association class
+class OrderedMenuItem {
+  - orderTime : Time
+}
+Reservation "1" -- "0..*" OrderedMenuItem : includes
+OrderedMenuItem "*" -- "1" MenuItem : orders
+
+' **********************************
+' Classes for Food Items
+' **********************************
+class FoodItem {
+  - foodItemNumber : int
+  - description : String
+}
+' A many-to-many association: Menu items use various food items in their preparation
+MenuItem "*" -- "*" FoodItem : uses
+
+' **********************************
+' Classes for Employees
+' **********************************
+class Employee {
+  - name : String
+  - dateOfBirth : Date
+  - driversLicenseNumber : String
+}
+
+class Manager 
+class "MaîtreD" as Maitred
+class Waiter
+class Bartender
+class Chef
+class Cook
+class BusPerson
+class Dishwasher
+
+Manager --|> Employee
+Maitred --|> Employee
+Waiter --|> Employee
+Bartender --|> Employee
+Chef --|> Employee
+Cook --|> Employee
+BusPerson --|> Employee
+Dishwasher --|> Employee
+
+' Hierarchy relationships:
+' Managers report to Romano and manage the MaîtreD and the Chefs.
+Manager "1" --> "*" Maitred : manages
+Manager "1" --> "*" Chef : manages
+
+' The MaîtreD manages waiters, bartenders and bus personnel.
+Maitred "1" --> "*" Waiter : manages
+Maitred "1" --> "*" Bartender : manages
+Maitred "1" --> "*" BusPerson : manages
+
+' Chefs are responsible for managing cooks and dishwashers.
+Chef "1" --> "*" Cook : manages
+Chef "1" --> "*" Dishwasher : manages
+
+' **********************************
+' Additional Associations
+' **********************************
+' A waiter can be assigned to many reservations over the evening.
+Waiter "1" --> "*" Reservation : serves
+
+@enduml

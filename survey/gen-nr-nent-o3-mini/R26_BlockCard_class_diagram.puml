@@ -1,0 +1,61 @@
+@startuml
+' Mobile Applications and Account Creation Process
+abstract class MobileApplication {
+  +createAccount()
+}
+class AndroidApplication extends MobileApplication
+class iOSApplication extends MobileApplication
+
+' Back-End Communication System for kiosk and branches
+class BackEndCommunication {
+  +sendMessage()
+  +receiveResponse()
+}
+MobileApplication ..> BackEndCommunication : communicates with
+
+' Menu Placement for Card Operations
+class CardsMenu {
+  -myCardsPage : MyCardsPage
+  -blockCardPage : BlockCardPage
+}
+class MyCardsPage {
+  +displayCards()
+}
+class BlockCardPage {
+  +initiateBlockCard(card : Card)
+}
+
+CardsMenu --> MyCardsPage : contains [after]
+CardsMenu --> BlockCardPage : contains
+
+' Customer and Card Related Classes
+class CustomerUser {
+  -cards : List<Card>
+  +initiateBlock(card : Card)
+}
+abstract class Card {
+  -status : CardStatus
+  +checkStatus() : CardStatus
+  +block(reason : CardBlockingReason) : boolean
+}
+class DebitCard extends Card
+class CreditCard extends Card
+class VirtualCard extends Card
+class SupplementaryCard extends Card
+
+CustomerUser "1" -- "*" Card : owns
+
+' Enumerations for Card Status and Blocking Reasons
+enum CardStatus {
+  AVAILABLE
+  BLOCKED
+  OTHER
+}
+
+enum CardBlockingReason {
+  STOLEN
+  MISSING
+  OTHERS
+}
+
+@enduml

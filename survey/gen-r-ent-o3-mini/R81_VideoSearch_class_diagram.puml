@@ -1,86 +1,98 @@
 @startuml
-' Define classes
-class User {
-  +searchTerm: string
-  +initiateSearch()
-}
+' Define the main classes
 
 class Software {
-  +launchProgram()
+  +executeTorrentSearch(term: String): Results
+  +addTorrentWebsite(website: TorrentWebsite)
 }
 
 class Program {
   +displayResults(results: Results)
+  +navigatePages(pageNumber: int)
 }
 
-class Search {
-  -term: string
-  +performSearch(query: Query): Results
-}
-
-class Query {
-  -term: string
+class User {
+  +performSearch(term: String)
 }
 
 class SearchBar {
-  ' Shared UI component for search input
+  -input: String
+  +getInput(): String
+  +setInput(term: String)
+}
+
+class Search {
+  -term: String
+  +execute(): Results
+  +setTerm(term: String)
 }
 
 class TorrentWebsite {
-  -website: string
+  -name: String
+  -url: String
+  +getTorrents(query: String): List<Torrent>
 }
 
 class Torrent {
+  -website: String
   -seeds: int
   -peers: int
-  -size: string
+  -size: String
   -datePosted: Date
-  -link: string
-}
-
-class Webpage {
-  -link: string
+  -link: String
+  +displayInfo()
 }
 
 class Results {
-  -sortOrder: string
-  -sortColumn: string
-  -currentPage: int
-  +sortBy(column: string)
+  -torrents: List<Torrent>
+  -sortOrder: String
+  +sortBy(attribute: String)
+  +paginate(pageNumber: int): List<Torrent>
+  +display()
 }
 
-class StreamingSearch {
-  -term: string
-  +performStreamingSearch(query: Query): Results
+class Webpage {
+  -url: String
+  +open()
 }
 
-' Define relationships
+' Relationships
 
-' The user initiates a search through the search bar.
-User "1" --> "1" Search : initiates
-Search --> Query : creates >
+User --> Search : "initiates"
+Search --> SearchBar : "gets input from"
+Search --> Software : "delegates search to"
+Software "1" o-- "many" TorrentWebsite : "stores"
+Software --> Program : "displays results in"
+Search --> Results : "returns"
 
-' Both torrent search and streaming search share the same SearchBar.
-SearchBar <..> Search : used by
-SearchBar <..> StreamingSearch : used by
+TorrentWebsite --> Torrent : "provides"
+Results --> Torrent : "contains"
 
-' Search produces Results containing multiple Torrent items.
-Search --> Results : returns >
-Results o-- "0..*" Torrent : contains
+' Optional: association for sorting attributes in Results
+Results --> Webpage : "link opens -->"
 
-' Each Torrent result is associated with the TorrentWebsite it came from.
-Torrent --> TorrentWebsite : "from"
+' Add note about streaming search sharing same search bar
+class Streaming {
+  ' This class represents the streaming feature sharing the search bar
+  +streamContent(term: String)
+}
+SearchBar <.. Streaming : "shared"
 
-' A Torrent also has a corresponding webpage for detailed info.
-Torrent --> Webpage : "has link to"
-
-' StreamingSearch is similar in behavior and returns Results.
-StreamingSearch --> Results : returns >
-
-' Software contains the main Program.
-Software --> Program : contains
-
-' The Program displays the Results on its torrent tab.
-Program --> Results : displays >
+' Methods for User
+User : +performSearch(term: String)
+' Methods for Search
+Search : +execute() 
+Search : +setTerm(term: String)
+' Methods for TorrentWebsite
+TorrentWebsite : +getTorrents(query: String)
+' Methods for Torrent
+Torrent : +displayInfo()
+' Methods for Results
+Results : +sortBy(attribute: String)
+Results : +paginate(pageNumber: int)
+Results : +display()
+' Methods for Program
+Program : +displayResults(results: Results)
+Program : +navigatePages(pageNumber: int)
 
 @enduml

@@ -1,105 +1,122 @@
 @startuml
-' Define the main system class that holds all rental offices and the central office.
-class RentalSystem {
+' The overall system that manages rental offices, rental agreements and vehicle assignments
+class System {
+  - vehicleAssignments : List<Vehicle>
+  - rentalAgreements : List<RentalAgreement>
+  + trackRentalAgreements() 
+  + updateVehicleAssignments()
 }
 
-' The central office that oversees vehicle distribution
+' The central office that oversees vehicle distribution and transfers
 class CentralOffice {
-  // Attributes can be added here if needed
+  + transferVehicle(source: RentalOffice, destination: RentalOffice, vehicle: Vehicle)
 }
 
-' A rental office with its details
+' A rental office has a unique three-digit office number, a name and an address.
 class RentalOffice {
   - officeName : String
-  - officeNumber : String  "unique three-digit code"
+  - officeNumber : String
   - address : String
+  - vehicles : List<Vehicle>
+  - rentalAgreements : List<RentalAgreement>
+  + rentVehicle(vehicle: Vehicle, customer: Customer)
+  + receiveVehicle(vehicle: Vehicle)
 }
 
-' Base class for all vehicles
+' Base vehicle class representing all vehicles in stock. Each vehicle is assigned a unique id,
+' state of registration, license plate, last maintenance date and registration expiration date.
 class Vehicle {
   - vehicleId : String
-  - stateOfRegistration : String
+  - stateRegistration : String
   - licensePlate : String
   - lastMaintenanceDate : Date
   - registrationExpirationDate : Date
+  - homeOffice : RentalOffice
+  + performMaintenance()
+  + updateRegistration()
 }
 
-' Trucks are a kind of vehicle with extra attributes.
-class Truck {
+' Truck is a subclass of Vehicle.
+' Trucks have additional attributes: current odometer reading, gas tank capacity
+' and status of working radio.
+class Truck extends Vehicle {
   - odometerReading : int
-  - gasTankCapacity : Double
-  - workingRadio : Boolean
+  - gasTankCapacity : float
+  - radioWorking : boolean
+  + updateOdometer(newReading: int)
 }
-Truck --|> Vehicle
 
-' Trailers are a kind of vehicle.
-class Trailer {
-  - trailerType : String   "e.g. '8ft covered' or '6ft open'"
-  - length : String
+' Trailer is a subclass of Vehicle.
+' The type of trailer can be distinguished by a type attribute.
+class Trailer extends Vehicle {
+  - trailerType : String   ' e.g., "8’ Covered" or "6’ Open"
 }
-Trailer --|> Vehicle
 
-' Abstract customer class
+' RentalAgreement represents a rental transaction for a single vehicle.
+' It records the originating office number, rental agreement number, rental date, duration,
+' drop-off rental office, deposit paid, quoted daily rental rate and quoted rate per mile.
+' Each rental agreement is associated with one vehicle and one customer (individual or company).
+class RentalAgreement {
+  - originatingRentalOfficeNumber : String
+  - rentalAgreementNumber : String
+  - rentalDate : Date
+  - duration : int
+  - depositPaid : float
+  - quotedDailyRentalRate : float
+  - quotedRatePerMile : float
+  - dropOffRentalOffice : RentalOffice
+  - vehicle : Vehicle
+  - customer : Customer
+  + calculateRentalCost(actualDuration: int, milesDriven: float) : float
+}
+
+' An abstract Customer class that is extended by Individual and Company.
 abstract class Customer {
 }
 
-' Individual customers with personal information 
-class Individual {
+' Individual customers have a name, home phone, address and driver’s license details.
+class Individual extends Customer {
   - name : String
   - homePhone : String
   - address : String
   - driversLicenseState : String
   - driversLicenseNumber : String
   - driversLicenseExpirationDate : Date
+  + getContactInfo() : String
 }
-Individual --|> Customer
 
-' Companies as customers
-class Company {
+' For company customers we record a company number, name and address.
+class Company extends Customer {
   - companyNumber : String
   - name : String
   - address : String
-}
-Company --|> Customer
-
-' A rental agreement for each vehicle rental
-class RentalAgreement {
-  - originatingRentalOfficeNumber : String
-  - rentalAgreementNumber : String
-  - rentalDate : Date
-  - duration : int    "anticipated duration (days)"
-  - depositPaid : Double
-  - dailyRentalRate : Double
-  - ratePerMile : Double
+  + getCompanyInfo() : String
 }
 
-' ------------------
-' Associations / Relationships
-' ------------------
+' Associations
 
-' RentalSystem aggregates the offices and has a central office.
-RentalSystem "1" --> "1" CentralOffice : manages
-RentalSystem "1" --> "*" RentalOffice : contains
+' The system manages many rental offices.
+System "1" -- "many" RentalOffice : manages
 
-' Each RentalOffice is the home office for many Vehicles.
-RentalOffice "1" --> "*" Vehicle : "home office for"
-' (alternatively, each Vehicle is based out of one RentalOffice)
-Vehicle "*" -- "1" RentalOffice
+' The system tracks many rental agreements.
+System "1" -- "many" RentalAgreement : tracks
 
-' Rental agreements are created by a rental office.
-' A RentalAgreement is associated with two offices: originating and drop-off.
-RentalOffice "1" <-- "0..*" RentalAgreement : originates
-RentalOffice "1" <-- "0..*" RentalAgreement : "drop-off"
+' Each rental office houses many vehicles.
+RentalOffice "1" -- "many" Vehicle : houses
 
-' Each RentalAgreement is for one Vehicle.
-RentalAgreement "1" --> "1" Vehicle : "assigns"
+' Each rental office originates many rental agreements.
+RentalOffice "1" -- "many" RentalAgreement : originates
 
-' Each RentalAgreement is with a single Customer (either individual or company).
-RentalAgreement "1" --> "1" Customer : "rented by"
+' Each rental agreement is for exactly one vehicle.
+RentalAgreement "1" --> "1" Vehicle : assigns
 
-' Note: The Customer relationship is implemented via inheritance in Individual and Company.
+' Each rental agreement involves exactly one customer (individual or company).
+RentalAgreement "1" --> "1" Customer : for
 
-' CentralOffice directs transfers among RentalOffices.
-CentralOffice "1" --> "*" RentalOffice : "oversees transfers"
+' Each vehicle is based out of exactly one home office (a RentalOffice).
+Vehicle "1" --> "1" RentalOffice : "home office"
+
+' The Central Office oversees vehicle distribution among Rental Offices.
+CentralOffice --> RentalOffice : oversees
 
 @enduml

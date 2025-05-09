@@ -1,62 +1,84 @@
 @startuml
-
-' Define classes for the domain
+' Define classes
 
 class Animal {
-  - identifier: int
-  - name: string
-  ' Instead of storing breed as a simple string attribute,
-  ' we use a dedicated Breed class to allow association with conditions.
-  - breed: Breed
+  +int id
+  +String name
+  +boolean admitted
+  +Breed breed
+  +Owner owner
+  +admitAnimal() : void
+  +updateInfo() : void
 }
 
 class Owner {
-  - identifier: int
-  - name: string
-  - address: string
-  - phoneNumber: string
-}
-
-class Physician {
-  - identifier: int
-  - name: string
-  - address: string
-  - phoneNumber: string
+  +int id
+  +String name
+  +String address
+  +String phoneNumber
+  +updateInfo() : void
 }
 
 class Appointment {
-  - date: DateTime
+  +Date dateTime
+  +Animal animal
+  +Physician physician
+  +schedule() : void
+  +cancel() : void
+  +reschedule() : void
+}
+
+class Physician {
+  +int id
+  +String name
+  +String address
+  +String phoneNumber
+  +updateSchedule() : void
 }
 
 class Condition {
-  - commonName: string
-  - scientificName: string
+  +String commonName
+  +String scientificName
+  +getDetails() : String
 }
 
-' Additional class to encapsulate breed information and its common conditions.
+' Extra class to represent breed details and store common conditions for that breed
 class Breed {
-  - name: string
+  +String name
+  +List<Condition> conditions
+  +addCondition(c : Condition) : void
+}
+
+' Database class that holds collections of all entities
+class Database {
+  +List<Animal> animals
+  +List<Owner> owners
+  +List<Appointment> appointments
+  +List<Physician> physicians
+  +List<Breed> breeds
+  +List<Condition> conditions
+  +addAnimal(a : Animal) : void
+  +addOwner(o : Owner) : void
+  +addAppointment(app : Appointment) : void
+  +addPhysician(p : Physician) : void
+  +addBreed(b : Breed) : void
+  +findAnimalById(id : int) : Animal
+  +findOwnerById(id : int) : Owner
 }
 
 ' Relationships
 
-' An Owner can have many Animals, but each Animal has exactly one Owner.
+' Each Animal is owned by exactly one Owner; an Owner can have many Animals.
 Owner "1" <-- "0..*" Animal : owns
 
-' Each Appointment is for one Animal.
-Animal "1" <-- "0..*" Appointment : isScheduledFor
+' Each Animal has a Breed (if any) and a Breed can be associated with many Animals.
+Breed "1" <-- "0..*" Animal : "is of type"
 
-' Since the owner is inherent to the Animal, Appointment can traverse to Owner,
-' though you may optionally model it directly.
-Appointment --> Owner : involves
+' Each Appointment has one Animal and one Physician.
+Animal "1" <-- "0..*" Appointment : "attended in"
+Physician "1" <-- "0..*" Appointment : "responsible for"
 
-' Each Appointment must have a responsible Physician.
-Appointment --> Physician : handledBy
-
-' An Animal’s breed is represented via the Breed class.
-Animal --> Breed : has
-
-' For each Breed, it is possible to store common Conditions.
-Breed "1" --> "0..*" Condition : commonConditions
+' Each Breed can have multiple Conditions (common conditions)
+Breed "1" -- "0..*" Condition : "associated with"
 
 @enduml

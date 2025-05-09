@@ -1,89 +1,132 @@
 @startuml
 
-' Store class
+'============================
+' Store and Related Classes
+'============================
 class Store {
-  +storeID: int
-  +address: string
-  +phoneNumber: string
+  - storeID: int
+  - address: String
+  - phoneNumber: String
+  + getStoreDetails(): String
+  + updateStoreInfo(address: String, phone: String): void
 }
 
-' Employee and related phone and type
+' A store enrolls customers and employs employees.
+Store "1" <-- "many" Employee : employs
+Store "1" <-- "many" Customer : enrolls
+Store "1" <-- "many" RentalTransaction : handles
+
+'============================
+' Employee and PhoneNumber
+'============================
 class Employee {
-  +employeeID: int
-  +name: string
-  +address: string
+  - employeeID: int
+  - name: String
+  - address: String
+  + getEmployeeInfo(): String 
+  + updateEmployeeInfo(name: String, address: String): void
 }
-class EmployeePhone {
-  +phoneNumber: string
-  +phoneType: string  // e.g., office, home, beeper
-}
+
+' Each employee has one employee type (manager, cashier, stocker)
 class EmployeeType {
-  +type: string  // "manager", "cashier", or "stocker"
+  - typeName: String
+  + getType(): String
+}
+Employee --> EmployeeType : classified as
+
+' Each employee can have many phone numbers.
+class PhoneNumber {
+  - number: String
+  - type: PhoneType
+  + getPhone(): String
 }
 
-' Relationship: an Employee has one or more phone numbers
-Employee "1" -- "1..*" EmployeePhone : has
-' Each Employee is classified by one EmployeeType (and one type classifies many employees)
-Employee "1" -- "1" EmployeeType : is classified as
-EmployeeType "1" -- "0..*" Employee : classifies
+enum PhoneType {
+  Office
+  Home
+  Beeper
+}
 
+Employee "1" *-- "*" PhoneNumber : has
+
+'============================
 ' Title and Distributor
+'============================
 class Title {
-  +titleID: int
-  +title: string
-  +runTime: int
-  +rating: string  // e.g., G, PG, R
+  - titleID: int
+  - name: String
+  - runTime: int
+  - rating: String
+  + getTitleInfo(): String
 }
+
+' A title is distributed by one distributor.
 class Distributor {
-  +distributorID: int
-  +name: string
-  +phoneNumber: string
+  - distributorID: int
+  - name: String
+  - phoneNumber: String
+  + getDistributorInfo(): String
 }
 
-' Assuming each Title is supplied by one Distributor, and one Distributor may supply many Titles
-Title "many" -- "1" Distributor : supplied by
+Title --> Distributor : distributed by
 
-' Cartridge (physical cassette) class
+' Many stores can carry many titles, but the inventory is maintained as cartridges.
+Store "*" -- "*" Title : carries
+
+'============================
+' Cartridge (Physical Copy)
+'============================
 class Cartridge {
-  +cartridgeID: int
-  +utilizationCount: int
-  +status: string  // Domain: "Available", "Rented", "Broken"
+  - cartridgeID: int
+  - utilizationCount: int
+  - status: CartridgeStatus
+  + updateStatus(newStatus: CartridgeStatus): void
+  + getCartridgeInfo(): String
 }
 
-' Each Cartridge is an instance (copy) of a Title
-Title "1" -- "0..*" Cartridge : "instance of"
-' Each Cartridge is stocked at one Store
-Store "1" -- "0..*" Cartridge : stocks
+enum CartridgeStatus {
+  Available
+  Rented
+  Broken
+}
 
-' Customer class
+' Each cartridge is a copy of one title.
+Cartridge --> Title : copy of
+' A cartridge is stocked at a store.
+Cartridge --> Store : stocked at
+
+'============================
+' Customer
+'============================
 class Customer {
-  +customerID: int
-  +name: string
-  +phoneNumber: string
+  - customerID: int
+  - name: String
+  - phoneNumber: String
+  + getCustomerInfo(): String
+  + updateCustomerInfo(name: String, phone: String): void
 }
 
-' A Customer enrolls at one Store
-Store "1" -- "0..*" Customer : enrolls
-
-' Rental Transaction and its Detail Lines
+'============================
+' Rental Transaction and Detail
+'============================
 class RentalTransaction {
-  +rentalID: int
-  +rentalDate: Date
-  +totalRentalAmount: float
+  - rentalID: int
+  - rentalDate: Date
+  - totalRentalAmount: Decimal
+  + processRental(): void
+  + calculateTotal(): Decimal
 }
 
+' A rental transaction is composed of detail lines.
 class RentalTransactionDetail {
-  +dueDate: Date
-  +actualReturnDate: Date
+  - dueDate: Date
+  - actualReturnDate: Date
+  + calculateLateFee(): Decimal
 }
 
-' Each RentalTransaction is associated with one Store
-Store "1" -- "0..*" RentalTransaction : "rented from"
+RentalTransaction "1" o-- "1..*" RentalTransactionDetail : contains
 
-' A RentalTransaction contains one or more RentalTransactionDetail lines
-RentalTransaction "1" -- "1..*" RentalTransactionDetail : contains
-
-' Each RentalTransactionDetail is for one Cartridge
-Cartridge "1" -- "0..*" RentalTransactionDetail : "rented in"
+' Each rental detail references one cartridge.
+RentalTransactionDetail --> Cartridge : references
 
 @enduml
