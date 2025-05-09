@@ -1,0 +1,105 @@
+@startuml
+' Define the main system class that holds all rental offices and the central office.
+class RentalSystem {
+}
+
+' The central office that oversees vehicle distribution
+class CentralOffice {
+  // Attributes can be added here if needed
+}
+
+' A rental office with its details
+class RentalOffice {
+  - officeName : String
+  - officeNumber : String  "unique three-digit code"
+  - address : String
+}
+
+' Base class for all vehicles
+class Vehicle {
+  - vehicleId : String
+  - stateOfRegistration : String
+  - licensePlate : String
+  - lastMaintenanceDate : Date
+  - registrationExpirationDate : Date
+}
+
+' Trucks are a kind of vehicle with extra attributes.
+class Truck {
+  - odometerReading : int
+  - gasTankCapacity : Double
+  - workingRadio : Boolean
+}
+Truck --|> Vehicle
+
+' Trailers are a kind of vehicle.
+class Trailer {
+  - trailerType : String   "e.g. '8ft covered' or '6ft open'"
+  - length : String
+}
+Trailer --|> Vehicle
+
+' Abstract customer class
+abstract class Customer {
+}
+
+' Individual customers with personal information 
+class Individual {
+  - name : String
+  - homePhone : String
+  - address : String
+  - driversLicenseState : String
+  - driversLicenseNumber : String
+  - driversLicenseExpirationDate : Date
+}
+Individual --|> Customer
+
+' Companies as customers
+class Company {
+  - companyNumber : String
+  - name : String
+  - address : String
+}
+Company --|> Customer
+
+' A rental agreement for each vehicle rental
+class RentalAgreement {
+  - originatingRentalOfficeNumber : String
+  - rentalAgreementNumber : String
+  - rentalDate : Date
+  - duration : int    "anticipated duration (days)"
+  - depositPaid : Double
+  - dailyRentalRate : Double
+  - ratePerMile : Double
+}
+
+' ------------------
+' Associations / Relationships
+' ------------------
+
+' RentalSystem aggregates the offices and has a central office.
+RentalSystem "1" --> "1" CentralOffice : manages
+RentalSystem "1" --> "*" RentalOffice : contains
+
+' Each RentalOffice is the home office for many Vehicles.
+RentalOffice "1" --> "*" Vehicle : "home office for"
+' (alternatively, each Vehicle is based out of one RentalOffice)
+Vehicle "*" -- "1" RentalOffice
+
+' Rental agreements are created by a rental office.
+' A RentalAgreement is associated with two offices: originating and drop-off.
+RentalOffice "1" <-- "0..*" RentalAgreement : originates
+RentalOffice "1" <-- "0..*" RentalAgreement : "drop-off"
+
+' Each RentalAgreement is for one Vehicle.
+RentalAgreement "1" --> "1" Vehicle : "assigns"
+
+' Each RentalAgreement is with a single Customer (either individual or company).
+RentalAgreement "1" --> "1" Customer : "rented by"
+
+' Note: The Customer relationship is implemented via inheritance in Individual and Company.
+
+' CentralOffice directs transfers among RentalOffices.
+CentralOffice "1" --> "*" RentalOffice : "oversees transfers"
+
+@enduml

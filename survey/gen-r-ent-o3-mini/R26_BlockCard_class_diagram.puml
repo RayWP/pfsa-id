@@ -1,0 +1,66 @@
+@startuml
+
+' Define Application Classes for Mobile Platforms
+abstract class MobileApp {
+  +createAccount()
+}
+class AndroidApp extends MobileApp
+class iOSApp extends MobileApp
+
+' Define Account related class
+class Account {
+  ' Attributes for account creation can be added here
+}
+
+' Define User Hierarchy
+class User {
+  ' Generic user attributes (e.g., username, password)
+}
+class Customer extends User {
+  - account: Account
+  - cards: Cards
+}
+
+' Define Cards container and individual Card
+class Cards {
+  - cardList: List<Card>
+}
+class Card {
+  - cardStatus: String  ' e.g., available, blocked, stolen, missing, etc.
+  ' Blocking reasons: stolen, missing, others can be processed in block()
+  +block(reason: String): void
+}
+
+' Define Back-end Communication Classes
+class System {
+  +checkCardStatus(card: Card): Boolean
+  ' The system verifies card status before blocking
+}
+class Kiosk {
+  ' Represents the kiosk terminal; communicates with System for backend operations
+}
+
+' Define Associations
+
+' A Customer has an Account and a collection of Cards
+Customer --> Account : "has"
+Customer --> Cards : "owns"
+
+' Cards is a container for Card objects
+Cards --> "*" Card : "contains"
+
+' The System checks the card status when a customer initiates a block.
+System ..> Card : "checks status"
+
+' The Kiosk communicates with the System.
+Kiosk --> System : "communicates with"
+
+' The mobile applications (Android & iOS) use Account creation process.
+MobileApp <-- AndroidApp
+MobileApp <-- iOSApp
+Customer .. MobileApp : "registers via"
+
+' Note: The "Block Card" function is assumed to be accessible under the "Cards" menu in UI.
+' This behavior is implemented in the Card.block(reason) method after status validation.
+
+@enduml

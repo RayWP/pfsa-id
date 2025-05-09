@@ -1,0 +1,150 @@
+@startuml
+
+' =========================
+' Classes with attributes
+' =========================
+
+class Product {
+  - type: String
+  - expirationDate: Date
+  - price: Double
+  - ingredients: String
+}
+
+class Group {
+  - category: String
+}
+
+class Stock {
+  - number: int
+}
+
+class Form {
+  - number: int
+}
+
+class Store {
+  ' Store may contain many products
+}
+
+class Shelf {
+}
+
+class Supplier {
+}
+
+class Supermarket {
+}
+
+class Cashier {
+}
+
+class Machine {
+}
+
+class Controller {
+}
+
+class Transaction {
+}
+
+class Customer {
+  - type: String
+}
+
+class Invoice {
+  - total: Double
+}
+
+class Order {
+  - quantities: int
+  - orders: int
+}
+
+class Bakery {
+}
+
+class Agent {
+}
+
+class Basket {
+}
+
+' Extra classes from list (aliases/collections)
+class Clients
+class Customers
+class Products
+class Goods
+class Items
+class FormaInvoice
+
+' =========================
+' Associations and Relationships
+' =========================
+
+' A product belongs to a product group
+Product --> Group : belongs to
+
+' A supermarket has one store and one stock, many shelves, many suppliers, many cashiers, and many customers
+Supermarket "1" o-- "1" Store : contains
+Supermarket "1" o-- "1" Stock : manages
+Supermarket "1" o-- "*" Shelf : displays
+Supermarket "1" o-- "*" Supplier : orders from
+Supermarket "1" o-- "*" Cashier : employs
+Supermarket "1" o-- "*" Customer : serves
+
+' A store contains many products (aggregated as Products)
+Store --> "0..*" Product : holds
+
+' Stock records products via forms (physical records)
+Stock --> "0..*" Form : records
+
+' Shelf holds products
+Shelf --> "0..*" Product : displays
+
+' When products arrive from supplier, they are recorded in stock and stored in store/shelf
+Supplier --> Product : supplies
+
+' Cashier approaches transaction through machine and controller
+Cashier --> Machine : uses
+Machine --> Controller : controlled by
+Cashier --> Transaction : initiates
+
+' During purchase, customer uses a basket to collect goods (items)
+Customer --> Basket : uses
+Basket --> "0..*" Product : contains
+Basket --> Goods : holds
+Goods --> Items : comprises
+
+' At checkout, cashier produces an invoice (and optionally a forma invoice)
+Cashier --> Invoice : generates
+Invoice --> FormaInvoice : may convert to
+
+' Payment methods are handled as attribute of invoice (payment by cash or cheque)
+' (Note: PaymentMethod is modeled as an enum)
+enum PaymentMethod {
+  Cash
+  Cheque
+}
+Invoice ..> PaymentMethod : payment by
+
+' An order is prepared by the bakery department via an agent
+Order --> Bakery : prepared by
+Order --> Agent : handled by
+Order --> Product : includes
+
+' Customers collection classes (Customers, Clients) to represent groups of customer objects
+Customers --> Customer : contains
+Clients --> Customer : alias for
+
+' Extra Entities from provided list
+' Products as a collection of Product
+Products --> Product : includes
+' Forms as a set of Form records
+Form --> Products : records product details
+
+' =========================
+' End of diagram
+' =========================
+
+@enduml

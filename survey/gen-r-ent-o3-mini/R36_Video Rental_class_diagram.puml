@@ -1,0 +1,89 @@
+@startuml
+
+' Store class
+class Store {
+  +storeID: int
+  +address: string
+  +phoneNumber: string
+}
+
+' Employee and related phone and type
+class Employee {
+  +employeeID: int
+  +name: string
+  +address: string
+}
+class EmployeePhone {
+  +phoneNumber: string
+  +phoneType: string  // e.g., office, home, beeper
+}
+class EmployeeType {
+  +type: string  // "manager", "cashier", or "stocker"
+}
+
+' Relationship: an Employee has one or more phone numbers
+Employee "1" -- "1..*" EmployeePhone : has
+' Each Employee is classified by one EmployeeType (and one type classifies many employees)
+Employee "1" -- "1" EmployeeType : is classified as
+EmployeeType "1" -- "0..*" Employee : classifies
+
+' Title and Distributor
+class Title {
+  +titleID: int
+  +title: string
+  +runTime: int
+  +rating: string  // e.g., G, PG, R
+}
+class Distributor {
+  +distributorID: int
+  +name: string
+  +phoneNumber: string
+}
+
+' Assuming each Title is supplied by one Distributor, and one Distributor may supply many Titles
+Title "many" -- "1" Distributor : supplied by
+
+' Cartridge (physical cassette) class
+class Cartridge {
+  +cartridgeID: int
+  +utilizationCount: int
+  +status: string  // Domain: "Available", "Rented", "Broken"
+}
+
+' Each Cartridge is an instance (copy) of a Title
+Title "1" -- "0..*" Cartridge : "instance of"
+' Each Cartridge is stocked at one Store
+Store "1" -- "0..*" Cartridge : stocks
+
+' Customer class
+class Customer {
+  +customerID: int
+  +name: string
+  +phoneNumber: string
+}
+
+' A Customer enrolls at one Store
+Store "1" -- "0..*" Customer : enrolls
+
+' Rental Transaction and its Detail Lines
+class RentalTransaction {
+  +rentalID: int
+  +rentalDate: Date
+  +totalRentalAmount: float
+}
+
+class RentalTransactionDetail {
+  +dueDate: Date
+  +actualReturnDate: Date
+}
+
+' Each RentalTransaction is associated with one Store
+Store "1" -- "0..*" RentalTransaction : "rented from"
+
+' A RentalTransaction contains one or more RentalTransactionDetail lines
+RentalTransaction "1" -- "1..*" RentalTransactionDetail : contains
+
+' Each RentalTransactionDetail is for one Cartridge
+Cartridge "1" -- "0..*" RentalTransactionDetail : "rented in"
+
+@enduml

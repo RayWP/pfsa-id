@@ -1,0 +1,73 @@
+@startuml
+
+' Define classes
+class Sample {
+  +id: String
+  +properties: String
+  +chemistry: String
+  +mineralogy: String
+  +age: Date
+  +density: Double
+  +porosity: Double
+  +permeability: Double
+  +samplingTime: Date
+}
+
+class Specimen {
+  +id: String
+  +details: String
+}
+
+class Lab {
+  +id: String
+  +localIdentifier: String
+}
+
+class System {
+  +id: String
+  +name: String
+}
+
+class Observations {
+  +id: String
+  +analysis: String
+  +analysisTime: Date
+}
+
+class Location {
+  +id: String
+  +locationInformation: String
+  +geographic: String
+}
+
+class Samples {
+  +collections: List<Sample>
+}
+
+' Associations
+
+' A Sample is obtained as a Specimen from the field
+Sample --> Specimen : "originates from"
+
+' A specimen (or its parent sample) is collected from a Location.
+Sample --> Location : "collected from"
+
+' A sample may be split into derived samples (sub-samples) 
+Sample "1" <-- "0..*" Sample : "derived"
+
+' A sample can be processed in one or more labs.
+Sample "0..*" -- "0..*" Lab : "processed in"
+
+' Each Lab runs its own LIMS System.
+Lab --> System : "runs"
+
+' Each Lab produces one or more Observations.
+Lab "1" --> "0..*" Observations : "produces"
+
+' Observations are made on a (parent or derived) Sample.
+Observations --> Sample : "observes"
+
+' Optional: a Samples collection aggregates multiple Sample objects.
+Samples o-- "0..*" Sample : "contains"
+
+@enduml

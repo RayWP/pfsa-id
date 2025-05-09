@@ -1,0 +1,62 @@
+@startuml
+
+' Define classes for the domain
+
+class Animal {
+  - identifier: int
+  - name: string
+  ' Instead of storing breed as a simple string attribute,
+  ' we use a dedicated Breed class to allow association with conditions.
+  - breed: Breed
+}
+
+class Owner {
+  - identifier: int
+  - name: string
+  - address: string
+  - phoneNumber: string
+}
+
+class Physician {
+  - identifier: int
+  - name: string
+  - address: string
+  - phoneNumber: string
+}
+
+class Appointment {
+  - date: DateTime
+}
+
+class Condition {
+  - commonName: string
+  - scientificName: string
+}
+
+' Additional class to encapsulate breed information and its common conditions.
+class Breed {
+  - name: string
+}
+
+' Relationships
+
+' An Owner can have many Animals, but each Animal has exactly one Owner.
+Owner "1" <-- "0..*" Animal : owns
+
+' Each Appointment is for one Animal.
+Animal "1" <-- "0..*" Appointment : isScheduledFor
+
+' Since the owner is inherent to the Animal, Appointment can traverse to Owner,
+' though you may optionally model it directly.
+Appointment --> Owner : involves
+
+' Each Appointment must have a responsible Physician.
+Appointment --> Physician : handledBy
+
+' An Animal’s breed is represented via the Breed class.
+Animal --> Breed : has
+
+' For each Breed, it is possible to store common Conditions.
+Breed "1" --> "0..*" Condition : commonConditions
+
+@enduml

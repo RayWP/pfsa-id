@@ -1,0 +1,100 @@
+@startuml
+
+' Rental System
+class RentalSystem {
+}
+
+' Rental Offices
+class RentalOffice {
+  - officeName : String
+  - officeNumber : String "3-digit unique"
+  - address : String
+}
+
+' Central Office is a specialized RentalOffice that oversees vehicle distribution
+class CentralOffice {
+  - officeName : String
+  - officeNumber : String "3-digit unique"
+  - address : String
+}
+RentalOffice <|-- CentralOffice
+
+' Vehicles
+abstract class Vehicle {
+  - vehicleId : String
+  - stateRegistration : String
+  - licensePlate : String
+  - registrationNumber : String
+  - lastMaintenanceDate : Date
+  - registrationExpirationDate : Date
+}
+
+' Trucks have extra attributes
+class Truck {
+  - odometerReading : int
+  - gasTankCapacity : double
+  - workingRadio : Boolean
+}
+Truck --|> Vehicle
+
+' Trailers (can be Covered or Open)
+class Trailer {
+  - trailerType : String  "Covered or Open"
+  - size : String         "e.g., 8' or 6'"
+}
+Trailer --|> Vehicle
+
+' Customers - abstract superclass
+abstract class Customer {
+}
+
+' Individual Customer
+class Individual {
+  - name : String
+  - homePhone : String
+  - address : String
+  - driversLicenseState : String
+  - driversLicenseNumber : String
+  - driversLicenseExpirationDate : Date
+}
+Individual --|> Customer
+
+' Company Customer
+class Company {
+  - companyNumber : String
+  - name : String
+  - address : String
+}
+Company --|> Customer
+
+' Rental Agreement
+class RentalAgreement {
+  - originatingRentalOfficeNumber : String
+  - rentalAgreementNumber : String
+  - rentalDate : Date
+  - duration : int
+  - depositPaid : double
+  - quotedDailyRentalRate : double
+  - quotedRatePerMile : double
+}
+
+' Associations
+
+' The Rental System manages offices, vehicles, rental agreements and customers
+RentalSystem "1" o-- "many" RentalOffice : manages
+RentalSystem "1" o-- "many" Vehicle : contains
+RentalSystem "1" o-- "many" RentalAgreement : tracks
+RentalSystem "1" o-- "many" Customer : registers
+
+' Each Vehicle is based at a single home office
+Vehicle "1" --> "1" RentalOffice : homeOffice
+
+' Each Rental Agreement is for one vehicle and one customer.
+RentalAgreement "1" --> "1" Vehicle : rentalVehicle
+RentalAgreement "1" --> "1" Customer : renter
+
+' Rental Agreement includes originating and drop-off offices
+RentalAgreement "1" --> "1" RentalOffice : originatingOffice
+RentalAgreement "1" --> "1" RentalOffice : dropOffOffice
+
+@enduml

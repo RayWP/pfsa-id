@@ -1,0 +1,113 @@
+@startuml
+
+' -----------------------------
+' Reservation Classes
+' -----------------------------
+class Reservation {
+  - reservationNumber: String
+  - date: Date
+  - time: Time
+  - numberOfPeople: Integer
+  - customerName: String
+  - phoneNumber: String
+}
+
+class IndividualReservation {
+  - seatingPreference: String
+  - smokingPreference: String
+}
+
+class BanquetReservation {
+  - groupName: String
+  - methodOfPayment: String
+}
+
+Reservation <|-- IndividualReservation
+Reservation <|-- BanquetReservation
+
+' -----------------------------
+' Table Class
+' -----------------------------
+class Table {
+  - tableNumber: String
+  - description: String
+  - capacity: Integer   ' (2, 4 or 6 persons)
+}
+
+' -----------------------------
+' Person and Employee Classes
+' -----------------------------
+class Person {
+  - name: String
+  - dateOfBirth: Date
+  - driversLicenseNumber: String
+}
+
+class Manager
+class Maitre_d
+class Waiter
+class Bartender
+class Chef
+class Cook
+class BusPerson
+class Dishwasher
+
+Person <|-- Manager
+Person <|-- Maitre_d
+Person <|-- Waiter
+Person <|-- Bartender
+Person <|-- Chef
+Person <|-- Cook
+Person <|-- BusPerson
+Person <|-- Dishwasher
+
+' Association: A waiter may serve many reservations.
+Reservation --> "1" Waiter : servedBy
+Waiter --> "*" Reservation : serves
+
+' Managerial relationships
+Manager "1" -- "*" Maitre_d : manages
+Manager "1" -- "*" Chef : manages
+
+Maitre_d "1" -- "*" Waiter : manages
+Maitre_d "1" -- "*" Bartender : manages
+Maitre_d "1" -- "*" BusPerson : manages
+
+Chef "1" -- "*" Cook : manages
+Chef "1" -- "*" Dishwasher : manages
+
+' -----------------------------
+' Menu Item and Food Item Classes
+' -----------------------------
+class MenuItem {
+  - menuItemNumber: String
+  - itemDescription: String
+  - itemPrepTime: Integer
+  - category: String    ' e.g., appetizer, entree, dessert, beverage
+  - lunchPrice: Decimal
+  - dinnerPrice: Decimal
+}
+
+class FoodItem {
+  - foodItemNumber: String
+  - foodName: String
+}
+
+' Many-to-many association: A MenuItem is prepared from one or more FoodItems,
+' and a FoodItem can be used in many MenuItems.
+MenuItem " *" -- " *" FoodItem : uses
+
+' -----------------------------
+' Reservation Orders (Association Class)
+' -----------------------------
+' To capture the list of menu items ordered (with time ordered) for each reservation.
+class ReservationOrder {
+  - orderTime: Time
+}
+
+' Link ReservationOrder with Reservation and MenuItem
+Reservation "1" -- "*" ReservationOrder : has
+ReservationOrder --> Reservation : for
+ReservationOrder --> MenuItem : orders
+
+@enduml
