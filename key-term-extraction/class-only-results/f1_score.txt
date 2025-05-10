@@ -1,0 +1,27 @@
+Test F1 score: 0.8925
+
+Classification Report (token-level):
+              precision    recall  f1-score   support
+
+      B-attr     0.7699    0.6397    0.6988       136
+     B-class     0.7231    0.7382    0.7306       191
+      I-attr     0.8947    0.5986    0.7173       142
+     I-class     0.6951    0.6129    0.6514        93
+           O     0.9265    0.9667    0.9462      1773
+
+    accuracy                         0.8925      2335
+   macro avg     0.8019    0.7112    0.7489      2335
+weighted avg     0.8896    0.8925    0.8885      2335
+
+
+Sequence-level F1 score: 0.6636
+
+Seqeval Classification Report (entity-level):
+              precision    recall  f1-score   support
+
+        attr       0.69      0.61      0.65       137
+       class       0.65      0.70      0.67       191
+
+   micro avg       0.67      0.66      0.66       328
+   macro avg       0.67      0.65      0.66       328
+weighted avg       0.67      0.66      0.66       328
