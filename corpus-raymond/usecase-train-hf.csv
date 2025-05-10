@@ -1,4 +1,4 @@
-tokens,tags
+tokens,IOB-tag
 "['Administrator', 'clicks', 'the', 'button', 'or', 'link', 'to', '""', 'Install', 'Plug', '-', 'ins', '""']","[1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 0]"
 "['Logout', 'the', 'Sales', 'Person', 'account', 'on', 'the', 'system', '.']","[3, 0, 1, 2, 0, 0, 0, 0, 0]"
 "['The', 'system', 'shall', 'follow', 'HIPAA', 'compliance', 'capabilities', 'in', 'new', 'functionality', 'introduced', 'to', 'the', 'system', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
