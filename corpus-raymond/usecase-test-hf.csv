@@ -1,4 +1,4 @@
-tokens,IOB-tag
+tokens,IOB_tag
 "['Systems', 'supporting', 'OM', 'must', 'provide', 'the', 'ability', 'to', 'publish', 'investigation', '-', 'specific', 'questionnaires', 'and', 'implementation', 'guides', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['The', 'system', 'shall', 'encrypt', 'all', 'sensitive', 'information', 'via', 'https', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['""', 'About', 'Window', '""', 'is', 'displayed', '.', 'The', '""', 'About', 'Windows', '""', 'is', 'composed', 'of', 'the', 'following', 'text', '""', 'Qheadache', '1.0', 'by', 'JeanPhilippe', 'Brossat', 'jp_brossat@yahoo.fr', '""']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"

@@ -1,4 +1,4 @@
-tokens,IOB-tag
+tokens,IOB_tag
 "['The', 'system', 'shall', 'display', 'the', 'desired', 'operational', 'page', 'for', 'the', 'user', 'after', 'clicking', 'the', 'hyperlink', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['EIRENE', 'will', 'provide', 'the', 'radio', 'bearer', 'for', 'ERTMS', '/', 'ETCS', '.', 'The', 'EURORADIO', 'layers', 'are', 'responsible', 'for', 'ensuring', 'the', 'overall', 'safety', 'of', 'the', 'transmission', 'link', 'between', 'train', '-', 'borne', 'and', 'trackside', 'ERTMS', '/', 'ETCS', 'applications', '.', '(', 'I', ')']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['Operational', 'Parameters', 'H', '/', 'C', 'Request']","[0, 0, 0, 0, 0, 0]"
