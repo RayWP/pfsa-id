@@ -1,47 +1,22 @@
 @startuml
-' Define classes
+actor User
 
-class User {
-  - reason: String
-  - explanation: String
-  + selectReason(reason: String)
-  + enterExplanation(text: String)
-  + requestCardBlock(card: Card)
-}
+' Main use case representing the complete process for blocking a card
+(User) --> (Block Any Card)
 
-class System {
-  + validateExplanation(reason: String, explanation: String): Boolean
-  + blockCard(card: Card): void
-  + notifyUsage(card: Card): void
-}
+' Include: Before blocking, the system must verify the card can be blocked.
+(Block Any Card) ..> (Check Card Status) : <<include>>
 
-class Card {
-  - isBlocked: Boolean
-  - reason: String
-  - explanation: String
-  + block(): void
-  + use(): void
-}
+' Include: The user must provide a reason for blocking the card.
+(Block Any Card) ..> (Provide Blocking Reason) : <<include>>
 
-class Banking {
-  + informStaff(message: String): void
-}
+' Extend: If the user selects "other," provide additional explanation.
+(Provide Blocking Reason) ..> (Enter Additional Explanation) : <<extend>> [if reason == "other"]
 
-class Cardholder {
-  + notify(message: String): void
-}
+' Include: Once validated, the system will disable the card immediately.
+(Block Any Card) ..> (Disable Card Usage) : <<include>>
 
-' Relationships
-
-User "1" --> "1" System : initiates block request
-System "1" --> "1" Card : blocks >>
-System "1" --> "1" Banking : informs if card used
-System "1" --> "1" Cardholder : notifies if card used
-
-' Additional relation: User is associated with Cardholder
-User -- Cardholder : represents (same person)
-
-' Optional: Card has a reason attribute that comes from User input.
-Card --> "1" User : blocked by request
+' Additional optional use case: if a blocked card is used, notify banking staff.
+(Block Any Card) ..> (Notify on Blocked Card Usage) : <<include>>
 
 @enduml

@@ -1,0 +1,30 @@
+@startuml
+actor "Clinic Staff" as Staff
+actor "Physician" as Physician
+
+rectangle "Veterinary Clinic System" {
+
+  usecase "Register Animal\n(store name, breed, optional owner, unique id)" as UC_RegisterAnimal
+  usecase "Register Owner\n(store name, address, phone, unique id)" as UC_RegisterOwner
+  usecase "Schedule Appointment\n(set date/time, animal & owner)" as UC_ScheduleAppointment
+  usecase "Record Appointment Details\n(assign responsible physician)" as UC_AppointmentDetails
+  usecase "Record Medical Conditions\n(add detected conditions)" as UC_RecordConditions
+  usecase "Manage Breed Information\n(store breed info & common conditions)" as UC_ManageBreed
+  usecase "Manage Physician Profile\n(store name, address, phone, id)" as UC_ManagePhysician
+
+}
+
+Staff --> UC_RegisterAnimal
+Staff --> UC_RegisterOwner
+Staff --> UC_ScheduleAppointment
+Staff --> UC_ManageBreed
+
+Physician --> UC_AppointmentDetails
+Physician --> UC_RecordConditions
+Physician --> UC_ManagePhysician
+
+' Relationships between use cases:
+UC_AppointmentDetails .> UC_ScheduleAppointment : <<include>>
+UC_RecordConditions .> UC_AppointmentDetails : <<extend>>
+
+@enduml

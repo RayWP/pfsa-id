@@ -1,120 +1,52 @@
 @startuml
+actor Customer
+actor Chief
+actor Controller
+actor Cashier
 
-' Define Supermarket and its related classes
-class Supermarket {
-  +checkInventory()
-  +serveCustomer()
-}
-Supermarket "1" --> "many" Shelf : contains
-Supermarket "1" --> "many" Employee : employs
-Supermarket "1" --> "many" (Client/Customer) : welcomes
-Supermarket "1" --> "1" Cashier : has
-Supermarket "1" --> "1" Controller : monitored by
+' ---------------------------
+' Inventory Management Use Cases
+' ---------------------------
+usecase "Record Incoming Stock" as UC1
+usecase "Record Shelf Inventory" as UC2
+usecase "Verify Stock Count" as UC3
 
-' Shelf holds products
-class Shelf {
-  +addProduct(p: Product)
-  +removeProduct(p: Product)
-  +isOccupied() : Boolean
-}
-Shelf "1" --> "many" Product : displays
+' ---------------------------
+' Sales Transaction Use Cases
+' ---------------------------
+usecase "Select Products" as UC4
+usecase "Process Sale Transaction" as UC5
+usecase "Calculate Payment & Generate Invoice" as UC6
+usecase "Process Payment (Cash/Cheque)" as UC7
 
-' Product and Group
-class Product {
-  -price : float
-  -expirationDate : Date
-  -ingredients : String
-  +getPrice() : float
-  +getExpirationDate() : Date
-  +getIngredients() : String
-}
-class Group {
-  +groupName : String
-  +listProducts() : void
-}
-Product "1" --> "1" Group : belongs to
+' ---------------------------
+' Shelf and Order Control Use Cases
+' ---------------------------
+usecase "Control Shelf Inventory" as UC9
+usecase "Prepare and Verify Order Delivery" as UC8
 
-' Client and Customer
-class Client {
-  +requestAssistance()
-  +selectProduct(p: Product)
-}
-class Customer {
-  +makePurchase()
-  +pay(amount: float)
-}
-' We assume both Client and Customer represent persons coming to the supermarket.
-Client <|-- Customer
+' ---------------------------
+' Actor to Use Case Associations
+' ---------------------------
+Chief --> UC1
+Chief --> UC2
+Chief --> UC3
+Chief --> UC8
 
-' Employee who helps clients (including chief of order role)
-class Employee {
-  +assistCustomer()
-  +maintainShelf()
-}
-' Chief of Order is a type of Employee responsible for checking orders.
-class ChiefOfOrder {
-  +checkOrder(order: Order)
-}
-Employee <|-- ChiefOfOrder
+Customer --> UC4
+Customer --> UC5
 
-' Basket holds goods (assume goods are the selected products)
-class Basket {
-  +addGood(g: Product)
-  +removeGood(g: Product)
-  +calculateTotal() : float
-}
-Basket o-- Product : contains
+Cashier --> UC5
+Cashier --> UC6
+Cashier --> UC7
 
-' Cashier, Machine, Controller, and Transaction process
-class Cashier {
-  +scanProduct(p: Product)
-  +processTransaction(t: Transaction)
-  +receivePayment(method: String)
-  +issueInvoice(i: Invoice)
-}
-class Machine {
-  +enterProduct(p: Product)
-  +calculateTotal(products: List<Product>) : float
-  +displayTotal(total: float)
-}
-Cashier --> Machine : uses
-class Controller {
-  +monitorShelf(s: Shelf)
-  +verifyPackaging()
-}
-class Transaction {
-  -total : float
-  +addProduct(p: Product)
-  +computeTotal() : float
-}
-Transaction --> Product
+Controller --> UC9
+Controller --> UC8
 
-' Invoice and Proforma Invoice with Order
-class Invoice {
-  +generateInvoice()
-}
-class ProformaInvoice {
-  +prepareInvoice()
-}
-class Order {
-  -orders : List<Product>
-  +addOrder(p: Product)
-  +getOrderList() : List<Product>
-}
-ProformaInvoice --> Order : includes
-
-' Service represents the delivery process
-class Service {
-  +initiateDelivery()
-  +completeDelivery()
-}
-Service "1" --> "many" Order : processes
-
-' Relationships among classes
-Client "1" --> Basket : uses
-Cashier "1" --> Transaction : initiates
-Transaction --> Machine : processed by
-Cashier "1" --> Invoice : issues
-ChiefOfOrder "1" --> ProformaInvoice : validates
+' ---------------------------
+' Use Case Relationships (Includes)
+' ---------------------------
+UC5 .> UC6 : <<include>>
+UC5 .> UC7 : <<include>>
 
 @enduml

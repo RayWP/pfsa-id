@@ -1,33 +1,37 @@
 @startuml
+actor "Receptionist" as Receptionist
+actor "Veterinarian" as Veterinarian
+actor "Administrator" as Administrator
 
-' Clinic class that handles dog rescue, treatment, and adoption process
-class Clinic {
-  +rescueDog(d: Dog): void
-  +treatDog(d: Dog): void
-  +assignOwner(d: Dog, o: Owner): void
-}
+usecase "Store Information" as SI
+usecase "Register Animal" as RA
+usecase "Register Owner" as RO
+usecase "Register Breed" as RB
+usecase "Register Physician" as RP
+usecase "Schedule Appointment" as SA
+usecase "Record Medical Conditions" as RMC
+usecase "Rescue Abandoned Animal" as RAA
 
-' Dog class with basic attributes and methods to update its status
-class Dog {
-  -name: String
-  -breed: String
-  -age: int
-  -healthStatus: String
-  -adoptionStatus: String
-  +updateHealth(status: String): void
-  +updateAdoptionStatus(status: String): void
-}
+' Include relationships: all registration and appointment activities include storing information
+RA --> SI : <<include>>
+RO --> SI : <<include>>
+RB --> SI : <<include>>
+RP --> SI : <<include>>
+SA --> SI : <<include>>
+RMC --> SI : <<include>>
 
-' Owner class to represent new adopters for the rescued dogs
-class Owner {
-  -name: String
-  -contactInfo: String
-  +adoptDog(d: Dog): void
-}
+' "Rescue Abandoned Animal" reuses animal registration functionality
+RAA --> RA
 
-' Relationships between classes
-Clinic "1" --> "many" Dog : rescues/treats
-Clinic "1" --> "many" Owner : facilitates
-Owner "1" --> "0..*" Dog : adopts
+' Actor associations
+Receptionist --> RA
+Receptionist --> RO
+Receptionist --> SA
+Receptionist --> RAA
+
+Veterinarian --> RMC
+
+Administrator --> RB
+Administrator --> RP
 
 @enduml

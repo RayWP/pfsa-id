@@ -1,44 +1,33 @@
 @startuml
-' The Entity class represents a basic domain object
-class Entity {
-  - id: int
-  - name: String
-  - description: String
-  + addAttribute(attr: Attribute): void
-  + removeAttribute(attr: Attribute): void
-  + getAttributes(): List<Attribute>
+actor Customer
+actor "Store Employee" as Employee
+actor Manager
+
+rectangle "SchlockBuster Video System" {
+
+  usecase "Rent a Video" as UC_Rent
+  usecase "Return a Video" as UC_Return
+  usecase "Record Rental Transaction" as UC_Record
+  usecase "Update Cartridge & Inventory Status" as UC_Inventory
+  usecase "Set Rental Price for Title" as UC_SetPrice
+  usecase "Manage Video Titles & Distributors" as UC_Titles
+  usecase "Manage Employee & Store Records" as UC_ManageRecords
+
+  UC_Rent --> UC_Record : «include»
+  UC_Return --> UC_Record : «include»
 }
 
-' The Attribute class represents properties that can be associated with an Entity.
-class Attribute {
-  - key: String
-  - value: String
-  + getKey(): String
-  + getValue(): String
-  + setValue(value: String): void
-}
+' Relationships between Actors and Use Cases
+Customer --> UC_Rent
+Customer --> UC_Return
 
-' The Relationship class defines an association between two Entity objects.
-class Relationship {
-  - relationType: String
-  - source: Entity
-  - target: Entity
-  + getRelationType(): String
-  + getSource(): Entity
-  + getTarget(): Entity
-}
+Employee --> UC_Rent
+Employee --> UC_Return
+Employee --> UC_Record
+Employee --> UC_Inventory
 
-' The EntityRepository is a container that handles a collection of Entity instances.
-class EntityRepository {
-  - entities: List<Entity>
-  + addEntity(e: Entity): void
-  + removeEntity(e: Entity): void
-  + findEntity(id: int): Entity
-}
+Manager --> UC_SetPrice
+Manager --> UC_Titles
+Manager --> UC_ManageRecords
 
-' Associations:
-Entity "1" -- "*" Attribute : "has"
-EntityRepository "1" -- "*" Entity : "contains"
-Relationship "1" --> "1" Entity : "source"
-Relationship "1" --> "1" Entity : "target"
 @enduml

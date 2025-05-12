@@ -1,0 +1,82 @@
+@startuml
+!define RECTANGLE rectangle
+
+' Actors
+actor "Customer\n(Normal/Extra)" as Customer
+actor "Cashier" as Cashier
+actor "Chief of Store" as Chief
+actor "Inventory Clerk" as Inventory
+actor "Shelf Controller" as ShelfCtrl
+actor "Store Employee" as Employee
+actor "Bakery/Pastry Agent" as Bakery
+actor "Chief of Order" as OrderChief
+actor "Security Controller" as SecCtrl
+actor "General Director" as GD
+
+' Package: Inventory Management
+package "Inventory Management" {
+    usecase "Record New Product in Stock" as UC_RecordStock
+    usecase "Place Product on Shelf" as UC_PlaceShelf
+    usecase "Verify Inventory" as UC_VerifyInventory
+    usecase "Manage Shelf Arrangement" as UC_ManageShelf
+}
+
+' Package: In‐Store Customer Process
+package "In-Store Customer Process" {
+    usecase "Assist Customer\n(Provide directions / help)" as UC_AssistCustomer
+    usecase "Select and Collect Product" as UC_SelectCollect
+    usecase "Check Product Details\n(price, expiration, ingredients)" as UC_CheckProduct
+}
+
+' Package: Payment and Transaction
+package "Payment and Transaction" {
+    usecase "Record Transaction on Cashier Machine" as UC_RecordTransaction
+    usecase "Calculate Total & Generate Invoice" as UC_CalcInvoice
+    usecase "Process Payment" as UC_ProcessPayment
+    usecase "Handle Cash Payment" as UC_CashPayment
+    usecase "Handle Cheque Payment" as UC_ChequePayment
+}
+
+' Package: Order & Delivery Process
+package "Order & Delivery Process" {
+    usecase "Prepare Order" as UC_PrepareOrder
+    usecase "Review and Verify Order" as UC_ReviewOrder
+    usecase "Package Order" as UC_PackageOrder
+    usecase "Deliver Order to Customer" as UC_DeliverOrder
+    usecase "Transfer Invoice to Office" as UC_TransferInvoice
+    usecase "Security Check" as UC_SecurityCheck
+}
+
+' Associations for Inventory Management
+Inventory --> UC_RecordStock
+Inventory --> UC_PlaceShelf
+Chief --> UC_VerifyInventory
+ShelfCtrl --> UC_ManageShelf
+
+' Associations for In-Store Customer Process
+Employee --> UC_AssistCustomer
+Customer --> UC_SelectCollect
+Customer --> UC_CheckProduct
+
+' Associations for Payment and Transaction
+Cashier --> UC_RecordTransaction
+Cashier --> UC_ProcessPayment
+Cashier --> UC_CalcInvoice
+UC_ProcessPayment .> UC_CashPayment : <<extend>>
+UC_ProcessPayment .> UC_ChequePayment : <<extend>>
+
+' Associations for Order & Delivery Process
+Bakery --> UC_PrepareOrder
+Bakery --> UC_PackageOrder
+OrderChief --> UC_ReviewOrder
+Customer --> UC_DeliverOrder
+SecCtrl --> UC_SecurityCheck
+SecCtrl --> UC_TransferInvoice
+GD <-- UC_TransferInvoice
+
+' Additional Relationships (Include relationships)
+UC_ProcessPayment --> UC_RecordTransaction : <<include>>
+UC_ProcessPayment --> UC_CalcInvoice : <<include>>
+UC_SelectCollect --> UC_CheckProduct : <<include>>
+
+@enduml

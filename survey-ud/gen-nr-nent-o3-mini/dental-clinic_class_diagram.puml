@@ -1,0 +1,52 @@
+@startuml
+actor "New Patient" as NP
+actor "Existing Patient" as EP
+actor "Office Staff" as OS
+actor "Desk Worker" as DW
+actor "Clinician" as CL
+actor "Supply Worker" as SW
+actor "Insurance Company" as IC
+actor "HMO" as HMO
+
+rectangle "Clinic Software" {
+  usecase "Fill Out Patient Form" as UC1
+  usecase "Schedule Appointment" as UC2
+  usecase "Call Patient for Appointment" as UC3
+  usecase "Perform Dental Hygiene" as UC4
+  usecase "Perform Cavities and Fillings" as UC5
+  usecase "Perform Oral Surgery" as UC6
+  usecase "Prepare Patient & Collect Supplies" as UC7
+  usecase "Administer Anesthesia\nand Post-Operative Waiting" as UC8
+  usecase "Generate Monthly Bill" as UC9
+  usecase "Receive Mail Payments" as UC10
+  usecase "Receive HMO Copayment" as UC11
+  usecase "Generate Reimbursement Request" as UC12
+  usecase "Update Supplies Inventory" as UC13
+}
+
+NP --> UC1
+NP --> UC2
+EP --> UC2
+OS --> UC2
+DW --> UC3
+
+CL --> UC4
+CL --> UC5
+CL --> UC6
+CL --> UC7
+CL --> UC8
+
+OS --> UC9
+OS --> UC10
+OS --> UC11
+OS --> UC12
+
+SW --> UC13
+
+IC <-- UC12
+HMO <-- UC11
+
+UC3 .> UC2 : «extend»
+UC8 .> UC6 : «extend»
+
+@enduml

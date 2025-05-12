@@ -1,62 +1,19 @@
 @startuml
+actor "Insurance Agent" as Agent
 
-' Base class for common attributes and methods
-class PhysicalObject {
-  - name : String
-  - info : String
-  - details : String
-  - attributes : List<String>
-}
+' Use cases based on provided description and additional ones to support functionality
+usecase "Retrieve a Person" as UC_Retrieve
+usecase "Manage Policy" as UC_Policy
+usecase "Print Person Info" as UC_PrintPerson
+usecase "Print Policy Details" as UC_PrintPolicy
 
-' Person inherits common physical attributes,
-' and has policies.
-class Person {
-  - policies : List<Policy>
-  + addPolicy(p : Policy) : void
-}
-Person --|> PhysicalObject
+' Actor interactions
+Agent --> UC_Retrieve
+Agent --> UC_Policy
+Agent --> UC_PrintPerson
+Agent --> UC_PrintPolicy
 
-' Policy inherits PhysicalObject and holds contacts and dwellings.
-class Policy {
-  - contacts : List<ContactPoint>
-  - dwellings : List<Dwelling>
-}
-Policy --|> PhysicalObject
-
-' Party represents a grouping of persons.
-class Party {
-  - persons : List<Person>
-}
-Party --|> PhysicalObject
-
-' Although not used in the redesigned Policy,
-' we include the Vehicle class as indicated in the requirements.
-class Vehicle {
-  - model : String
-}
-Vehicle --|> PhysicalObject
-
-' ContactPoint class.
-class ContactPoint {
-  - contactDetail : String
-}
-ContactPoint --|> PhysicalObject
-
-' Dwelling class.
-class Dwelling {
-  - address : String
-}
-Dwelling --|> PhysicalObject
-
-' Relationships:
-' A Person aggregates Policies.
-Person "1" o-- "many" Policy : policies
-
-' A Policy aggregates ContactPoints and Dwellings.
-Policy "1" o-- "many" ContactPoint : contacts
-Policy "1" o-- "many" Dwelling : dwellings
-
-' A Party aggregates Persons.
-Party "1" o-- "many" Person : persons
+' Relationships between use cases
+UC_PrintPolicy --> UC_Policy : «include»
 
 @enduml

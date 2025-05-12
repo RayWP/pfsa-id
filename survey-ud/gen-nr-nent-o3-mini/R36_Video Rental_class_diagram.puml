@@ -1,0 +1,42 @@
+@startuml
+actor Customer
+actor Manager
+actor Cashier
+actor Stocker
+
+package "SchlockBuster Video Rental System" {
+
+  usecase "Enroll Customer" as UC_Enroll
+  usecase "Rent Video" as UC_Rent
+  usecase "Return Video" as UC_Return
+  usecase "Process Rental Transaction" as UC_Transact
+  usecase "Set Rental Prices" as UC_SetPrice
+  usecase "Maintain Inventory" as UC_Inventory
+  usecase "Manage Video Titles & Distributors" as UC_Titles
+  usecase "Update Cartridge Status & Utilization" as UC_Cartridge
+
+}
+
+' Associations between Actors and Use Cases
+Customer --> UC_Rent
+Customer --> UC_Return
+
+Manager --> UC_Enroll
+Manager --> UC_Transact
+Manager --> UC_SetPrice
+Manager --> UC_Inventory
+Manager --> UC_Titles
+Manager --> UC_Cartridge
+
+Cashier --> UC_Rent
+Cashier --> UC_Return
+Cashier --> UC_Transact
+
+Stocker --> UC_Inventory
+Stocker --> UC_Cartridge
+
+' Include relationships where one use case is a necessary part of another
+UC_Rent .> UC_Transact : <<include>>
+UC_Return .> UC_Transact : <<include>>
+
+@enduml

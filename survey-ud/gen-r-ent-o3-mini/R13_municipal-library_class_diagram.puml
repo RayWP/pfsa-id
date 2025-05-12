@@ -1,56 +1,22 @@
 @startuml
-' Define the Library class with its attributes and methods
-class Library {
-  - name: String
-  - location: String
-  - documents: List<Document>
-  - books: List<Book>
-  + addDocument(d: Document): void
-  + addBook(b: Book): void
-  + getDocumentByID(id: String): Document
-  + getBookByID(id: String): Book
-}
+actor "Member" as Member
 
-' Define the Document class to represent general documents in the library
-class Document {
-  - documentId: String
-  - title: String
-  - addedDate: Date
-  + getInfo(): String
-}
+' Main use cases related to book lending
+usecase "Borrow or Return a Book" as BorrowReturn
+usecase "Borrow Books" as BorrowBooks
 
-' Define the Book class. It can be considered as a distinct type of document.
-class Book {
-  - bookId: String
-  - title: String
-  - author: String
-  - isAvailable: Boolean
-  + borrow(): void
-  + returnBook(): void
-  + getInfo(): String
-}
+' Additional use case for extending the loan period
+usecase "Extend Return Date" as ExtendDate
 
-' Define the Member class. A member can borrow up to 3 books.
-class Member {
-  - memberId: String
-  - name: String
-  - borrowedBooks: List<Book>
-  + borrowBook(b: Book): boolean
-  + returnBook(b: Book): void
-  + getBorrowedBooks(): List<Book>
-}
+' Additional use case for membership management
+usecase "Subscribe/Unsubscribe Membership" as Subscription
 
-' Relationships:
+' Relationships between the actor and the use cases
+Member --> BorrowReturn
+Member --> BorrowBooks
+Member --> Subscription
 
-' Library aggregates many Documents and Books
-Library "1" o-- "many" Document : includes
-Library "1" o-- "many" Book : includes
+' The extension of functionality for a book loan
+BorrowReturn .> ExtendDate : <<include>>
 
-' A Member borrows Books. 
-' The association indicates that a member can borrow 0..3 books.
-Member "1" -- "0..3" Book : borrows
-Book "0..1" -- "1" Member : borrowedBy
-
-' Note the constraint on the borrowing process
-note right of Member : A member can borrow a maximum\nof 3 books.
 @enduml
