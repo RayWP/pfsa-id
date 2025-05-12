@@ -1,53 +1,10 @@
 Document: rental-truck-company.txt
 
-Classes identified:
+actor identified:
 --------------------
-- rental office
-- vehicles
-- customers
-- vehicle
-- customer
-- rented
-- central
-- truck
 
-Attributes identified:
+ usecase identified:
 --------------------
-- mileage
-- name
-- home phone
-- address
-- driver’s license
-- state
-- number
-- expiration date
 
 Detailed Entities:
 --------------------
-Type: class, Word: rental office, Score: 0.9539
-Type: class, Word: vehicles, Score: 0.9138
-Type: class, Word: customers, Score: 0.9189
-Type: class, Word: vehicle, Score: 0.7678
-Type: class, Word: customer, Score: 0.9509
-Type: class, Word: rented, Score: 0.4406
-Type: class, Word: vehicles, Score: 0.4563
-Type: class, Word: central, Score: 0.4774
-Type: class, Word: vehicles, Score: 0.7062
-Type: class, Word: rental office, Score: 0.9646
-Type: attr, Word: mileage, Score: 0.9321
-Type: class, Word: truck, Score: 0.9299
-Type: class, Word: customer, Score: 0.9312
-Type: class, Word: customer, Score: 0.9218
-Type: attr, Word: name, Score: 0.9197
-Type: attr, Word: home phone, Score: 0.9281
-Type: attr, Word: address, Score: 0.9806
-Type: attr, Word: driver’s license, Score: 0.8276
-Type: attr, Word: state, Score: 0.9530
-Type: attr, Word: number, Score: 0.8874
-Type: attr, Word: expiration date, Score: 0.9823
-Type: class, Word: customer, Score: 0.9433
-Type: class, Word: vehicle, Score: 0.9255
-Type: class, Word: customer, Score: 0.9366
-Type: class, Word: customer, Score: 0.9025
-Type: class, Word: customers, Score: 0.8498
-Type: class, Word: vehicles, Score: 0.8370

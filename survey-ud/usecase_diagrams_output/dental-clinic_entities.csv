@@ -1,18 +1,5 @@
 ,entity_group,score,word,start,end
-0,class,0.6866462,patients,30,39
-1,class,0.44310835,form,127,132
-2,attr,0.9471642,name,146,151
-3,attr,0.9843783,address,152,160
-4,attr,0.98374957,telephone numbers,161,179
-5,attr,0.96731156,allergies,180,190
-6,attr,0.89371234,state of mind,195,209
-7,class,0.55720675,office,263,270
-8,class,0.91704804,patient,325,333
-9,attr,0.5108324,date,345,350
-10,attr,0.3798332,Schedules,351,361
-11,class,0.5731144,appointment book,388,405
-12,class,0.7401501,patient records,406,422
-13,attr,0.9775351,contact information,433,453
-14,class,0.5503755,clinic,573,580
-15,class,0.50957197,supplies inventory,592,611
-16,class,0.49628118,procedures,695,706
+0,actor,0.9385484,New patients,103,116
+1,usecase,0.9973418,fill out a form listing,116,140
+2,actor,0.74023694,desk,297,302
+3,actor,0.7975341,worker,623,630

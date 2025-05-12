@@ -1,43 +1,16 @@
 Document: R39_Insurance.txt
 
-Classes identified:
+actor identified:
 --------------------
-- policy object
 - Person
-- policy
-- vehicles
-- party
-- Policy
 
-Attributes identified:
+ usecase identified:
 --------------------
-- attributes
-- Person info
-- info
-- contacts
-- name
-- policies
-- details
-- ContactPoints
-- Dwellings
+- addPolicy
+- print
 
 Detailed Entities:
 --------------------
-Type: attr, Word: attributes, Score: 0.6556
-Type: class, Word: policy object, Score: 0.9442
-Type: class, Word: Person, Score: 0.7717
-Type: class, Word: policy object, Score: 0.9573
-Type: class, Word: policy, Score: 0.9593
-Type: attr, Word: Person info, Score: 0.8237
-Type: class, Word: policy, Score: 0.9545
-Type: attr, Word: info, Score: 0.7095
-Type: attr, Word: contacts, Score: 0.6616
-Type: class, Word: vehicles, Score: 0.4983
-Type: class, Word: party, Score: 0.9693
-Type: class, Word: party, Score: 0.8270
-Type: attr, Word: name, Score: 0.9558
-Type: attr, Word: policies, Score: 0.8473
-Type: attr, Word: details, Score: 0.6666
-Type: class, Word: Policy, Score: 0.5489
-Type: attr, Word: ContactPoints, Score: 0.7544
-Type: attr, Word: Dwellings, Score: 0.7446
+Type: usecase, Word: addPolicy, Score: 0.9737
+Type: actor, Word: Person, Score: 0.8199
+Type: usecase, Word: print, Score: 0.6146

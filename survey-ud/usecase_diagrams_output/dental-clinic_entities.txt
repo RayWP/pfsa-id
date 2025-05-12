@@ -1,44 +1,18 @@
 Document: dental-clinic.txt
 
-Classes identified:
+actor identified:
 --------------------
-- patients
-- form
-- office
-- patient
-- appointment book
-- patient records
-- clinic
-- supplies inventory
-- procedures
+- New patients
+- desk
+- worker
 
-Attributes identified:
+ usecase identified:
 --------------------
-- name
-- address
-- telephone numbers
-- allergies
-- state of mind
-- date
-- Schedules
-- contact information
+- fill out a form listing
 
 Detailed Entities:
 --------------------
-Type: class, Word: patients, Score: 0.6866
-Type: class, Word: form, Score: 0.4431
-Type: attr, Word: name, Score: 0.9472
-Type: attr, Word: address, Score: 0.9844
-Type: attr, Word: telephone numbers, Score: 0.9837
-Type: attr, Word: allergies, Score: 0.9673
-Type: attr, Word: state of mind, Score: 0.8937
-Type: class, Word: office, Score: 0.5572
-Type: class, Word: patient, Score: 0.9170
-Type: attr, Word: date, Score: 0.5108
-Type: attr, Word: Schedules, Score: 0.3798
-Type: class, Word: appointment book, Score: 0.5731
-Type: class, Word: patient records, Score: 0.7402
-Type: attr, Word: contact information, Score: 0.9775
-Type: class, Word: clinic, Score: 0.5504
-Type: class, Word: supplies inventory, Score: 0.5096
-Type: class, Word: procedures, Score: 0.4963
+Type: actor, Word: New patients, Score: 0.9385
+Type: usecase, Word: fill out a form listing, Score: 0.9973
+Type: actor, Word: desk, Score: 0.7402
+Type: actor, Word: worker, Score: 0.7975

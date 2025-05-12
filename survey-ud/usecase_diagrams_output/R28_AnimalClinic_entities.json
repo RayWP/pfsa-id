@@ -1,26 +1,8 @@
 {
-  "entities": [
-    {
-      "entity_group": "class",
-      "word": "clinic",
-      "score": 0.8341401219367981,
-      "start": 31,
-      "end": 38
-    },
-    {
-      "entity_group": "class",
-      "word": "dogs",
-      "score": 0.6539487242698669,
-      "start": 62,
-      "end": 67
-    }
-  ],
+  "entities": [],
   "summary": {
-    "class": [
-      "clinic",
-      "dogs"
-    ],
-    "attr": []
+    "actor": [],
+    "usecase": []
   },
   "document_class": " This happens frequently as the clinic often rescues abandoned dogs from the streets in order to treat them and get them new owners"
 }

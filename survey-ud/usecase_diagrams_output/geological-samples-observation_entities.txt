@@ -1,16 +1,10 @@
 Document: geological-samples-observation.txt
 
-Classes identified:
+actor identified:
 --------------------
-- samples
-- research teams
-- labs
 
-Attributes identified:
+ usecase identified:
 --------------------
 
 Detailed Entities:
 --------------------
-Type: class, Word: samples, Score: 0.9162
-Type: class, Word: research teams, Score: 0.7778
-Type: class, Word: labs, Score: 0.7528

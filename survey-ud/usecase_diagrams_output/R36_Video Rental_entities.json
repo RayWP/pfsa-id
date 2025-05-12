@@ -1,8 +1,8 @@
 {
   "entities": [],
   "summary": {
-    "class": [],
-    "attr": []
+    "actor": [],
+    "usecase": []
   },
   "document_class": ""
 }

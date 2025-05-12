@@ -1,32 +1,10 @@
 Document: R26_BlockCard.txt
 
-Classes identified:
+actor identified:
 --------------------
-- user
-- system
-- card
-- banking
-- cardholder
 
-Attributes identified:
+ usecase identified:
 --------------------
-- reason
 
 Detailed Entities:
 --------------------
-Type: class, Word: user, Score: 0.9034
-Type: attr, Word: reason, Score: 0.6060
-Type: class, Word: system, Score: 0.7308
-Type: class, Word: user, Score: 0.9063
-Type: class, Word: system, Score: 0.8202
-Type: class, Word: user, Score: 0.9541
-Type: class, Word: card, Score: 0.9701
-Type: class, Word: user, Score: 0.9258
-Type: class, Word: card, Score: 0.8550
-Type: class, Word: system, Score: 0.9024
-Type: class, Word: card, Score: 0.9340
-Type: class, Word: card, Score: 0.8525
-Type: class, Word: card, Score: 0.9411
-Type: class, Word: system, Score: 0.8476
-Type: class, Word: banking, Score: 0.6660
-Type: class, Word: cardholder, Score: 0.9498

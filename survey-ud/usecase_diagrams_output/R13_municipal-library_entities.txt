@@ -1,18 +1,14 @@
 Document: R13_municipal-library.txt
 
-Classes identified:
+actor identified:
 --------------------
-- documents
-- library
 - member
-- books
 
-Attributes identified:
+ usecase identified:
 --------------------
+- borrow
 
 Detailed Entities:
 --------------------
-Type: class, Word: documents, Score: 0.7541
-Type: class, Word: library, Score: 0.8940
-Type: class, Word: member, Score: 0.9771
-Type: class, Word: books, Score: 0.7174
+Type: actor, Word: member, Score: 0.8512
+Type: usecase, Word: borrow, Score: 0.6201

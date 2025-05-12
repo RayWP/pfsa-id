@@ -1,34 +1,8 @@
 {
-  "entities": [
-    {
-      "entity_group": "class",
-      "word": "samples",
-      "score": 0.9161567687988281,
-      "start": 6,
-      "end": 14
-    },
-    {
-      "entity_group": "class",
-      "word": "research teams",
-      "score": 0.7778371572494507,
-      "start": 68,
-      "end": 83
-    },
-    {
-      "entity_group": "class",
-      "word": "labs",
-      "score": 0.7527830004692078,
-      "start": 86,
-      "end": 91
-    }
-  ],
+  "entities": [],
   "summary": {
-    "class": [
-      "samples",
-      "research teams",
-      "labs"
-    ],
-    "attr": []
+    "actor": [],
+    "usecase": []
   },
   "document_class": " These samples are sometimes sub-divided and distributed to multiple research teams or labs for different specialized observations"
 }

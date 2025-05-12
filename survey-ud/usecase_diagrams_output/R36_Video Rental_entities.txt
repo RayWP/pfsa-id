@@ -1,9 +1,9 @@
 Document: R36_Video Rental.txt
 
-Classes identified:
+actor identified:
 --------------------
 
-Attributes identified:
+ usecase identified:
 --------------------
 
 Detailed Entities:
