@@ -1,28 +1,14 @@
 @startuml
-title Use Case Diagram for "Block Card" Feature
-
 actor Customer
-actor "Bank Staff" as BankStaff
 
-package "Online Banking System" {
-  usecase "View My Cards" as UC_ViewCards
-  usecase "Block Card" as UC_BlockCard
-  usecase "Check Card Status" as UC_CheckStatus
-  usecase "Select Blocking Reason" as UC_SelectReason
-  usecase "Provide Additional Info\n(if 'Other' selected)" as UC_ProvideInfo
-  usecase "Immediately Block Card" as UC_ImmediateBlock
-  usecase "Notify on Usage of Blocked Card" as UC_NotifyUsage
-}
+usecase "Block Card" as UC_Block
+usecase "Verify Card Status" as UC_Verify
+usecase "Enter Blocking Reason" as UC_Reason
+usecase "Provide Additional Explanation" as UC_Additional
 
-Customer --> UC_ViewCards
-Customer --> UC_BlockCard
-
-UC_BlockCard --> UC_CheckStatus : <<include>>
-UC_BlockCard --> UC_SelectReason : <<include>>
-UC_SelectReason --> UC_ProvideInfo : <<extend>>\n[if reason is Other]
-UC_BlockCard --> UC_ImmediateBlock : <<include>>
-UC_ImmediateBlock --> UC_NotifyUsage : <<extend>>
-
-UC_NotifyUsage --> BankStaff
+Customer --> UC_Block
+UC_Block ..> UC_Verify : <<include>>
+UC_Block ..> UC_Reason : <<include>>
+UC_Reason ..> UC_Additional : <<extend>> [if 'Other' selected]
 
 @enduml

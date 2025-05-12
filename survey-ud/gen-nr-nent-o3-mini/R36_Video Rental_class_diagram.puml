@@ -1,42 +1,31 @@
 @startuml
+left to right direction
+
 actor Customer
-actor Manager
-actor Cashier
-actor Stocker
+actor Employee
 
-package "SchlockBuster Video Rental System" {
+' Use cases for Customer interactions
+usecase "Register Membership" as UC_Register
+usecase "Rent Video" as UC_Rent
+usecase "Return Video" as UC_Return
 
-  usecase "Enroll Customer" as UC_Enroll
-  usecase "Rent Video" as UC_Rent
-  usecase "Return Video" as UC_Return
-  usecase "Process Rental Transaction" as UC_Transact
-  usecase "Set Rental Prices" as UC_SetPrice
-  usecase "Maintain Inventory" as UC_Inventory
-  usecase "Manage Video Titles & Distributors" as UC_Titles
-  usecase "Update Cartridge Status & Utilization" as UC_Cartridge
+' Use cases for Employee interactions
+usecase "Process Rental Transaction" as UC_ProcessRental
+usecase "Manage Inventory & Pricing" as UC_Inventory
+usecase "Manage Employee Records" as UC_Employees
 
-}
-
-' Associations between Actors and Use Cases
+' Customer initiates membership, rental, and return processes
+Customer --> UC_Register
 Customer --> UC_Rent
 Customer --> UC_Return
 
-Manager --> UC_Enroll
-Manager --> UC_Transact
-Manager --> UC_SetPrice
-Manager --> UC_Inventory
-Manager --> UC_Titles
-Manager --> UC_Cartridge
+' Renting or returning a video includes processing a rental transaction
+UC_Rent ..> UC_ProcessRental : <<include>>
+UC_Return ..> UC_ProcessRental : <<include>>
 
-Cashier --> UC_Rent
-Cashier --> UC_Return
-Cashier --> UC_Transact
-
-Stocker --> UC_Inventory
-Stocker --> UC_Cartridge
-
-' Include relationships where one use case is a necessary part of another
-UC_Rent .> UC_Transact : <<include>>
-UC_Return .> UC_Transact : <<include>>
+' Employees perform transaction processing, inventory management and employee management
+Employee --> UC_ProcessRental
+Employee --> UC_Inventory
+Employee --> UC_Employees
 
 @enduml

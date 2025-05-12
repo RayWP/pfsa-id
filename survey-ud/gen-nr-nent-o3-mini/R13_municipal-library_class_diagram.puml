@@ -1,23 +1,17 @@
 @startuml
 actor Member
-actor Librarian
 
-usecase "Subscribe to Library" as UC_Subscribe
-usecase "Unsubscribe from Library" as UC_Unsubscribe
+usecase "Subscribe" as UC_Subscribe
+usecase "Unsubscribe" as UC_Unsubscribe
 usecase "Borrow Book" as UC_Borrow
 usecase "Return Book" as UC_Return
-usecase "Extend Loan Period" as UC_Extend
-usecase "Add Document" as UC_AddDocument
+usecase "Extend Loan" as UC_Extend
+usecase "View Borrowed Books" as UC_View
 
 Member --> UC_Subscribe
 Member --> UC_Unsubscribe
 Member --> UC_Borrow
 Member --> UC_Return
 Member --> UC_Extend
-
-Librarian --> UC_AddDocument
-
-' Note: Documents include journals and volumes (volumes are dictionaries, books, or comics),
-' but only books are eligible for the borrowing process.
-
+Member --> UC_View
 @enduml

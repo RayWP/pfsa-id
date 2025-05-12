@@ -1,30 +1,27 @@
 @startuml
-actor "Clinic Staff" as Staff
-actor "Physician" as Physician
+actor Receptionist
+actor Physician
 
-rectangle "Veterinary Clinic System" {
-
-  usecase "Register Animal\n(store name, breed, optional owner, unique id)" as UC_RegisterAnimal
-  usecase "Register Owner\n(store name, address, phone, unique id)" as UC_RegisterOwner
-  usecase "Schedule Appointment\n(set date/time, animal & owner)" as UC_ScheduleAppointment
-  usecase "Record Appointment Details\n(assign responsible physician)" as UC_AppointmentDetails
-  usecase "Record Medical Conditions\n(add detected conditions)" as UC_RecordConditions
-  usecase "Manage Breed Information\n(store breed info & common conditions)" as UC_ManageBreed
-  usecase "Manage Physician Profile\n(store name, address, phone, id)" as UC_ManagePhysician
-
+rectangle "Clinic System" {
+  usecase "Register Animal" as UC_RegisterAnimal
+  usecase "Register Owner" as UC_RegisterOwner
+  usecase "Maintain Breed Info" as UC_MaintainBreed
+  usecase "Register Physician" as UC_RegisterPhysician
+  usecase "Schedule Appointment" as UC_ScheduleAppointment
+  usecase "Record Diagnosis (Medical Conditions)" as UC_RecordDiagnosis
+  usecase "Store Common Conditions for Breed" as UC_StoreCommonConditions
 }
 
-Staff --> UC_RegisterAnimal
-Staff --> UC_RegisterOwner
-Staff --> UC_ScheduleAppointment
-Staff --> UC_ManageBreed
+Receptionist --> UC_RegisterAnimal
+Receptionist --> UC_RegisterOwner
+Receptionist --> UC_MaintainBreed
+Receptionist --> UC_RegisterPhysician
+Receptionist --> UC_ScheduleAppointment
+Receptionist --> UC_StoreCommonConditions
 
-Physician --> UC_AppointmentDetails
-Physician --> UC_RecordConditions
-Physician --> UC_ManagePhysician
+Physician --> UC_RecordDiagnosis
 
-' Relationships between use cases:
-UC_AppointmentDetails .> UC_ScheduleAppointment : <<include>>
-UC_RecordConditions .> UC_AppointmentDetails : <<extend>>
+' The appointment process includes diagnosis recording
+UC_ScheduleAppointment .> UC_RecordDiagnosis : <<include>>
 
 @enduml

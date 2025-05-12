@@ -1,23 +1,21 @@
 @startuml
 actor "Insurance Agent" as Agent
 
-usecase "Add/Update Customer Info" as UC_Customer
-usecase "Create/Update Policy" as UC_Policy
-usecase "Add Contact Points\n(Email, Phone, Address)" as UC_Contact
-usecase "Add Physical Objects\n(Vehicle, Dwelling)" as UC_Physical
-usecase "Retrieve Customer & Policy Details" as UC_Retrieve
-usecase "Calculate Age from Birth Date" as UC_CalcAge
+rectangle "Fireman’s Fund Insurance System" {
+  (Create Person)
+  (Create Company)
+  (Add Policy)
+  (Add Contact Information)
+  (Add Vehicle)
+  (Add Dwelling)
+  (Retrieve Party & Policy Details)
+}
 
-Agent --> UC_Customer
-Agent --> UC_Policy
-Agent --> UC_Contact
-Agent --> UC_Physical
-Agent --> UC_Retrieve
-
-UC_Customer --> UC_CalcAge
-
-' Include relationships showing that adding/updating policies includes managing its details
-UC_Policy .> UC_Contact : <<include>>
-UC_Policy .> UC_Physical : <<include>>
-
+Agent --> (Create Person)
+Agent --> (Create Company)
+Agent --> (Add Policy)
+Agent --> (Add Contact Information)
+Agent --> (Add Vehicle)
+Agent --> (Add Dwelling)
+Agent --> (Retrieve Party & Policy Details)
 @enduml

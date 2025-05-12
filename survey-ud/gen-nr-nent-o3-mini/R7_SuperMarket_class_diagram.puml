@@ -1,82 +1,74 @@
 @startuml
-!define RECTANGLE rectangle
-
-' Actors
-actor "Customer\n(Normal/Extra)" as Customer
-actor "Cashier" as Cashier
+' Define Actors
+actor "Normal Customer" as NC
+actor "Extra Customer" as EC
+actor Cashier
 actor "Chief of Store" as Chief
-actor "Inventory Clerk" as Inventory
 actor "Shelf Controller" as ShelfCtrl
-actor "Store Employee" as Employee
 actor "Bakery/Pastry Agent" as Bakery
 actor "Chief of Order" as OrderChief
-actor "Security Controller" as SecCtrl
-actor "General Director" as GD
 
-' Package: Inventory Management
-package "Inventory Management" {
-    usecase "Record New Product in Stock" as UC_RecordStock
-    usecase "Place Product on Shelf" as UC_PlaceShelf
-    usecase "Verify Inventory" as UC_VerifyInventory
-    usecase "Manage Shelf Arrangement" as UC_ManageShelf
-}
+' Stock Management Use Cases
+usecase "Record New Product" as UC1
+usecase "Record Product on Shelf" as UC2
+usecase "Check Inventory Count" as UC3
 
-' Package: In‐Store Customer Process
-package "In-Store Customer Process" {
-    usecase "Assist Customer\n(Provide directions / help)" as UC_AssistCustomer
-    usecase "Select and Collect Product" as UC_SelectCollect
-    usecase "Check Product Details\n(price, expiration, ingredients)" as UC_CheckProduct
-}
+' Customer Shopping Use Cases
+usecase "Select & Collect Products" as UC4
+usecase "Examine Product Details\n(price, expiration, ingredients)" as UC5
 
-' Package: Payment and Transaction
-package "Payment and Transaction" {
-    usecase "Record Transaction on Cashier Machine" as UC_RecordTransaction
-    usecase "Calculate Total & Generate Invoice" as UC_CalcInvoice
-    usecase "Process Payment" as UC_ProcessPayment
-    usecase "Handle Cash Payment" as UC_CashPayment
-    usecase "Handle Cheque Payment" as UC_ChequePayment
-}
+' Payment Process Use Cases
+usecase "Process Payment" as UC6
+usecase "Calculate Total Payment" as UC7
+usecase "Generate Invoice" as UC8
+usecase "Pay by Cash" as UC9
+usecase "Pay by Cheque" as UC10
 
-' Package: Order & Delivery Process
-package "Order & Delivery Process" {
-    usecase "Prepare Order" as UC_PrepareOrder
-    usecase "Review and Verify Order" as UC_ReviewOrder
-    usecase "Package Order" as UC_PackageOrder
-    usecase "Deliver Order to Customer" as UC_DeliverOrder
-    usecase "Transfer Invoice to Office" as UC_TransferInvoice
-    usecase "Security Check" as UC_SecurityCheck
-}
+' Order Delivery Use Cases
+usecase "Prepare Order" as UC11
+usecase "Package Order" as UC12
+usecase "Deliver Order" as UC13
+usecase "Receive Order" as UC14
 
-' Associations for Inventory Management
-Inventory --> UC_RecordStock
-Inventory --> UC_PlaceShelf
-Chief --> UC_VerifyInventory
-ShelfCtrl --> UC_ManageShelf
+' --------------------
+' Relationships - Stock Management
+ShelfCtrl --> UC1
+ShelfCtrl --> UC2
+Chief --> UC3
 
-' Associations for In-Store Customer Process
-Employee --> UC_AssistCustomer
-Customer --> UC_SelectCollect
-Customer --> UC_CheckProduct
+' --------------------
+' Relationships - Customer Shopping
+NC --> UC4
+NC --> UC5
+EC --> UC4
+EC --> UC5
 
-' Associations for Payment and Transaction
-Cashier --> UC_RecordTransaction
-Cashier --> UC_ProcessPayment
-Cashier --> UC_CalcInvoice
-UC_ProcessPayment .> UC_CashPayment : <<extend>>
-UC_ProcessPayment .> UC_ChequePayment : <<extend>>
+' --------------------
+' Relationships - Payment Process
+Cashier --> UC6
+UC6 --> UC7
+UC6 --> UC8
 
-' Associations for Order & Delivery Process
-Bakery --> UC_PrepareOrder
-Bakery --> UC_PackageOrder
-OrderChief --> UC_ReviewOrder
-Customer --> UC_DeliverOrder
-SecCtrl --> UC_SecurityCheck
-SecCtrl --> UC_TransferInvoice
-GD <-- UC_TransferInvoice
+' Payment methods specific to customers
+NC --> UC9
+EC --> UC10
+Cashier --> UC9
+Cashier --> UC10
 
-' Additional Relationships (Include relationships)
-UC_ProcessPayment --> UC_RecordTransaction : <<include>>
-UC_ProcessPayment --> UC_CalcInvoice : <<include>>
-UC_SelectCollect --> UC_CheckProduct : <<include>>
+' --------------------
+' Relationships - Order Delivery Process
+Bakery --> UC11
+OrderChief --> UC12
+OrderChief --> UC13
+NC --> UC14
+EC --> UC14
+
+' --------------------
+' Additional Notes:
+' The Payment use case UC6 (Process Payment) internally performs total calculation (UC7)
+' and then generates an invoice (UC8). Payment can be made either by cash (UC9)
+' or by cheque (UC10), with cheque payments applicable to extra-customers (e.g., organizations).
+' Similarly, product ordering involves preparation (UC11), packaging (UC12) and delivery (UC13)
+' after which customers receive their order (UC14).
 
 @enduml
