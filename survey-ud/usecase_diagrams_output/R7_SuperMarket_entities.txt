@@ -1,0 +1,84 @@
+Document: R7_SuperMarket.txt
+
+Classes identified:
+--------------------
+- supermarket
+- shelf
+- products
+- clients
+- customers
+- product
+- group
+- employees
+- basket
+- goods
+- cashier
+- machine
+- controller
+- transactions
+- client
+- customer
+- invoice
+- service
+- proforma invoice
+- order
+
+Attributes identified:
+--------------------
+- price
+- expiration date
+- ingredients
+- total
+- orders
+
+Detailed Entities:
+--------------------
+Type: class, Word: supermarket, Score: 0.7855
+Type: class, Word: shelf, Score: 0.8339
+Type: class, Word: products, Score: 0.7212
+Type: class, Word: clients, Score: 0.6565
+Type: class, Word: customers, Score: 0.5269
+Type: class, Word: supermarket, Score: 0.7522
+Type: class, Word: product, Score: 0.6323
+Type: class, Word: group, Score: 0.3415
+Type: class, Word: products, Score: 0.5554
+Type: class, Word: employees, Score: 0.5487
+Type: class, Word: clients, Score: 0.5385
+Type: class, Word: products, Score: 0.5596
+Type: class, Word: basket, Score: 0.9473
+Type: class, Word: goods, Score: 0.5371
+Type: attr, Word: price, Score: 0.9560
+Type: attr, Word: expiration date, Score: 0.9860
+Type: attr, Word: ingredients, Score: 0.9357
+Type: class, Word: cashier, Score: 0.7419
+Type: class, Word: cashier, Score: 0.9294
+Type: class, Word: machine, Score: 0.9138
+Type: class, Word: group, Score: 0.6496
+Type: class, Word: product, Score: 0.9323
+Type: class, Word: controller, Score: 0.6979
+Type: class, Word: product, Score: 0.9134
+Type: class, Word: cashier, Score: 0.9290
+Type: class, Word: transactions, Score: 0.8047
+Type: class, Word: client, Score: 0.8299
+Type: class, Word: customer, Score: 0.4971
+Type: class, Word: machine, Score: 0.7176
+Type: class, Word: customer, Score: 0.9004
+Type: attr, Word: total, Score: 0.9150
+Type: class, Word: invoice, Score: 0.8512
+Type: class, Word: customer, Score: 0.9556
+Type: class, Word: client, Score: 0.6345
+Type: class, Word: customer, Score: 0.8969
+Type: class, Word: service, Score: 0.6059
+Type: class, Word: customer, Score: 0.8996
+Type: attr, Word: orders, Score: 0.4040
+Type: class, Word: proforma invoice, Score: 0.8192
+Type: class, Word: order, Score: 0.9807
+Type: class, Word: customer, Score: 0.9528
+Type: class, Word: product, Score: 0.6556
+Type: attr, Word: total, Score: 0.7991
+Type: class, Word: customer, Score: 0.8294
+Type: class, Word: customer, Score: 0.9533
+Type: class, Word: cashier, Score: 0.7208
+Type: class, Word: cashier, Score: 0.7518
+Type: class, Word: customer, Score: 0.9537
+Type: class, Word: invoice, Score: 0.5778

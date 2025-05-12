@@ -1,0 +1,19 @@
+,entity_group,score,word,start,end
+0,attr,0.65559685,attributes,60,71
+1,class,0.9441666,policy object,95,109
+2,class,0.77169025,Person,149,156
+3,class,0.9572568,policy object,181,195
+4,class,0.9593144,policy,291,298
+5,attr,0.8237073,Person info,321,333
+6,class,0.95447165,policy,342,349
+7,attr,0.7094632,info,354,359
+8,attr,0.6616196,contacts,377,386
+9,class,0.4983124,vehicles,390,399
+10,class,0.9692814,party,443,449
+11,class,0.826987,party,469,475
+12,attr,0.95584637,name,480,485
+13,attr,0.84725755,policies,490,499
+14,attr,0.6665706,details,508,516
+15,class,0.5488915,Policy,688,695
+16,attr,0.75443,ContactPoints,719,733
+17,attr,0.7445676,Dwellings,747,757

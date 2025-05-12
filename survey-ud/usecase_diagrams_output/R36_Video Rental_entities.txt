@@ -1,0 +1,10 @@
+Document: R36_Video Rental.txt
+
+Classes identified:
+--------------------
+
+Attributes identified:
+--------------------
+
+Detailed Entities:
+--------------------

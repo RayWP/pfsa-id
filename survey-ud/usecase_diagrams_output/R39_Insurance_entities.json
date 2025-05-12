@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_group": "attr",
+      "word": "attributes",
+      "score": 0.6555968523025513,
+      "start": 60,
+      "end": 71
+    },
+    {
+      "entity_group": "class",
+      "word": "policy object",
+      "score": 0.9441666007041931,
+      "start": 95,
+      "end": 109
+    },
+    {
+      "entity_group": "class",
+      "word": "Person",
+      "score": 0.7716902494430542,
+      "start": 149,
+      "end": 156
+    },
+    {
+      "entity_group": "class",
+      "word": "policy object",
+      "score": 0.9572567939758301,
+      "start": 181,
+      "end": 195
+    },
+    {
+      "entity_group": "class",
+      "word": "policy",
+      "score": 0.9593144059181213,
+      "start": 291,
+      "end": 298
+    },
+    {
+      "entity_group": "attr",
+      "word": "Person info",
+      "score": 0.8237072825431824,
+      "start": 321,
+      "end": 333
+    },
+    {
+      "entity_group": "class",
+      "word": "policy",
+      "score": 0.9544716477394104,
+      "start": 342,
+      "end": 349
+    },
+    {
+      "entity_group": "attr",
+      "word": "info",
+      "score": 0.7094631791114807,
+      "start": 354,
+      "end": 359
+    },
+    {
+      "entity_group": "attr",
+      "word": "contacts",
+      "score": 0.6616196036338806,
+      "start": 377,
+      "end": 386
+    },
+    {
+      "entity_group": "class",
+      "word": "vehicles",
+      "score": 0.49831241369247437,
+      "start": 390,
+      "end": 399
+    },
+    {
+      "entity_group": "class",
+      "word": "party",
+      "score": 0.9692813754081726,
+      "start": 443,
+      "end": 449
+    },
+    {
+      "entity_group": "class",
+      "word": "party",
+      "score": 0.8269870281219482,
+      "start": 469,
+      "end": 475
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.95584636926651,
+      "start": 480,
+      "end": 485
+    },
+    {
+      "entity_group": "attr",
+      "word": "policies",
+      "score": 0.8472575545310974,
+      "start": 490,
+      "end": 499
+    },
+    {
+      "entity_group": "attr",
+      "word": "details",
+      "score": 0.6665706038475037,
+      "start": 508,
+      "end": 516
+    },
+    {
+      "entity_group": "class",
+      "word": "Policy",
+      "score": 0.5488914847373962,
+      "start": 688,
+      "end": 695
+    },
+    {
+      "entity_group": "attr",
+      "word": "ContactPoints",
+      "score": 0.7544299960136414,
+      "start": 719,
+      "end": 733
+    },
+    {
+      "entity_group": "attr",
+      "word": "Dwellings",
+      "score": 0.7445675730705261,
+      "start": 747,
+      "end": 757
+    }
+  ],
+  "summary": {
+    "class": [
+      "policy object",
+      "Person",
+      "policy",
+      "vehicles",
+      "party",
+      "Policy"
+    ],
+    "attr": [
+      "attributes",
+      "Person info",
+      "info",
+      "contacts",
+      "name",
+      "policies",
+      "details",
+      "ContactPoints",
+      "Dwellings"
+    ]
+  },
+  "document_class": " Create a Policy class and test that you can get and set its attributes correctly by creating a policy object  Add an addPolicy(Policy) method to the Person class that will accept a policy object and stores it in the list  Test that this works by adding some of the things you created to the policy and then printing: The Person info For Each policy, its info and a list of its contacts and vehicles  You should now be able to loop through the party array and print the party, its name, its policies, and its details (try reusing some of the code you wrote earlier)  Create a superclass PhysicalObject for these two classes, and factor out the common methods and attributes: Redesign your Policy class to hold a list of ContactPoints and a List of Dwellings"
+}

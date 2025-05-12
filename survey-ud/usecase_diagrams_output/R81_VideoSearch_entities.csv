@@ -1,0 +1,23 @@
+,entity_group,score,word,start,end
+0,class,0.8370713,User,28,33
+1,class,0.6919802,torrent,43,51
+2,class,0.7255254,box,56,60
+3,class,0.9089802,system,66,73
+4,class,0.6020436,torrent websites,92,109
+5,class,0.60392964,search,132,139
+6,class,0.90117973,user,155,160
+7,attr,0.8054272,search term,171,183
+8,class,0.8642506,system,207,214
+9,class,0.70603156,torrent,235,243
+10,attr,0.4533406,search term,281,293
+11,class,0.83207804,user,298,303
+12,attr,0.6378993,column header,350,364
+13,class,0.55464244,system,370,377
+14,class,0.74368805,results,387,395
+15,class,0.7723375,user,430,435
+16,class,0.73167723,system,472,479
+17,class,0.46058783,results,504,512
+18,class,0.6043682,search,520,527
+19,class,0.9310028,user,566,571
+20,class,0.805385,torrent,592,600
+21,class,0.5987163,search,654,661

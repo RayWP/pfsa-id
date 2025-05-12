@@ -1,0 +1,18 @@
+Document: R13_municipal-library.txt
+
+Classes identified:
+--------------------
+- documents
+- library
+- member
+- books
+
+Attributes identified:
+--------------------
+
+Detailed Entities:
+--------------------
+Type: class, Word: documents, Score: 0.7541
+Type: class, Word: library, Score: 0.8940
+Type: class, Word: member, Score: 0.9771
+Type: class, Word: books, Score: 0.7174

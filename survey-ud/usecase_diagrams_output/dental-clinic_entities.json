@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.6866462230682373,
+      "start": 30,
+      "end": 39
+    },
+    {
+      "entity_group": "class",
+      "word": "form",
+      "score": 0.44310835003852844,
+      "start": 127,
+      "end": 132
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9471641778945923,
+      "start": 146,
+      "end": 151
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9843782782554626,
+      "start": 152,
+      "end": 160
+    },
+    {
+      "entity_group": "attr",
+      "word": "telephone numbers",
+      "score": 0.9837495684623718,
+      "start": 161,
+      "end": 179
+    },
+    {
+      "entity_group": "attr",
+      "word": "allergies",
+      "score": 0.9673115611076355,
+      "start": 180,
+      "end": 190
+    },
+    {
+      "entity_group": "attr",
+      "word": "state of mind",
+      "score": 0.8937123417854309,
+      "start": 195,
+      "end": 209
+    },
+    {
+      "entity_group": "class",
+      "word": "office",
+      "score": 0.5572067499160767,
+      "start": 263,
+      "end": 270
+    },
+    {
+      "entity_group": "class",
+      "word": "patient",
+      "score": 0.9170480370521545,
+      "start": 325,
+      "end": 333
+    },
+    {
+      "entity_group": "attr",
+      "word": "date",
+      "score": 0.5108324289321899,
+      "start": 345,
+      "end": 350
+    },
+    {
+      "entity_group": "attr",
+      "word": "Schedules",
+      "score": 0.3798331916332245,
+      "start": 351,
+      "end": 361
+    },
+    {
+      "entity_group": "class",
+      "word": "appointment book",
+      "score": 0.5731143951416016,
+      "start": 388,
+      "end": 405
+    },
+    {
+      "entity_group": "class",
+      "word": "patient records",
+      "score": 0.7401500940322876,
+      "start": 406,
+      "end": 422
+    },
+    {
+      "entity_group": "attr",
+      "word": "contact information",
+      "score": 0.9775351285934448,
+      "start": 433,
+      "end": 453
+    },
+    {
+      "entity_group": "class",
+      "word": "clinic",
+      "score": 0.5503755211830139,
+      "start": 573,
+      "end": 580
+    },
+    {
+      "entity_group": "class",
+      "word": "supplies inventory",
+      "score": 0.5095719695091248,
+      "start": 592,
+      "end": 611
+    },
+    {
+      "entity_group": "class",
+      "word": "procedures",
+      "score": 0.4962811768054962,
+      "start": 695,
+      "end": 706
+    }
+  ],
+  "summary": {
+    "class": [
+      "patients",
+      "form",
+      "office",
+      "patient",
+      "appointment book",
+      "patient records",
+      "clinic",
+      "supplies inventory",
+      "procedures"
+    ],
+    "attr": [
+      "name",
+      "address",
+      "telephone numbers",
+      "allergies",
+      "state of mind",
+      "date",
+      "Schedules",
+      "contact information"
+    ]
+  },
+  "document_class": "The clinic basically schedules patients, provides services for them, and bills them for those services  New patients fill out a form listing their name, address, telephone numbers, allergies, and state of mind prior to scheduling their first appointment  When the office staff forget to do this, a desk worker has to call the patient to set up a date  Schedules are entered into a central appointment book; patient records (including contact information) are kept in paper files  HMO-funded patients are asked to make a copayment at the time that they leave the office  The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms"
+}

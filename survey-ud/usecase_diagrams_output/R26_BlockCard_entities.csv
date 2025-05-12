@@ -1,0 +1,17 @@
+,entity_group,score,word,start,end
+0,class,0.90339315,user,7,12
+1,attr,0.60596925,reason,35,42
+2,class,0.730827,system,47,54
+3,class,0.906307,user,117,122
+4,class,0.8202036,system,167,174
+5,class,0.954117,user,193,198
+6,class,0.9700707,card,210,215
+7,class,0.92579967,user,226,231
+8,class,0.855036,card,245,250
+9,class,0.9023749,system,272,279
+10,class,0.9339866,card,316,321
+11,class,0.85253817,card,360,365
+12,class,0.941138,card,419,424
+13,class,0.8476458,system,450,457
+14,class,0.66602045,banking,475,483
+15,class,0.94980174,cardholder,493,504

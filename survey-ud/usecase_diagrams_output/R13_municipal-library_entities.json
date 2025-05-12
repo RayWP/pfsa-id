@@ -1,0 +1,42 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "documents",
+      "score": 0.754059910774231,
+      "start": 4,
+      "end": 14
+    },
+    {
+      "entity_group": "class",
+      "word": "library",
+      "score": 0.8940445184707642,
+      "start": 31,
+      "end": 39
+    },
+    {
+      "entity_group": "class",
+      "word": "member",
+      "score": 0.9770862460136414,
+      "start": 52,
+      "end": 59
+    },
+    {
+      "entity_group": "class",
+      "word": "books",
+      "score": 0.7173904776573181,
+      "start": 85,
+      "end": 91
+    }
+  ],
+  "summary": {
+    "class": [
+      "documents",
+      "library",
+      "member",
+      "books"
+    ],
+    "attr": []
+  },
+  "document_class": " New documents are added to the library regularly  A member can borrow a maximum of 3 books"
+}

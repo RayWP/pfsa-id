@@ -1,0 +1,42 @@
+Document: R81_VideoSearch.txt
+
+Classes identified:
+--------------------
+- User
+- torrent
+- box
+- system
+- torrent websites
+- search
+- user
+- results
+
+Attributes identified:
+--------------------
+- search term
+- column header
+
+Detailed Entities:
+--------------------
+Type: class, Word: User, Score: 0.8371
+Type: class, Word: torrent, Score: 0.6920
+Type: class, Word: box, Score: 0.7255
+Type: class, Word: system, Score: 0.9090
+Type: class, Word: torrent websites, Score: 0.6020
+Type: class, Word: search, Score: 0.6039
+Type: class, Word: user, Score: 0.9012
+Type: attr, Word: search term, Score: 0.8054
+Type: class, Word: system, Score: 0.8643
+Type: class, Word: torrent, Score: 0.7060
+Type: attr, Word: search term, Score: 0.4533
+Type: class, Word: user, Score: 0.8321
+Type: attr, Word: column header, Score: 0.6379
+Type: class, Word: system, Score: 0.5546
+Type: class, Word: results, Score: 0.7437
+Type: class, Word: user, Score: 0.7723
+Type: class, Word: system, Score: 0.7317
+Type: class, Word: results, Score: 0.4606
+Type: class, Word: search, Score: 0.6044
+Type: class, Word: user, Score: 0.9310
+Type: class, Word: torrent, Score: 0.8054
+Type: class, Word: search, Score: 0.5987

@@ -1,0 +1,28 @@
+,entity_group,score,word,start,end
+0,class,0.95390165,rental office,107,121
+1,class,0.9137509,vehicles,127,136
+2,class,0.9188982,customers,163,173
+3,class,0.7677538,vehicle,205,213
+4,class,0.9508708,customer,267,276
+5,class,0.440574,rented,288,295
+6,class,0.45633736,vehicles,295,304
+7,class,0.47742313,central,309,317
+8,class,0.70624524,vehicles,384,393
+9,class,0.9645926,rental office,402,416
+10,attr,0.9320656,mileage,447,455
+11,class,0.9299047,truck,477,483
+12,class,0.93117785,customer,540,549
+13,class,0.92184824,customer,564,573
+14,attr,0.9197053,name,575,580
+15,attr,0.92808706,home phone,581,592
+16,attr,0.9806467,address,593,601
+17,attr,0.82758254,driver’s license,606,623
+18,attr,0.953021,state,623,629
+19,attr,0.88740236,number,630,637
+20,attr,0.9822805,expiration date,642,658
+21,class,0.9432586,customer,664,673
+22,class,0.92545587,vehicle,683,691
+23,class,0.93661326,customer,752,761
+24,class,0.90249705,customer,800,809
+25,class,0.8497949,customers,832,842
+26,class,0.83697593,vehicles,859,868

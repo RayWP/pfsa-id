@@ -1,0 +1,379 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "supermarket",
+      "score": 0.7855424284934998,
+      "start": 44,
+      "end": 56
+    },
+    {
+      "entity_group": "class",
+      "word": "shelf",
+      "score": 0.8338708281517029,
+      "start": 80,
+      "end": 86
+    },
+    {
+      "entity_group": "class",
+      "word": "products",
+      "score": 0.721177339553833,
+      "start": 118,
+      "end": 127
+    },
+    {
+      "entity_group": "class",
+      "word": "clients",
+      "score": 0.6565322279930115,
+      "start": 133,
+      "end": 141
+    },
+    {
+      "entity_group": "class",
+      "word": "customers",
+      "score": 0.5268682837486267,
+      "start": 144,
+      "end": 154
+    },
+    {
+      "entity_group": "class",
+      "word": "supermarket",
+      "score": 0.7521690130233765,
+      "start": 164,
+      "end": 176
+    },
+    {
+      "entity_group": "class",
+      "word": "product",
+      "score": 0.6323060989379883,
+      "start": 185,
+      "end": 193
+    },
+    {
+      "entity_group": "class",
+      "word": "group",
+      "score": 0.3415469527244568,
+      "start": 215,
+      "end": 221
+    },
+    {
+      "entity_group": "class",
+      "word": "products",
+      "score": 0.5554205179214478,
+      "start": 224,
+      "end": 233
+    },
+    {
+      "entity_group": "class",
+      "word": "employees",
+      "score": 0.5486699938774109,
+      "start": 243,
+      "end": 253
+    },
+    {
+      "entity_group": "class",
+      "word": "clients",
+      "score": 0.5384758710861206,
+      "start": 275,
+      "end": 283
+    },
+    {
+      "entity_group": "class",
+      "word": "products",
+      "score": 0.5595921277999878,
+      "start": 360,
+      "end": 369
+    },
+    {
+      "entity_group": "class",
+      "word": "basket",
+      "score": 0.947329580783844,
+      "start": 385,
+      "end": 392
+    },
+    {
+      "entity_group": "class",
+      "word": "goods",
+      "score": 0.5371008515357971,
+      "start": 404,
+      "end": 410
+    },
+    {
+      "entity_group": "attr",
+      "word": "price",
+      "score": 0.9560073614120483,
+      "start": 435,
+      "end": 441
+    },
+    {
+      "entity_group": "attr",
+      "word": "expiration date",
+      "score": 0.9860217571258545,
+      "start": 442,
+      "end": 458
+    },
+    {
+      "entity_group": "attr",
+      "word": "ingredients",
+      "score": 0.9356958866119385,
+      "start": 463,
+      "end": 475
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.7419203519821167,
+      "start": 491,
+      "end": 499
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.9293924570083618,
+      "start": 545,
+      "end": 553
+    },
+    {
+      "entity_group": "class",
+      "word": "machine",
+      "score": 0.9138108491897583,
+      "start": 582,
+      "end": 590
+    },
+    {
+      "entity_group": "class",
+      "word": "group",
+      "score": 0.6496492028236389,
+      "start": 610,
+      "end": 616
+    },
+    {
+      "entity_group": "class",
+      "word": "product",
+      "score": 0.9322993755340576,
+      "start": 623,
+      "end": 631
+    },
+    {
+      "entity_group": "class",
+      "word": "controller",
+      "score": 0.6979241967201233,
+      "start": 662,
+      "end": 673
+    },
+    {
+      "entity_group": "class",
+      "word": "product",
+      "score": 0.9133711457252502,
+      "start": 685,
+      "end": 693
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.929003894329071,
+      "start": 719,
+      "end": 727
+    },
+    {
+      "entity_group": "class",
+      "word": "transactions",
+      "score": 0.8047123551368713,
+      "start": 742,
+      "end": 755
+    },
+    {
+      "entity_group": "class",
+      "word": "client",
+      "score": 0.8298828601837158,
+      "start": 784,
+      "end": 791
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.4970579743385315,
+      "start": 792,
+      "end": 800
+    },
+    {
+      "entity_group": "class",
+      "word": "machine",
+      "score": 0.7175671458244324,
+      "start": 817,
+      "end": 825
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9003742933273315,
+      "start": 838,
+      "end": 847
+    },
+    {
+      "entity_group": "attr",
+      "word": "total",
+      "score": 0.9150012731552124,
+      "start": 847,
+      "end": 853
+    },
+    {
+      "entity_group": "class",
+      "word": "invoice",
+      "score": 0.8512036800384521,
+      "start": 891,
+      "end": 899
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9556358456611633,
+      "start": 908,
+      "end": 917
+    },
+    {
+      "entity_group": "class",
+      "word": "client",
+      "score": 0.6345346570014954,
+      "start": 920,
+      "end": 927
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.8968763947486877,
+      "start": 972,
+      "end": 981
+    },
+    {
+      "entity_group": "class",
+      "word": "service",
+      "score": 0.6058682203292847,
+      "start": 1006,
+      "end": 1014
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.8995721340179443,
+      "start": 1098,
+      "end": 1107
+    },
+    {
+      "entity_group": "attr",
+      "word": "orders",
+      "score": 0.4039836525917053,
+      "start": 1211,
+      "end": 1218
+    },
+    {
+      "entity_group": "class",
+      "word": "proforma invoice",
+      "score": 0.8191580176353455,
+      "start": 1233,
+      "end": 1250
+    },
+    {
+      "entity_group": "class",
+      "word": "order",
+      "score": 0.9806526899337769,
+      "start": 1282,
+      "end": 1288
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9528470039367676,
+      "start": 1323,
+      "end": 1332
+    },
+    {
+      "entity_group": "class",
+      "word": "product",
+      "score": 0.6555580496788025,
+      "start": 1353,
+      "end": 1361
+    },
+    {
+      "entity_group": "attr",
+      "word": "total",
+      "score": 0.7991120219230652,
+      "start": 1381,
+      "end": 1387
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.8293936252593994,
+      "start": 1413,
+      "end": 1422
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9533202648162842,
+      "start": 1469,
+      "end": 1478
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.7207975387573242,
+      "start": 1499,
+      "end": 1507
+    },
+    {
+      "entity_group": "class",
+      "word": "cashier",
+      "score": 0.7517767548561096,
+      "start": 1520,
+      "end": 1528
+    },
+    {
+      "entity_group": "class",
+      "word": "customer",
+      "score": 0.9536697864532471,
+      "start": 1552,
+      "end": 1561
+    },
+    {
+      "entity_group": "class",
+      "word": "invoice",
+      "score": 0.5778371095657349,
+      "start": 1569,
+      "end": 1577
+    }
+  ],
+  "summary": {
+    "class": [
+      "supermarket",
+      "shelf",
+      "products",
+      "clients",
+      "customers",
+      "product",
+      "group",
+      "employees",
+      "basket",
+      "goods",
+      "cashier",
+      "machine",
+      "controller",
+      "transactions",
+      "client",
+      "customer",
+      "invoice",
+      "service",
+      "proforma invoice",
+      "order"
+    ],
+    "attr": [
+      "price",
+      "expiration date",
+      "ingredients",
+      "total",
+      "orders"
+    ]
+  },
+  "document_class": " There is a person loaded that action in the supermarket who controller when the shelf is taken care of or occupied of products  When clients or customers enter the supermarket, saw the product wanted in a different group of products, and some employees can help us or orient clients/customers by showing where products are placed  After choosing and selecting products, one can take a basket for storing goods; before going, check the price, expiration date, and ingredients, then go to the cashier  Arriving there, they deposit around him; the cashier takes one by one entering on machine according also on a group of the product when finished, gives us to the controller to make the product on free packing  When the cashier finishes those transactions, they calculate and show the client/customer on-screen of the machine and tell the customer total of money they can pay, and give us an invoice when the customer or client needed  The delivery process begins when the customer first interacts with the service organization and ends when the delivery of the desired service is completed and the customer exits the process  Then the chief of order checks and counts if there is no mistake; when the number of orders written to the proforma invoice is well prepared, they give the order for put out before arriving to the customer  After selecting the product and calculating the total money, the payment to the customer is made in the following ways: Cash: where the customer presents cash to the cashier or where the cashier receives money, and the customer gets an invoice"
+}

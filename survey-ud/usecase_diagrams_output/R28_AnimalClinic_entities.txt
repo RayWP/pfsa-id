@@ -1,0 +1,14 @@
+Document: R28_AnimalClinic.txt
+
+Classes identified:
+--------------------
+- clinic
+- dogs
+
+Attributes identified:
+--------------------
+
+Detailed Entities:
+--------------------
+Type: class, Word: clinic, Score: 0.8341
+Type: class, Word: dogs, Score: 0.6539
