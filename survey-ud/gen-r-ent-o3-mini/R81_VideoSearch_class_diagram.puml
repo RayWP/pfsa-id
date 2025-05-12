@@ -1,98 +1,62 @@
 @startuml
-' Define the main classes
 
-class Software {
-  +executeTorrentSearch(term: String): Results
-  +addTorrentWebsite(website: TorrentWebsite)
-}
-
-class Program {
-  +displayResults(results: Results)
-  +navigatePages(pageNumber: int)
-}
-
+' Define classes
 class User {
-  +performSearch(term: String)
+  +tickTorrentBox() : void
+  +enterSearchTerm(term: String) : void
+  +clickSearch() : void
+  +clickSort(columnHeader: String) : void
+  +clickNextPage() : void
 }
 
-class SearchBar {
-  -input: String
-  +getInput(): String
-  +setInput(term: String)
+class System {
+  -torrentWebsites : List<TorrentWebsite>
+  -search : Search
+  -torrentBox : Box
+  +performSearch(term: String, includeTorrent: Boolean) : Results
+  +sortResults(by: String) : Results
+  +displayPage(pageNumber: int) : void
+  +displayMessage(message: String) : void
 }
 
 class Search {
-  -term: String
-  +execute(): Results
-  +setTerm(term: String)
+  -searchTerm : String
+  -results : Results
+  +startSearch() : Results
+  +setSearchTerm(term: String) : void
+  +getResults() : Results
+}
+
+class Box {
+  -checked : Boolean
+  +isChecked() : Boolean
+  +setChecked(state: Boolean) : void
 }
 
 class TorrentWebsite {
-  -name: String
-  -url: String
-  +getTorrents(query: String): List<Torrent>
-}
-
-class Torrent {
-  -website: String
-  -seeds: int
-  -peers: int
-  -size: String
-  -datePosted: Date
-  -link: String
-  +displayInfo()
+  -url : String
+  +query(term: String) : Results
 }
 
 class Results {
-  -torrents: List<Torrent>
-  -sortOrder: String
-  +sortBy(attribute: String)
-  +paginate(pageNumber: int): List<Torrent>
-  +display()
+  -torrents : List<Torrent>
+  +sort(by: String) : void
+  +getPage(pageNumber: int) : List<Torrent>
 }
 
-class Webpage {
-  -url: String
-  +open()
+class Torrent {
+  -name : String
+  -size : String
+  +download() : void
 }
 
 ' Relationships
 
-User --> Search : "initiates"
-Search --> SearchBar : "gets input from"
-Search --> Software : "delegates search to"
-Software "1" o-- "many" TorrentWebsite : "stores"
-Software --> Program : "displays results in"
-Search --> Results : "returns"
-
-TorrentWebsite --> Torrent : "provides"
-Results --> Torrent : "contains"
-
-' Optional: association for sorting attributes in Results
-Results --> Webpage : "link opens -->"
-
-' Add note about streaming search sharing same search bar
-class Streaming {
-  ' This class represents the streaming feature sharing the search bar
-  +streamContent(term: String)
-}
-SearchBar <.. Streaming : "shared"
-
-' Methods for User
-User : +performSearch(term: String)
-' Methods for Search
-Search : +execute() 
-Search : +setTerm(term: String)
-' Methods for TorrentWebsite
-TorrentWebsite : +getTorrents(query: String)
-' Methods for Torrent
-Torrent : +displayInfo()
-' Methods for Results
-Results : +sortBy(attribute: String)
-Results : +paginate(pageNumber: int)
-Results : +display()
-' Methods for Program
-Program : +displayResults(results: Results)
-Program : +navigatePages(pageNumber: int)
+User --> System : "invokes"
+System o-- Search : "has a"
+System o-- Box : "uses"
+System --> TorrentWebsite : "queries"
+Search o-- Results : "produces"
+Results *-- Torrent : "contains"
 
 @enduml

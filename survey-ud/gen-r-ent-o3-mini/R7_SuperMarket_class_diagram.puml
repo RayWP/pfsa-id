@@ -1,139 +1,120 @@
 @startuml
 
-'-------------------------
-' Product & Related Classes
-'-------------------------
-class Product {
-  - type : String
-  - number : int
-  - expirationDate : Date
-  - group : String
-  - price : double
-  - ingredients : String
-  - category : String
-  + checkExpiration() : Boolean
-  + recordShelf() : void
-}
-
-'-------------------------
-' Customer and Basket
-'-------------------------
-class Customer {
-  - type : String  "Normal or Extra-customer"
-  + selectProduct(p: Product) : void
-  + pay(amount: double) : void
-}
-
-class Basket {
-  - goods : List<Product>
-  + addProduct(p: Product) : void
-  + removeProduct(p: Product) : void
-}
-
-' Association: Customer has a Basket
-Customer --> Basket
-
-'-------------------------
-' Supermarket and Inventory
-'-------------------------
+' Define Supermarket and its related classes
 class Supermarket {
-  + manageInventory() : void
-  + directCustomer() : void
+  +checkInventory()
+  +serveCustomer()
 }
+Supermarket "1" --> "many" Shelf : contains
+Supermarket "1" --> "many" Employee : employs
+Supermarket "1" --> "many" (Client/Customer) : welcomes
+Supermarket "1" --> "1" Cashier : has
+Supermarket "1" --> "1" Controller : monitored by
 
-class Stock {
-  - forms : List<Form>
-  + recordInStock(p: Product) : void
-  + countInventory() : int
-}
-
-class Form {
-  - number : int
-  + recordProduct(p: Product) : void
-}
-
+' Shelf holds products
 class Shelf {
-  - products : List<Product>
-  + arrangeProduct(p: Product) : void
-  + checkProduct() : void
+  +addProduct(p: Product)
+  +removeProduct(p: Product)
+  +isOccupied() : Boolean
 }
+Shelf "1" --> "many" Product : displays
 
-' Relationships: Supermarket manages Stock and Shelf
-Supermarket --> Stock
-Supermarket --> Shelf
-
-' Relationship: Stock is composed of Forms (records)
-Stock "1" *-- "many" Form
-
-'-------------------------
-' Supplier
-'-------------------------
-class Supplier {
-  + deliverProduct(p: Product) : void
+' Product and Group
+class Product {
+  -price : float
+  -expirationDate : Date
+  -ingredients : String
+  +getPrice() : float
+  +getExpirationDate() : Date
+  +getIngredients() : String
 }
+class Group {
+  +groupName : String
+  +listProducts() : void
+}
+Product "1" --> "1" Group : belongs to
 
-' Supermarket works with Suppliers (one or many)
-Supermarket --> "many" Supplier
+' Client and Customer
+class Client {
+  +requestAssistance()
+  +selectProduct(p: Product)
+}
+class Customer {
+  +makePurchase()
+  +pay(amount: float)
+}
+' We assume both Client and Customer represent persons coming to the supermarket.
+Client <|-- Customer
 
-'-------------------------
-' Payment: Cashier, Machine, Invoice, Controller
-'-------------------------
+' Employee who helps clients (including chief of order role)
+class Employee {
+  +assistCustomer()
+  +maintainShelf()
+}
+' Chief of Order is a type of Employee responsible for checking orders.
+class ChiefOfOrder {
+  +checkOrder(order: Order)
+}
+Employee <|-- ChiefOfOrder
+
+' Basket holds goods (assume goods are the selected products)
+class Basket {
+  +addGood(g: Product)
+  +removeGood(g: Product)
+  +calculateTotal() : float
+}
+Basket o-- Product : contains
+
+' Cashier, Machine, Controller, and Transaction process
 class Cashier {
-  + enterProduct(p: Product) : void
-  + calculateTotal() : double
-  + generateInvoice(c: Customer) : Invoice
+  +scanProduct(p: Product)
+  +processTransaction(t: Transaction)
+  +receivePayment(method: String)
+  +issueInvoice(i: Invoice)
 }
-
 class Machine {
-  + displayTotal(total: double) : void
+  +enterProduct(p: Product)
+  +calculateTotal(products: List<Product>) : float
+  +displayTotal(total: float)
 }
-
-class Invoice {
-  - total : double
-  - invoiceNumber : int
-  + printInvoice() : void
-}
-
+Cashier --> Machine : uses
 class Controller {
-  + verifyInventory(forms: List<Form>) : Boolean
-  + freePacking(p: Product) : void
+  +monitorShelf(s: Shelf)
+  +verifyPackaging()
 }
+class Transaction {
+  -total : float
+  +addProduct(p: Product)
+  +computeTotal() : float
+}
+Transaction --> Product
 
-' Relationships for payment process
-Supermarket --> Cashier
-Cashier --> Machine
-Cashier --> Invoice
-Supermarket --> Controller
-
-'-------------------------
-' Order and Bakery Process
-'-------------------------
+' Invoice and Proforma Invoice with Order
+class Invoice {
+  +generateInvoice()
+}
+class ProformaInvoice {
+  +prepareInvoice()
+}
 class Order {
-  - quantities : int
-  - orders : String
-  + recordOrder() : void
+  -orders : List<Product>
+  +addOrder(p: Product)
+  +getOrderList() : List<Product>
 }
+ProformaInvoice --> Order : includes
 
-class Bakery {
-  + prepareGoods(o: Order) : void
-  + packageGoods(o: Order) : void
+' Service represents the delivery process
+class Service {
+  +initiateDelivery()
+  +completeDelivery()
 }
+Service "1" --> "many" Order : processes
 
-class Agent {
-  + prepareOrder(o: Order) : void
-}
-
-' Relationships: Bakery and Agent handle Orders
-Supermarket --> Bakery
-Bakery --> Order : prepares >
-Agent --> Order : processes >
-
-'-------------------------
-' Customer Shopping Process
-'-------------------------
-' Customer selects goods (from Shelf) using a Basket.
-Customer --> Shelf : selects products
-' After selection, customer goes to cashier for payment.
-Customer --> Cashier : pays
+' Relationships among classes
+Client "1" --> Basket : uses
+Cashier "1" --> Transaction : initiates
+Transaction --> Machine : processed by
+Cashier "1" --> Invoice : issues
+ChiefOfOrder "1" --> ProformaInvoice : validates
 
 @enduml

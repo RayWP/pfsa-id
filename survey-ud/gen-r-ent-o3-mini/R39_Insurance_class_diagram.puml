@@ -1,106 +1,62 @@
 @startuml
 
-' Base party class with policies
-abstract class Party {
-  - name : String
-  - policies : List<Policy>
-  + Party(name: String)
-  + addPolicy(policy: Policy) : void
-  + getPolicies() : List<Policy>
-  + name() : String
-}
-
-class Person {
-  + Person(name: String)
-}
-
-class Company {
-  + Company(name: String)
-}
-
-' Inheritance for Party
-Party <|-- Person
-Party <|-- Company
-
-' Policy class with contacts, vehicles and physical objects
-class Policy {
-  - emails : List<Email>
-  - phones : List<Phone>
-  - addresses : List<Address>
-  - vehicles : List<Vehicle>
-  - physicalObjects : List<PhysicalObject>
-  + Policy()
-  + addEmail(email: Email) : void
-  + getEmails() : List<Email>
-  + addPhone(phone: Phone) : void
-  + getPhones() : List<Phone>
-  + addAddress(address: Address) : void
-  + getAddresses() : List<Address>
-  + addVehicle(vehicle: Vehicle) : void
-  + getVehicles() : List<Vehicle>
-  + addPhysicalObject(obj: PhysicalObject) : void
-  + getPhysicalObjects() : List<PhysicalObject>
-}
-
-' Relationship: Party holds Policy objects
-Party "1" -- "*" Policy : owns
-
-' Contact interface for all contact points
-interface Contact {
-  + contactPointAsString() : String
-}
-
-' Contact classes
-class Email {
-  - emailAddress : String
-  + Email(emailAddress: String)
-  + contactPointAsString() : String
-}
-class Phone {
-  - phoneNumber : String
-  + Phone(phoneNumber: String)
-  + contactPointAsString() : String
-}
-class Address {
-  - addressDetail : String
-  + Address(addressDetail: String)
-  + contactPointAsString() : String
-}
-
-' Realize Contact interface
-Contact <|.. Email
-Contact <|.. Phone
-Contact <|.. Address
-
-' Policy has collections of contacts
-Policy "1" -- "0..*" Email : contains
-Policy "1" -- "0..*" Phone : contains
-Policy "1" -- "0..*" Address : contains
-
-' Vehicle class definition
-class Vehicle {
-  - registration : String
-  + Vehicle(registration: String)
-  + toString() : String
-}
-
-Policy "1" -- "0..*" Vehicle : contains
-
-' Physical objects: general class and dwellings
+' Base class for common attributes and methods
 class PhysicalObject {
   - name : String
-  - description : String
-  + PhysicalObject(name: String, description: String)
-  + getName() : String
-  + getDescription() : String
+  - info : String
+  - details : String
+  - attributes : List<String>
 }
 
+' Person inherits common physical attributes,
+' and has policies.
+class Person {
+  - policies : List<Policy>
+  + addPolicy(p : Policy) : void
+}
+Person --|> PhysicalObject
+
+' Policy inherits PhysicalObject and holds contacts and dwellings.
+class Policy {
+  - contacts : List<ContactPoint>
+  - dwellings : List<Dwelling>
+}
+Policy --|> PhysicalObject
+
+' Party represents a grouping of persons.
+class Party {
+  - persons : List<Person>
+}
+Party --|> PhysicalObject
+
+' Although not used in the redesigned Policy,
+' we include the Vehicle class as indicated in the requirements.
+class Vehicle {
+  - model : String
+}
+Vehicle --|> PhysicalObject
+
+' ContactPoint class.
+class ContactPoint {
+  - contactDetail : String
+}
+ContactPoint --|> PhysicalObject
+
+' Dwelling class.
 class Dwelling {
-  + Dwelling(name: String, description: String)
+  - address : String
 }
+Dwelling --|> PhysicalObject
 
-PhysicalObject <|-- Dwelling
+' Relationships:
+' A Person aggregates Policies.
+Person "1" o-- "many" Policy : policies
 
-Policy "1" -- "0..*" PhysicalObject : contains
+' A Policy aggregates ContactPoints and Dwellings.
+Policy "1" o-- "many" ContactPoint : contacts
+Policy "1" o-- "many" Dwelling : dwellings
+
+' A Party aggregates Persons.
+Party "1" o-- "many" Person : persons
 
 @enduml

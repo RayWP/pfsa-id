@@ -1,73 +1,56 @@
 @startuml
-' Define Library class with its attributes and methods
+' Define the Library class with its attributes and methods
 class Library {
-  - documents: Set<Document>
-  - patrons: Set<Patron>
-  + addDocument(doc: Document)
-  + removeDocument(doc: Document)
-  + addPatron(p: Patron)
-  + removePatron(p: Patron)
+  - name: String
+  - location: String
+  - documents: List<Document>
+  - books: List<Book>
+  + addDocument(d: Document): void
+  + addBook(b: Book): void
+  + getDocumentByID(id: String): Document
+  + getBookByID(id: String): Book
 }
 
-' Define Document as an abstract class with a title attribute
-abstract class Document {
+' Define the Document class to represent general documents in the library
+class Document {
+  - documentId: String
   - title: String
-  + getTitle(): String
+  - addedDate: Date
+  + getInfo(): String
 }
 
-' Documents can be either Journals or Volumes.
-' Journal with an additional date of publication.
-class Journal extends Document {
-  - dateOfPublication: Date
-  + getDateOfPublication(): Date
-}
-
-' Volume is a kind of Document with an author.
-class Volume extends Document {
+' Define the Book class. It can be considered as a distinct type of document.
+class Book {
+  - bookId: String
+  - title: String
   - author: String
-  + getAuthor(): String
+  - isAvailable: Boolean
+  + borrow(): void
+  + returnBook(): void
+  + getInfo(): String
 }
 
-' Volumes can be specialized as Dictionary, Book or Comic.
-class Dictionary extends Volume
-class Book extends Volume
-
-' Comics (Bds) have an extra attribute for recipient name.
-class Comic extends Volume {
-  - recipientName: String
-  + getRecipientName(): String
-}
-
-' Define Member with first name and surname plus some methods.
+' Define the Member class. A member can borrow up to 3 books.
 class Member {
-  - firstName: String
-  - surname: String
-  + checkoutDocument(doc: Document)
-  + returnDocument(doc: Document)
+  - memberId: String
+  - name: String
+  - borrowedBooks: List<Book>
+  + borrowBook(b: Book): boolean
+  + returnBook(b: Book): void
+  + getBorrowedBooks(): List<Book>
 }
 
-' Define Patron with first name and surname plus additional methods.
-class Patron {
-  - firstName: String
-  - surname: String
-  + borrowDocument(doc: Document)
-  + reserveDocument(doc: Document)
-}
+' Relationships:
 
-' Relationships
-' Library aggregates Documents
-Library "1" o-- "*" Document : contains
+' Library aggregates many Documents and Books
+Library "1" o-- "many" Document : includes
+Library "1" o-- "many" Book : includes
 
-' Library aggregates Patrons
-Library "1" o-- "*" Patron : contains
+' A Member borrows Books. 
+' The association indicates that a member can borrow 0..3 books.
+Member "1" -- "0..3" Book : borrows
+Book "0..1" -- "1" Member : borrowedBy
 
-' Inheritance for Volume specializations
-Volume <|-- Dictionary
-Volume <|-- Book
-Volume <|-- Comic
-
-' Document specialization inheritance
-Document <|-- Journal
-Document <|-- Volume
-
+' Note the constraint on the borrowing process
+note right of Member : A member can borrow a maximum\nof 3 books.
 @enduml

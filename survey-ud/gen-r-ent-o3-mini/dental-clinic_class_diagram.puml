@@ -1,107 +1,91 @@
 @startuml
 
-' Clinic class aggregates core modules
+'------------------------
+' Clinic System Classes
+'------------------------
+
 class Clinic {
-  - name : String
-  + schedulePatient(p: Patient) : void
-  + processBilling() : void
-  + manageSuppliesInventory() : void
+  +registerPatient(newPatient: Patient) : void
+  +schedulePatient(patient: Patient, date: Date) : void
+  +billPatient(patient: Patient, amount: double) : void
 }
 
-' Patient registration & information
+class Office {
+  +scheduleAppointment(patient: Patient, date: Date) : void
+  +callPatient(patient: Patient) : void
+  +processBilling(patient: Patient, payment: double) : void
+}
+
 class Patient {
-  - name : String
-  - address : String
-  - telephoneNumbers : List<String>
-  - allergies : String
-  - stateOfMind : String
-  + fillForm() : Form
-  + requestAppointment() : void
+  -name: String
+  -address: String
+  -telephoneNumbers: String
+  -allergies: String
+  -stateOfMind: String
+  +fillOutForm(form: Form) : void
 }
 
-' Form used by new patients for registration
 class Form {
-  - name : String
-  - address : String
-  - telephoneNumbers : List<String>
-  - allergies : String
-  - stateOfMind : String
-  + submit() : void
+  -name: String
+  -address: String
+  -telephoneNumbers: String
+  -allergies: String
+  -stateOfMind: String
+  +validate() : Boolean
+  +submit() : void
 }
 
-' AppointmentBook holds all schedules
 class AppointmentBook {
-  - schedules : List<Appointment>
-  + addAppointment(appt: Appointment) : void
-  + removeAppointment(appt: Appointment) : void
-  + getAppointments() : List<Appointment>
+  -appointments: List<Appointment>
+  +addAppointment(appointment: Appointment) : void
+  +removeAppointment(appointment: Appointment) : void
+  +updateAppointment(appointment: Appointment) : void
 }
 
-' Each appointment links a patient and a procedure
 class Appointment {
-  - date : Date
-  - time : Time
-  - procedure : Procedure
-  - patient : Patient
-  + schedule() : void
-  + cancel() : void
+  -date: Date
+  -details: String
+  +reschedule(newDate: Date) : void
 }
 
-' PatientRecord keeping contact information and history
-class PatientRecord {
-  - contactInformation : String
-  + updateRecord() : void
+class PatientRecords {
+  -contactInformation: String
+  +updateRecord(patient: Patient) : void
+  +retrieveRecord(patientID: String) : Patient
 }
 
-' Abstract Procedure, with concrete procedure types used in appointments
-abstract class Procedure {
-  + preparePatient() : void
-  + collectSupplies() : void
-  + performProcedure() : void
-}
-
-' Concrete procedure classes
-class DentalHygiene
-class CavitiesAndFillings
-class OralSurgery
-
-DentalHygiene --|> Procedure
-CavitiesAndFillings --|> Procedure
-OralSurgery --|> Procedure
-
-' SuppliesInventory updated weekly by inspecting procedure rooms
 class SuppliesInventory {
-  - lastInspectionDate : Date
-  + updateInventory() : void
+  -suppliesList: List<String>
+  +updateInventory() : void
+  +performWeeklyInspection() : void
 }
 
-' Rooms holding supplies for procedures
-class Room {
-  - name : String
-  - supplies : List<String>
-  + inspectRoom() : void
+class ProcedureRoom {
+  -roomNumber: int
+  -status: String
+  +inspect() : void
 }
 
-' Relationships
-' A Clinic has an AppointmentBook, manages SuppliesInventory, and keeps PatientRecords
-Clinic "1" -- "1" AppointmentBook : contains
-Clinic "1" -- "1" SuppliesInventory : maintains
-Clinic "1" -- "*" PatientRecord : keeps
+'------------------------
+' Relationships between Classes
+'------------------------
 
-' AppointmentBook aggregates many Appointments
+' Clinic aggregates core components
+Clinic --> Office : uses
+Clinic --> AppointmentBook : maintains
+Clinic --> PatientRecords : stores
+Clinic --> "*" Patient : registers
+
+' Patient uses a Form to be registered
+Patient --> Form : "fills out"
+
+' AppointmentBook is composed of Appointments
 AppointmentBook "1" o-- "*" Appointment
 
-' Each Appointment is associated with one Patient and one Procedure
-Appointment "1" --> "1" Patient : for
-Appointment "1" --> "1" Procedure : involves
+' Office schedules appointments into the AppointmentBook
+Office --> AppointmentBook : "updates"
 
-' A Patient fills out a Form during registration
-Patient "1" --> "1" Form : fills
-
-' A Patient has (or is linked to) a PatientRecord
-Patient "1" -- "0..1" PatientRecord : has
-
-' SuppliesInventory inspects multiple Rooms
-SuppliesInventory "1" o-- "*" Room : inspects
+' SuppliesInventory inspects several ProcedureRooms
+SuppliesInventory --> "*" ProcedureRoom : "inspects"
 
 @enduml

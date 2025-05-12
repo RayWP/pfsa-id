@@ -1,53 +1,47 @@
 @startuml
-
 ' Define classes
-class Account {
-  +createAccount()
-  +updateAccount()
-}
 
-class Kiosk {
-  +connectToBackend()
+class User {
+  - reason: String
+  - explanation: String
+  + selectReason(reason: String)
+  + enterExplanation(text: String)
+  + requestCardBlock(card: Card)
 }
 
 class System {
-  +checkCardStatus(card: Card): boolean
-  +processBlockCard(card: Card, reason: String)
-}
-
-class User {
-  +username: String
-  +password: String
-  +register()
-  +login()
-}
-
-class Customer {
-  +getCards(): List<Card>
+  + validateExplanation(reason: String, explanation: String): Boolean
+  + blockCard(card: Card): void
+  + notifyUsage(card: Card): void
 }
 
 class Card {
-  +cardStatus: String
-  +cardType: String
-  +blockCard(reason: String)
-  +checkStatus(): String
+  - isBlocked: Boolean
+  - reason: String
+  - explanation: String
+  + block(): void
+  + use(): void
 }
 
-' Define relationships
+class Banking {
+  + informStaff(message: String): void
+}
 
-' Customer is a type of User
-Customer --|> User
+class Cardholder {
+  + notify(message: String): void
+}
 
-' A User (Customer) has an Account (composition)
-User *-- Account
+' Relationships
 
-' A Customer can have multiple Cards (aggregation)
-Customer "1" -- "0..*" Card
+User "1" --> "1" System : initiates block request
+System "1" --> "1" Card : blocks >>
+System "1" --> "1" Banking : informs if card used
+System "1" --> "1" Cardholder : notifies if card used
 
-' Kiosk communicates with System
-Kiosk --> System
+' Additional relation: User is associated with Cardholder
+User -- Cardholder : represents (same person)
 
-' System interacts with Card (invokes methods)
-System ..> Card : checks/blocks
+' Optional: Card has a reason attribute that comes from User input.
+Card --> "1" User : blocked by request
 
 @enduml

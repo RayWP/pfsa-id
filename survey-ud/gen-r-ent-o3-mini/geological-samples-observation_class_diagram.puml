@@ -1,76 +1,29 @@
 @startuml
-' Define classes
-
-class Specimen {
-  - specimenID : String
-  - samplingTime : Date
-  - locationInformation : String
-  + collect() : void
-}
-
+' Define the Sample class with methods to subdivide and distribute itself
 class Sample {
-  - sampleID : String          ' Often assigned by Lab LIMS (local identifier)
-  - chemistry : String
-  - mineralogy : String
-  - age : Date
-  - petrophysicalProperties : PetrophysicalProperties
-  + addObservation(obs : Observations) : void
-  + linkToParent(parent : Sample) : void
+  + subdivide() : List<Sample>
+  + distributeToResearchTeam(rt: ResearchTeam)
+  + distributeToLab(lab: Lab)
 }
 
-class PetrophysicalProperties {
-  - density : float
-  - porosity : float
-  - permeability : float
+' Define the ResearchTeam class with methods to receive a sample and perform observations
+class ResearchTeam {
+  + receiveSample(sample: Sample)
+  + performObservation(sample: Sample)
 }
 
-class Observations {
-  - observationID : String
-  - analysisTime : Date
-  - results : String
-  + addResult(result : String) : void
-}
-
+' Define the Lab class with methods to receive and analyze a sample
 class Lab {
-  - labID : String
-  - localIdentifier : String
-  + processSample(sample : Sample) : void
-  + assignLocalIdentifier(sample : Sample) : void
+  + receiveSample(sample: Sample)
+  + analyzeSample(sample: Sample)
 }
 
-class Location {
-  - locationInformation : String
-  - geographic : String
-  + getCoordinates() : String
-}
+' A sample may be subdivided into multiple sub-samples
+Sample "1" -- "0..*" Sample : subdivides
 
-class System {
-  - systemName : String
-  + correlateObservations() : void
-}
+' Many samples can be distributed to many research teams
+Sample "0..*" -- "0..*" ResearchTeam : distributes to
 
-' Relationships
-
-' A Specimen is collected from a Location
-Specimen "1" -- "1" Location : "collected from"
-
-' A Specimen (physical sample from field) gives rise to one or more Samples
-Specimen "1" --> "0..*" Sample : "is processed into"
-
-' A Lab processes many Samples (and assigns a local identifier)
-Lab "1" --> "0..*" Sample : "processes"
-
-' Samples generate one or many Observations
-Sample "1" --> "0..*" Observations : "generates"
-
-' A Sample has a composite petrophysical property attribute
-Sample "1" o-- "1" PetrophysicalProperties
-
-' Derived samples: a Sample may be a strict sub-sample or biased split of a parent Sample.
-Sample "0..1" --> "0..1" Sample : "derived from"
-
-' The System integrates results from multiple Labs and Observations
-System "1" --> "0..*" Lab : "integrates"
-System "1" --> "0..*" Observations : "aggregates"
-
+' Many samples can be distributed to many labs
+Sample "0..*" -- "0..*" Lab : distributes to
 @enduml
