@@ -1,2 +1,4 @@
 ,entity_group,score,word,start,end
-0,actor,0.6875022,cashier,719,727
+0,actor,0.5149913,chief,2674,2680
+1,actor,0.6034467,controllers,2877,2889
+2,actor,0.95757216,customers,2962,2972

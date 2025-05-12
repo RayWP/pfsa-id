@@ -4,15 +4,19 @@ actor identified:
 --------------------
 - New patients
 - desk
+- patient
 - worker
 
  usecase identified:
 --------------------
 - fill out a form listing
+- generates a reimbursement request
 
 Detailed Entities:
 --------------------
-Type: actor, Word: New patients, Score: 0.9385
-Type: usecase, Word: fill out a form listing, Score: 0.9973
-Type: actor, Word: desk, Score: 0.7402
-Type: actor, Word: worker, Score: 0.7975
+Type: actor, Word: New patients, Score: 0.9514
+Type: usecase, Word: fill out a form listing, Score: 0.9958
+Type: actor, Word: desk, Score: 0.7367
+Type: actor, Word: patient, Score: 0.9328
+Type: usecase, Word: generates a reimbursement request, Score: 0.9985
+Type: actor, Word: worker, Score: 0.8972

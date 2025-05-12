@@ -1,4 +1,5 @@
 ,entity_group,score,word,start,end
-0,usecase,0.97369814,addPolicy,117,127
-1,actor,0.8199116,Person,149,156
-2,usecase,0.6146327,print,459,465
+0,usecase,0.9942216,retrieve a person,363,381
+1,usecase,0.74966055,Policy,1287,1293
+2,usecase,0.6979829,print,3592,3598
+3,usecase,0.87742877,print out the policy,4428,4449

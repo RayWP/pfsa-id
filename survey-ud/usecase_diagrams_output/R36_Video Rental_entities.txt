@@ -5,6 +5,8 @@ actor identified:
 
  usecase identified:
 --------------------
+- rent a video
 
 Detailed Entities:
 --------------------
+Type: usecase, Word: rent a video, Score: 0.7371

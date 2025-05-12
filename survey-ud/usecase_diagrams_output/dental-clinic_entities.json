@@ -3,41 +3,57 @@
     {
       "entity_group": "actor",
       "word": "New patients",
-      "score": 0.9385483860969543,
+      "score": 0.9513581991195679,
       "start": 103,
       "end": 116
     },
     {
       "entity_group": "usecase",
       "word": "fill out a form listing",
-      "score": 0.9973418116569519,
+      "score": 0.9958316087722778,
       "start": 116,
       "end": 140
     },
     {
       "entity_group": "actor",
       "word": "desk",
-      "score": 0.7402369379997253,
-      "start": 297,
-      "end": 302
+      "score": 0.7366897463798523,
+      "start": 412,
+      "end": 417
+    },
+    {
+      "entity_group": "actor",
+      "word": "patient",
+      "score": 0.9328026175498962,
+      "start": 1489,
+      "end": 1497
+    },
+    {
+      "entity_group": "usecase",
+      "word": "generates a reimbursement request",
+      "score": 0.9984704256057739,
+      "start": 1502,
+      "end": 1536
     },
     {
       "entity_group": "actor",
       "word": "worker",
-      "score": 0.7975341081619263,
-      "start": 623,
-      "end": 630
+      "score": 0.8971776962280273,
+      "start": 1724,
+      "end": 1731
     }
   ],
   "summary": {
     "actor": [
       "New patients",
       "desk",
+      "patient",
       "worker"
     ],
     "usecase": [
-      "fill out a form listing"
+      "fill out a form listing",
+      "generates a reimbursement request"
     ]
   },
-  "document_class": "The clinic basically schedules patients, provides services for them, and bills them for those services  New patients fill out a form listing their name, address, telephone numbers, allergies, and state of mind prior to scheduling their first appointment  When the office staff forget to do this, a desk worker has to call the patient to set up a date  Schedules are entered into a central appointment book; patient records (including contact information) are kept in paper files  HMO-funded patients are asked to make a copayment at the time that they leave the office  The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms"
+  "document_class": "The clinic basically schedules patients, provides services for them, and bills them for those services  New patients fill out a form listing their name, address, telephone numbers, allergies, and state of mind prior to scheduling their first appointment  Existing patients are normally scheduled for their next appointment as they depart from their current appointment  When the office staff forget to do this, a desk worker has to call the patient to set up a date  Schedules are entered into a central appointment book; patient records (including contact information) are kept in paper files  Appointments are for one of three procedures: dental hygiene, cavities and fillings, and oral surgery (including root canals and tooth extractions)  For each procedure the patient needs to be prepared and supplies need to be collected (e g , probes, drill bits, cements, resins, etc )  For a hygienist's appointment, preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck  For oral surgery, anesthesia of various strengths are normally administered prior to operation  Only for oral surgery procedures is it necessary to ask the patient to wait for up to twenty minutes before performing a post-operative check  Billing is always done by the month, and bills are always sent by mail to patients' contact addresses  Checks are received by mail  HMO-funded patients are asked to make a copayment at the time that they leave the office  Each patient also generates a reimbursement request to an insurance company  Insurance companies and HMOs send their checks by mail three months after receiving a reimbursement request  The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms  Supplies and tools are stored in a standard layout in each room"
 }

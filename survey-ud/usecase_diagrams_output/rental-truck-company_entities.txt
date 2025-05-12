@@ -5,6 +5,8 @@ actor identified:
 
  usecase identified:
 --------------------
+- rental agreements
 
 Detailed Entities:
 --------------------
+Type: usecase, Word: rental agreements, Score: 0.7469

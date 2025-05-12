@@ -5,6 +5,10 @@ actor identified:
 
  usecase identified:
 --------------------
+- store information
+- store
 
 Detailed Entities:
 --------------------
+Type: usecase, Word: store information, Score: 0.8812
+Type: usecase, Word: store, Score: 0.7639

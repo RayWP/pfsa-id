@@ -1,33 +1,33 @@
 ,sentence,useful
 0,The Right-Way Rental Truck Company rents small moving trucks and trailers for local and one-way usage,1
-1, We have 347 rental offices across the western United States,0
-2," Our rental stock includes a total of 5,780 vehicles including various types of trucks and trailers",0
-3, We need to implement a system to track our rental agreements and our vehicle assignments,0
+1, We have 347 rental offices across the western United States,1
+2," Our rental stock includes a total of 5,780 vehicles including various types of trucks and trailers",1
+3, We need to implement a system to track our rental agreements and our vehicle assignments,1
 4, Each rental office rents vehicles that they have in stock to customers ready to take possession of the vehicle,1
 5," We don’t take reservations, or speculate on when the customer will return rented vehicles",1
 6," The central office oversees the vehicle distribution, and directs transfers of vehicles from one rental office to another",1
-7, Each rental office has an office name like “Littleton Right-Way”,0
-8, Each office also has a unique three digit office number,0
-9, We also keep each office’s address,0
-10," Each office is a home office for some of our vehicles, and each vehicle is based out of a single home office",0
-11," Each vehicle has a vehicle id, state of registration, and a license plate registration number",0
-12," We have five different types of vehicles: 36 trucks, 24’ trucks, 10’ trucks, 8’ covered trailers, and 6’ open trailers",0
-13," Yes, we do have a vehicle type code",0
-14," For all our vehicles, we need to track the last maintenance date, and expiration date of its registration",0
-15," For our trucks, we need to know the current odometer reading, the gas tank capacity, and whether or not it has a working radio",0
-16," For long moves, customers really prefer a radio",0
+7, Each rental office has an office name like “Littleton Right-Way”,1
+8, Each office also has a unique three digit office number,1
+9, We also keep each office’s address,1
+10," Each office is a home office for some of our vehicles, and each vehicle is based out of a single home office",1
+11," Each vehicle has a vehicle id, state of registration, and a license plate registration number",1
+12," We have five different types of vehicles: 36 trucks, 24’ trucks, 10’ trucks, 8’ covered trailers, and 6’ open trailers",1
+13," Yes, we do have a vehicle type code",1
+14," For all our vehicles, we need to track the last maintenance date, and expiration date of its registration",1
+15," For our trucks, we need to know the current odometer reading, the gas tank capacity, and whether or not it has a working radio",1
+16," For long moves, customers really prefer a radio",1
 17," We log the current mileage just before we rent a truck, and then again when it is returned",1
-18," Most of our rental agreements are for individual customers, but a rental agreement can either be for an individual or for a company",0
-19, We do rent a small percentage of our trucks to companies,0
-20, We assign each company an identifying company number and track the company’s name and address,0
-21," No, we don’t need to worry about any additional information about a company",0
-22, Our corporate sales group handles all that information separately,0
+18," Most of our rental agreements are for individual customers, but a rental agreement can either be for an individual or for a company",1
+19, We do rent a small percentage of our trucks to companies,1
+20, We assign each company an identifying company number and track the company’s name and address,1
+21," No, we don’t need to worry about any additional information about a company",1
+22, Our corporate sales group handles all that information separately,1
 23," For each individual customer, we record the customer’s name, home phone, address, and driver’s license state, number, and expiration date",1
-24, We like to keep track of all our customers,0
+24, We like to keep track of all our customers,1
 25," If a customer damaged a vehicle, abandoned it, or didn’t fully pay the bill, then we tag the customer as a poor risk, and won’t rent to that customer again",1
-26," We only allow a single individual or company for a given rental agreement, and we write a separate rental agreement for each vehicle",0
+26," We only allow a single individual or company for a given rental agreement, and we write a separate rental agreement for each vehicle",1
 27," Yes, we do have customers rent two or more vehicles at the same time",1
-28, Each rental agreement is identified by the originating rental office number and a rental agreement number,0
-29," We also need to track the rental date, the anticipated duration of the rental, the originating rental office, the drop-off rental office, the amount of the deposit paid, the quoted daily rental rate, and the quoted rate per mile",0
-30," Of course for the trailers, there isn’t a mileage charge",0
-31," No, we don’t need to automate the financial side of our business, just our rental agreement tracking and vehicle assignment functions",0
+28, Each rental agreement is identified by the originating rental office number and a rental agreement number,1
+29," We also need to track the rental date, the anticipated duration of the rental, the originating rental office, the drop-off rental office, the amount of the deposit paid, the quoted daily rental rate, and the quoted rate per mile",1
+30," Of course for the trailers, there isn’t a mileage charge",1
+31," No, we don’t need to automate the financial side of our business, just our rental agreement tracking and vehicle assignment functions",1

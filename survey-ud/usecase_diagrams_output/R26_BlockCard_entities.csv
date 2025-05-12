@@ -1,1 +1,6 @@
-""
+,entity_group,score,word,start,end
+0,usecase,0.9896539,block,87,93
+1,usecase,0.72898704,block any card,163,178
+2,usecase,0.8273077,block any card,798,813
+3,actor,0.6912959,user,942,947
+4,usecase,0.97541046,initiate the card-blocking,951,978

@@ -2,15 +2,17 @@ Document: R39_Insurance.txt
 
 actor identified:
 --------------------
-- Person
 
  usecase identified:
 --------------------
-- addPolicy
+- retrieve a person
+- Policy
 - print
+- print out the policy
 
 Detailed Entities:
 --------------------
-Type: usecase, Word: addPolicy, Score: 0.9737
-Type: actor, Word: Person, Score: 0.8199
-Type: usecase, Word: print, Score: 0.6146
+Type: usecase, Word: retrieve a person, Score: 0.9942
+Type: usecase, Word: Policy, Score: 0.7497
+Type: usecase, Word: print, Score: 0.6980
+Type: usecase, Word: print out the policy, Score: 0.8774

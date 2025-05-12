@@ -6,9 +6,11 @@ actor identified:
 
  usecase identified:
 --------------------
-- borrow
+- borrow or return a book
+- borrow books
 
 Detailed Entities:
 --------------------
-Type: actor, Word: member, Score: 0.8512
-Type: usecase, Word: borrow, Score: 0.6201
+Type: actor, Word: member, Score: 0.9098
+Type: usecase, Word: borrow or return a book, Score: 0.7541
+Type: usecase, Word: borrow books, Score: 0.9255

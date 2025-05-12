@@ -1,5 +1,7 @@
 ,entity_group,score,word,start,end
-0,actor,0.9385484,New patients,103,116
-1,usecase,0.9973418,fill out a form listing,116,140
-2,actor,0.74023694,desk,297,302
-3,actor,0.7975341,worker,623,630
+0,actor,0.9513582,New patients,103,116
+1,usecase,0.9958316,fill out a form listing,116,140
+2,actor,0.73668975,desk,412,417
+3,actor,0.9328026,patient,1489,1497
+4,usecase,0.9984704,generates a reimbursement request,1502,1536
+5,actor,0.8971777,worker,1724,1731

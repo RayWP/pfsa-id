@@ -2,11 +2,15 @@ Document: R7_SuperMarket.txt
 
 actor identified:
 --------------------
-- cashier
+- chief
+- controllers
+- customers
 
  usecase identified:
 --------------------
 
 Detailed Entities:
 --------------------
-Type: actor, Word: cashier, Score: 0.6875
+Type: actor, Word: chief, Score: 0.5150
+Type: actor, Word: controllers, Score: 0.6034
+Type: actor, Word: customers, Score: 0.9576

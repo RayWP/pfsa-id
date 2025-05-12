@@ -2,9 +2,18 @@ Document: R26_BlockCard.txt
 
 actor identified:
 --------------------
+- user
 
  usecase identified:
 --------------------
+- block
+- block any card
+- initiate the card-blocking
 
 Detailed Entities:
 --------------------
+Type: usecase, Word: block, Score: 0.9897
+Type: usecase, Word: block any card, Score: 0.7290
+Type: usecase, Word: block any card, Score: 0.8273
+Type: actor, Word: user, Score: 0.6913
+Type: usecase, Word: initiate the card-blocking, Score: 0.9754
