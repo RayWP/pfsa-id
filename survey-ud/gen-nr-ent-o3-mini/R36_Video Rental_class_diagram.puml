@@ -1,0 +1,100 @@
+@startuml
+
+'---------------------------'
+'         Classes           '
+'---------------------------'
+class Store {
+  +storeID: String
+  +address: String
+  +phoneNumber: String
+}
+
+class Employee {
+  +employeeID: String
+  +name: String
+  +address: String
+}
+
+class EmployeePhoneNumber {
+  +phoneNumber: String
+  +phoneType: String
+}
+
+class EmployeeType {
+  +type: String  «enumeration»
+  ' Possible values: manager, cashier, stocker
+}
+
+class Title {
+  +titleID: String
+  +name: String
+  +runTime: Integer
+  +rating: String
+}
+
+class Distributor {
+  +distributorID: String
+  +name: String
+  +phoneNumber: String
+}
+
+class Cartridge {
+  +cartridgeID: String
+  +utilizationCount: Integer
+  +status: String
+  ' Domain: Available, Rented, Broken
+}
+
+class Customer {
+  +customerID: String
+  +name: String
+  +phoneNumber: String
+}
+
+class RentalTransaction {
+  +rentalID: String
+  +rentalDate: Date
+  +totalRentalAmount: Float
+}
+
+class RentalTransactionDetail {
+  +dueDate: Date
+  +actualReturnDate: Date
+}
+
+'---------------------------'
+'       Associations        '
+'---------------------------'
+
+' Customer enrolls in a Store
+Customer --> Store : enrolled at
+
+' Each RentalTransaction is associated with one Store
+RentalTransaction --> Store : rented from
+
+' A RentalTransaction has one or more detail lines
+RentalTransaction "1" -- "0..*" RentalTransactionDetail : contains
+
+' Each RentalTransactionDetail references one Cartridge
+RentalTransactionDetail --> Cartridge : for
+
+' A Cartridge represents a physical copy of a Title
+Cartridge --> Title : copy of
+
+' A Cartridge is stocked at a Store
+Cartridge --> Store : stocked at
+
+' Many stores carry many titles indirectly via Cartridges
+' (Store --< Cartridge >-- Title)
+
+' Each Title is distributed by one Distributor
+Title --> Distributor : distributed by
+
+' Each Employee has at least one phone number
+Employee "1" -- "0..*" EmployeePhoneNumber : has
+
+' Each Employee is classified as one type (manager, cashier, or stocker)
+Employee --> EmployeeType : is classified as
+
+@startuml
+@enduml

@@ -1,0 +1,25 @@
+BLOCK CARD
+
+Purpose
+This study aims to design new software that allows bank customers to block their desired card or cards. By finishing this project, customers can block any card via online banking systems.
+
+Scope
+The study will include the "Block" process on both web and mobile systems. There will be two separate applications for the mobile platforms, which are Android and iOS. They should have the same function and features for the account creation process. The project will also contain the back-end communication system for the kiosk and branches. 
+
+Requirements
+
+Menu Placement
+The "Block Card" process should be under the "Cards" menu. 
+It should be added after the "My Cards" page.
+
+Customer
+Users can have four types of cards: debit, credit, virtual and supplementary. 
+Users should be able to block any card using online banking systems. 
+
+Software System
+The system should check the card status when the user blocks the desired card. The user can initiate the card-blocking process if the card status is available. 
+During the card-blocking process, the system should ask for the reason for the blocking. 
+The system should display three different kinds of blocking reasons for the user. The blocking reasons can be stolen, missing, and others. 
+If the user selects "other" as the reason, the system should ask for further explanation in a free-text area. If the user does not enter this area field as input, the system should not let the user block their card. 
+After the user completes the card-blocking process, the system should immediately block the related card, and no one should be able to use that card in ATMs, shopping, online shopping, etc. 
+If a blocked card is used for anything, the system should inform the banking staff and cardholder. 

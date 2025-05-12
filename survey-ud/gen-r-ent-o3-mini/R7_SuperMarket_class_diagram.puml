@@ -1,0 +1,139 @@
+@startuml
+
+'-------------------------
+' Product & Related Classes
+'-------------------------
+class Product {
+  - type : String
+  - number : int
+  - expirationDate : Date
+  - group : String
+  - price : double
+  - ingredients : String
+  - category : String
+  + checkExpiration() : Boolean
+  + recordShelf() : void
+}
+
+'-------------------------
+' Customer and Basket
+'-------------------------
+class Customer {
+  - type : String  "Normal or Extra-customer"
+  + selectProduct(p: Product) : void
+  + pay(amount: double) : void
+}
+
+class Basket {
+  - goods : List<Product>
+  + addProduct(p: Product) : void
+  + removeProduct(p: Product) : void
+}
+
+' Association: Customer has a Basket
+Customer --> Basket
+
+'-------------------------
+' Supermarket and Inventory
+'-------------------------
+class Supermarket {
+  + manageInventory() : void
+  + directCustomer() : void
+}
+
+class Stock {
+  - forms : List<Form>
+  + recordInStock(p: Product) : void
+  + countInventory() : int
+}
+
+class Form {
+  - number : int
+  + recordProduct(p: Product) : void
+}
+
+class Shelf {
+  - products : List<Product>
+  + arrangeProduct(p: Product) : void
+  + checkProduct() : void
+}
+
+' Relationships: Supermarket manages Stock and Shelf
+Supermarket --> Stock
+Supermarket --> Shelf
+
+' Relationship: Stock is composed of Forms (records)
+Stock "1" *-- "many" Form
+
+'-------------------------
+' Supplier
+'-------------------------
+class Supplier {
+  + deliverProduct(p: Product) : void
+}
+
+' Supermarket works with Suppliers (one or many)
+Supermarket --> "many" Supplier
+
+'-------------------------
+' Payment: Cashier, Machine, Invoice, Controller
+'-------------------------
+class Cashier {
+  + enterProduct(p: Product) : void
+  + calculateTotal() : double
+  + generateInvoice(c: Customer) : Invoice
+}
+
+class Machine {
+  + displayTotal(total: double) : void
+}
+
+class Invoice {
+  - total : double
+  - invoiceNumber : int
+  + printInvoice() : void
+}
+
+class Controller {
+  + verifyInventory(forms: List<Form>) : Boolean
+  + freePacking(p: Product) : void
+}
+
+' Relationships for payment process
+Supermarket --> Cashier
+Cashier --> Machine
+Cashier --> Invoice
+Supermarket --> Controller
+
+'-------------------------
+' Order and Bakery Process
+'-------------------------
+class Order {
+  - quantities : int
+  - orders : String
+  + recordOrder() : void
+}
+
+class Bakery {
+  + prepareGoods(o: Order) : void
+  + packageGoods(o: Order) : void
+}
+
+class Agent {
+  + prepareOrder(o: Order) : void
+}
+
+' Relationships: Bakery and Agent handle Orders
+Supermarket --> Bakery
+Bakery --> Order : prepares >
+Agent --> Order : processes >
+
+'-------------------------
+' Customer Shopping Process
+'-------------------------
+' Customer selects goods (from Shelf) using a Basket.
+Customer --> Shelf : selects products
+' After selection, customer goes to cashier for payment.
+Customer --> Cashier : pays
+
+@enduml

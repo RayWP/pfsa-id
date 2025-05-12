@@ -1,0 +1,69 @@
+,entity_group,score,word,start,end
+0,class,0.65173066,vehicles,43,52
+1,class,0.49745858,system,123,130
+2,class,0.5900519,rental agreements,143,161
+3,attr,0.55651397,vehicle assignments,169,189
+4,class,0.9227962,rental office,195,209
+5,class,0.7374318,vehicles,215,224
+6,class,0.94518805,customers,251,261
+7,class,0.65734345,vehicle,293,301
+8,class,0.5629979,central,306,314
+9,class,0.6454852,vehicles,381,390
+10,class,0.9509282,rental office,399,413
+11,class,0.8411338,rental office,430,444
+12,attr,0.76975286,office name,451,463
+13,class,0.92266,office,496,503
+14,attr,0.95874166,office number,533,547
+15,class,0.9198542,office,566,573
+16,attr,0.96179414,address,575,583
+17,class,0.84748924,office,589,596
+18,class,0.4688588,vehicles,629,638
+19,class,0.81373084,vehicle,648,656
+20,class,0.67975837,home office,681,693
+21,class,0.8811326,vehicle,699,707
+22,attr,0.98702145,vehicle id,713,724
+23,attr,0.9510898,state of registration,725,747
+24,attr,0.953874,license plate,754,768
+25,attr,0.73075485,registration number,768,788
+26,class,0.7285722,vehicles,921,930
+27,attr,0.71708983,last maintenance date,952,974
+28,attr,0.95453465,expiration date,979,995
+29,attr,0.8516029,registration,1002,1015
+30,attr,0.9784744,odometer reading,1060,1077
+31,attr,0.9259949,gas tank capacity,1082,1100
+32,class,0.55808544,agreements,1163,1174
+33,class,0.7935707,customers,1193,1203
+34,class,0.8486571,rental agreement,1210,1227
+35,class,0.81549454,company,1292,1300
+36,attr,0.9010176,company number,1315,1330
+37,class,0.49563462,company,1344,1352
+38,attr,0.7077022,name,1354,1359
+39,attr,0.9644832,address,1363,1371
+40,class,0.9358578,customer,1459,1468
+41,class,0.9658166,customer,1483,1492
+42,attr,0.7806674,name,1494,1499
+43,attr,0.93521035,home phone,1500,1511
+44,attr,0.9619818,address,1512,1520
+45,attr,0.9665122,driver,1525,1532
+46,attr,0.9444921,s license,1533,1542
+47,attr,0.9304564,state,1542,1548
+48,attr,0.507159,number,1549,1556
+49,attr,0.96990526,expiration date,1561,1577
+50,class,0.47741595,individual,1601,1612
+51,class,0.7002208,company,1615,1623
+52,class,0.847661,rental agreement,1635,1652
+53,class,0.84016097,rental agreement,1677,1694
+54,class,0.95142406,vehicle,1703,1711
+55,class,0.7626443,rental agreement,1717,1734
+56,attr,0.7695615,originating rental office number,1755,1788
+57,attr,0.92220014,rental agreement number,1794,1818
+58,attr,0.7877761,rental date,1845,1857
+59,attr,0.8895524,duration,1874,1883
+60,attr,0.37805048,rental,1890,1897
+61,attr,0.8231713,originating rental office,1902,1928
+62,attr,0.62465274,drop-off rental office,1933,1956
+63,attr,0.7279679,amount,1961,1968
+64,attr,0.7307575,deposit paid,1975,1988
+65,attr,0.7035662,quoted,1993,2000
+66,attr,0.78914165,daily rental rate,2000,2018
+67,attr,0.7269803,rate,2034,2039

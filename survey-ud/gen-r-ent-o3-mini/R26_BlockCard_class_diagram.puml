@@ -1,0 +1,53 @@
+@startuml
+
+' Define classes
+class Account {
+  +createAccount()
+  +updateAccount()
+}
+
+class Kiosk {
+  +connectToBackend()
+}
+
+class System {
+  +checkCardStatus(card: Card): boolean
+  +processBlockCard(card: Card, reason: String)
+}
+
+class User {
+  +username: String
+  +password: String
+  +register()
+  +login()
+}
+
+class Customer {
+  +getCards(): List<Card>
+}
+
+class Card {
+  +cardStatus: String
+  +cardType: String
+  +blockCard(reason: String)
+  +checkStatus(): String
+}
+
+' Define relationships
+
+' Customer is a type of User
+Customer --|> User
+
+' A User (Customer) has an Account (composition)
+User *-- Account
+
+' A Customer can have multiple Cards (aggregation)
+Customer "1" -- "0..*" Card
+
+' Kiosk communicates with System
+Kiosk --> System
+
+' System interacts with Card (invokes methods)
+System ..> Card : checks/blocks
+
+@enduml

@@ -1,0 +1,20 @@
+,sentence,useful
+0,BLOCK CARD Purpose This study aims to design new software that allows bank customers to block their desired card or cards,0
+1," By finishing this project, customers can block any card via online banking systems",0
+2," Scope The study will include the ""Block"" process on both web and mobile systems",0
+3," There will be two separate applications for the mobile platforms, which are Android and iOS",1
+4, They should have the same function and features for the account creation process,1
+5, The project will also contain the back-end communication system for the kiosk and branches,1
+6," Requirements Menu Placement The ""Block Card"" process should be under the ""Cards"" menu",1
+7," It should be added after the ""My Cards"" page",1
+8," Customer Users can have four types of cards: debit, credit, virtual and supplementary",1
+9, Users should be able to block any card using online banking systems,0
+10, Software System The system should check the card status when the user blocks the desired card,1
+11, The user can initiate the card-blocking process if the card status is available,1
+12," During the card-blocking process, the system should ask for the reason for the blocking",0
+13, The system should display three different kinds of blocking reasons for the user,0
+14," The blocking reasons can be stolen, missing, and others",1
+15," If the user selects ""other"" as the reason, the system should ask for further explanation in a free-text area",0
+16," If the user does not enter this area field as input, the system should not let the user block their card",0
+17," After the user completes the card-blocking process, the system should immediately block the related card, and no one should be able to use that card in ATMs, shopping, online shopping, etc",0
+18," If a blocked card is used for anything, the system should inform the banking staff and cardholder",0

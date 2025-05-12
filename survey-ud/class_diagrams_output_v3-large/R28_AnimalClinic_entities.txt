@@ -1,0 +1,55 @@
+Document: R28_AnimalClinic.txt
+
+Classes identified:
+--------------------
+- admitted
+- animal
+- appointement
+- physician
+- appoint
+- owner
+- condition
+- database
+
+Attributes identified:
+--------------------
+- name
+- breed
+- owner
+- identifier
+- address
+- phone number
+- date
+- common name
+- scientific name
+- conditions
+
+Detailed Entities:
+--------------------
+Type: class, Word: admitted, Score: 0.3988
+Type: class, Word: animal, Score: 0.9649
+Type: attr, Word: name, Score: 0.7425
+Type: attr, Word: breed, Score: 0.9902
+Type: attr, Word: owner, Score: 0.8877
+Type: class, Word: animal, Score: 0.9167
+Type: attr, Word: identifier, Score: 0.5499
+Type: attr, Word: owner, Score: 0.5989
+Type: attr, Word: name, Score: 0.4715
+Type: attr, Word: address, Score: 0.9505
+Type: attr, Word: phone number, Score: 0.9756
+Type: class, Word: appointement, Score: 0.5928
+Type: class, Word: physician, Score: 0.9163
+Type: class, Word: appoint, Score: 0.6224
+Type: attr, Word: date, Score: 0.9348
+Type: class, Word: animal, Score: 0.9550
+Type: class, Word: owner, Score: 0.5275
+Type: class, Word: physician, Score: 0.9330
+Type: attr, Word: name, Score: 0.5597
+Type: attr, Word: address, Score: 0.9567
+Type: attr, Word: phone number, Score: 0.9799
+Type: class, Word: condition, Score: 0.5957
+Type: attr, Word: common name, Score: 0.9204
+Type: attr, Word: scientific name, Score: 0.9594
+Type: attr, Word: conditions, Score: 0.3575
+Type: attr, Word: breed, Score: 0.7258
+Type: class, Word: database, Score: 0.9149

@@ -1,0 +1,106 @@
+@startuml
+
+' Base party class with policies
+abstract class Party {
+  - name : String
+  - policies : List<Policy>
+  + Party(name: String)
+  + addPolicy(policy: Policy) : void
+  + getPolicies() : List<Policy>
+  + name() : String
+}
+
+class Person {
+  + Person(name: String)
+}
+
+class Company {
+  + Company(name: String)
+}
+
+' Inheritance for Party
+Party <|-- Person
+Party <|-- Company
+
+' Policy class with contacts, vehicles and physical objects
+class Policy {
+  - emails : List<Email>
+  - phones : List<Phone>
+  - addresses : List<Address>
+  - vehicles : List<Vehicle>
+  - physicalObjects : List<PhysicalObject>
+  + Policy()
+  + addEmail(email: Email) : void
+  + getEmails() : List<Email>
+  + addPhone(phone: Phone) : void
+  + getPhones() : List<Phone>
+  + addAddress(address: Address) : void
+  + getAddresses() : List<Address>
+  + addVehicle(vehicle: Vehicle) : void
+  + getVehicles() : List<Vehicle>
+  + addPhysicalObject(obj: PhysicalObject) : void
+  + getPhysicalObjects() : List<PhysicalObject>
+}
+
+' Relationship: Party holds Policy objects
+Party "1" -- "*" Policy : owns
+
+' Contact interface for all contact points
+interface Contact {
+  + contactPointAsString() : String
+}
+
+' Contact classes
+class Email {
+  - emailAddress : String
+  + Email(emailAddress: String)
+  + contactPointAsString() : String
+}
+class Phone {
+  - phoneNumber : String
+  + Phone(phoneNumber: String)
+  + contactPointAsString() : String
+}
+class Address {
+  - addressDetail : String
+  + Address(addressDetail: String)
+  + contactPointAsString() : String
+}
+
+' Realize Contact interface
+Contact <|.. Email
+Contact <|.. Phone
+Contact <|.. Address
+
+' Policy has collections of contacts
+Policy "1" -- "0..*" Email : contains
+Policy "1" -- "0..*" Phone : contains
+Policy "1" -- "0..*" Address : contains
+
+' Vehicle class definition
+class Vehicle {
+  - registration : String
+  + Vehicle(registration: String)
+  + toString() : String
+}
+
+Policy "1" -- "0..*" Vehicle : contains
+
+' Physical objects: general class and dwellings
+class PhysicalObject {
+  - name : String
+  - description : String
+  + PhysicalObject(name: String, description: String)
+  + getName() : String
+  + getDescription() : String
+}
+
+class Dwelling {
+  + Dwelling(name: String, description: String)
+}
+
+PhysicalObject <|-- Dwelling
+
+Policy "1" -- "0..*" PhysicalObject : contains
+
+@enduml

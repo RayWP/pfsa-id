@@ -1,0 +1,70 @@
+@startuml
+' Clinic system for scheduling, services, and billing
+
+class Clinic {
+  - appointmentBook: AppointmentBook
+  - inventory: Inventory
+  + schedulePatient(patient: Patient, appointment: Appointment)
+  + billPatient(patient: Patient, bill: Bill)
+}
+
+class Patient {
+  + name: String
+  + address: String
+  + telephone: String
+  + allergies: String
+  + stateOfMind: String
+  + fillOutForm()
+}
+
+class AppointmentBook {
+  - appointments: List<Appointment>
+  + addAppointment(app: Appointment)
+}
+
+class Appointment {
+  + date: Date
+  + procedure: Procedure
+}
+
+enum ProcedureType {
+  DentalHygiene
+  CavitiesAndFillings
+  OralSurgery
+}
+
+class Procedure {
+  + type: ProcedureType
+  + preparePatient()
+  + collectSupplies()
+}
+
+class Supply {
+  + name: String
+  + quantity: int
+}
+
+class Bill {
+  + billingMonth: String
+  + sendBill()
+}
+
+class InsuranceReimbursement {
+  + generateRequest()
+}
+
+class Inventory {
+  - supplies: List<Supply>
+  + updateInventory()
+}
+
+' Associations
+Patient "1" -- "*" Appointment : books
+Appointment "1" -- "1" Procedure : uses
+Procedure "1" -- "*" Supply : requires
+Patient "1" -- "*" Bill : receives
+Patient "1" -- "*" InsuranceReimbursement : generates
+Clinic "1" -- "1" AppointmentBook : maintains
+Clinic "1" -- "1" Inventory : manages
+
+@enduml

@@ -1,0 +1,15 @@
+System Features 
+Torrent Search Description and Priority 
+The user will give a search term that will search through a database of compatible torrent websites added by the development team. The results of this search will be displayed as web links in a tab on the program's main window. This is one of the software's main features and therefore has a high priority for development. 
+Stimulus/Response Sequences 
+User ticks the torrent tick box – the system will now query the torrent websites in its database when a search is started. 
+The user enters the search term and starts the search – system sends queries to the torrent websites in its database based on the search term. Results for this query will then be sent to the torrent tab in the program, where they will display information such as website, seeds, peers, size, date posted, and a link for the webpage. 
+The user sorts the search results by clicking once on a column header – the system sorts all results in descending/ascending order. 
+The user clicks on the next page button – the system displays the next set of results for the search. 
+Functional Requirements 
+Torrent search will share the same search bar as the streaming search. REQ-2: The database of torrent sites can be updated via the internet. 
+There will be a tick box to allow the user to choose to include torrent searching in the search. 
+The query will retrieve the no. of seeds and peers, the file size, the date posted, and a link to the webpage. 
+If no results are found on a search, it will display the message "No results were found for this search." 
+Results will be arranged in size/date/alphabetical order by clicking on the column headers. 
+There will be a page button for the user to navigate the results.

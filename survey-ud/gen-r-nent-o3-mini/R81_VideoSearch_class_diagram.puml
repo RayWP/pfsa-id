@@ -1,0 +1,53 @@
+@startuml
+' Class representing the search bar shared with streaming search
+class SearchBar {
+  +search(term: String): void
+}
+
+' Class that handles torrent search functionality
+class TorrentSearch {
+  -searchTerm: String
+  -database: TorrentDatabase
+  +performSearch(term: String): List<TorrentResult>
+}
+
+' Class representing the database which stores the available torrent websites
+class TorrentDatabase {
+  -torrentWebsites: List<TorrentWebsite>
+  +getCompatibleWebsites(): List<TorrentWebsite>
+}
+
+' Class representing each torrent website entry in the system
+class TorrentWebsite {
+  -name: String
+  -url: String
+  +fetchResults(term: String): List<TorrentResult>
+}
+
+' Class representing an individual torrent search result
+class TorrentResult {
+  -website: TorrentWebsite
+  -seeds: int
+  -peers: int
+  -size: String
+  -datePosted: DateTime
+  -webpageLink: String
+}
+
+' Class responsible for displaying the torrent search results in the torrent tab
+class TorrentTab {
+  -results: List<TorrentResult>
+  +displayResults(results: List<TorrentResult>): void
+  +sortResults(by: String): void
+  +navigatePage(pageNumber: int): void
+}
+
+' Relationships
+SearchBar --> TorrentSearch : initiates
+TorrentSearch --> TorrentDatabase : queries
+TorrentDatabase --> TorrentWebsite : contains
+TorrentWebsite --> TorrentResult : returns list of
+TorrentSearch --> TorrentResult : aggregates results
+TorrentTab --> TorrentResult : displays
+
+@enduml

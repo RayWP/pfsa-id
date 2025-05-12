@@ -1,0 +1,177 @@
+{
+  "entities": [
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.7892016172409058,
+      "start": 30,
+      "end": 39
+    },
+    {
+      "entity_group": "class",
+      "word": "form",
+      "score": 0.510007917881012,
+      "start": 127,
+      "end": 132
+    },
+    {
+      "entity_group": "attr",
+      "word": "name",
+      "score": 0.9382857084274292,
+      "start": 146,
+      "end": 151
+    },
+    {
+      "entity_group": "attr",
+      "word": "address",
+      "score": 0.9777044057846069,
+      "start": 152,
+      "end": 160
+    },
+    {
+      "entity_group": "attr",
+      "word": "telephone numbers",
+      "score": 0.9809295535087585,
+      "start": 161,
+      "end": 179
+    },
+    {
+      "entity_group": "attr",
+      "word": "allergies",
+      "score": 0.9541366100311279,
+      "start": 180,
+      "end": 190
+    },
+    {
+      "entity_group": "attr",
+      "word": "state of mind",
+      "score": 0.8881884217262268,
+      "start": 195,
+      "end": 209
+    },
+    {
+      "entity_group": "attr",
+      "word": "Schedules",
+      "score": 0.49924349784851074,
+      "start": 254,
+      "end": 264
+    },
+    {
+      "entity_group": "class",
+      "word": "appointment book",
+      "score": 0.6041605472564697,
+      "start": 291,
+      "end": 308
+    },
+    {
+      "entity_group": "class",
+      "word": "patient records",
+      "score": 0.6983844637870789,
+      "start": 309,
+      "end": 325
+    },
+    {
+      "entity_group": "attr",
+      "word": "contact information",
+      "score": 0.9726316332817078,
+      "start": 336,
+      "end": 356
+    },
+    {
+      "entity_group": "class",
+      "word": "Appointments",
+      "score": 0.5825310349464417,
+      "start": 382,
+      "end": 395
+    },
+    {
+      "entity_group": "class",
+      "word": "procedure",
+      "score": 0.6690938472747803,
+      "start": 540,
+      "end": 550
+    },
+    {
+      "entity_group": "class",
+      "word": "patient",
+      "score": 0.7790876626968384,
+      "start": 554,
+      "end": 562
+    },
+    {
+      "entity_group": "class",
+      "word": "patients",
+      "score": 0.7766265273094177,
+      "start": 738,
+      "end": 747
+    },
+    {
+      "entity_group": "attr",
+      "word": "contact addresses",
+      "score": 0.7696080207824707,
+      "start": 748,
+      "end": 766
+    },
+    {
+      "entity_group": "class",
+      "word": "patient",
+      "score": 0.830409824848175,
+      "start": 772,
+      "end": 780
+    },
+    {
+      "entity_group": "class",
+      "word": "clinic",
+      "score": 0.6555044054985046,
+      "start": 848,
+      "end": 855
+    },
+    {
+      "entity_group": "class",
+      "word": "supplies inventory",
+      "score": 0.5620853900909424,
+      "start": 867,
+      "end": 886
+    },
+    {
+      "entity_group": "class",
+      "word": "procedures",
+      "score": 0.44171762466430664,
+      "start": 970,
+      "end": 981
+    },
+    {
+      "entity_group": "class",
+      "word": "rooms",
+      "score": 0.34817588329315186,
+      "start": 981,
+      "end": 987
+    }
+  ],
+  "summary": {
+    "class": [
+      "patients",
+      "form",
+      "appointment book",
+      "patient records",
+      "Appointments",
+      "procedure",
+      "patient",
+      "clinic",
+      "supplies inventory",
+      "procedures",
+      "rooms"
+    ],
+    "attr": [
+      "name",
+      "address",
+      "telephone numbers",
+      "allergies",
+      "state of mind",
+      "Schedules",
+      "contact information",
+      "contact addresses"
+    ]
+  },
+  "document_class": "The clinic basically schedules patients, provides services for them, and bills them for those services  New patients fill out a form listing their name, address, telephone numbers, allergies, and state of mind prior to scheduling their first appointment  Schedules are entered into a central appointment book; patient records (including contact information) are kept in paper files  Appointments are for one of three procedures: dental hygiene, cavities and fillings, and oral surgery (including root canals and tooth extractions)  For each procedure the patient needs to be prepared and supplies need to be collected (e , probes, drill bits, cements, resins, etc  Billing is always done by the month, and bills are always sent by mail to patients' contact addresses  Each patient also generates a reimbursement request to an insurance company  The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms"
+}

@@ -1,0 +1,60 @@
+@startuml
+' Define the core Sample class
+class Sample {
+  +String globalID
+  +Date samplingTime
+  +Boolean highValue
+}
+
+' A DerivedSample is a specialized Sample, derived from a parent sample.
+class DerivedSample {
+  +String derivedType   ' e.g., "strict sub-sample" or "biased split"
+}
+Sample <|-- DerivedSample
+' Maintain the relationship from parent Sample to DerivedSample(s)
+Sample "1" o-- "0..*" DerivedSample : "derived from"
+
+' Each Sample must eventually be associated with a Location.
+class Location {
+  +String locationID
+  +String description
+  +double latitude
+  +double longitude
+}
+Sample --> Location : "location re-attached"
+
+' In some cases, the location detail originates from a SamplingArtifact.
+abstract class SamplingArtifact {
+  +String artifactID
+  +String artifactType   ' e.g., "DrillHole", "Traverse", "Cruise"
+}
+SamplingArtifact --> Location : "provides detailed info"
+
+' A Sample might be linked to a SamplingArtifact when the location is obtained indirectly.
+Sample --> SamplingArtifact : "associated with"
+
+' Each Laboratory has its own LIMS system which assigns a local identifier.
+class Laboratory {
+  +String labID
+  +String name
+}
+
+' In the lab, a sample is registered as a LabSample (with a local identifier).
+class LabSample {
+  +String localID
+}
+Laboratory "1" o-- "*" LabSample : "registers"
+LabSample --> Sample : "refers to"
+
+' Observations/Analyses are generated during processing.
+class Observation {
+  +String observationID
+  +String type          ' e.g., chemistry, mineralogy, age, petrophysics
+  +String result
+  +Date analysisTime
+  +Date reportingTime
+}
+' A LabSample is the subject of many Observations.
+LabSample "1" --> "*" Observation : "produces"
+
+@enduml

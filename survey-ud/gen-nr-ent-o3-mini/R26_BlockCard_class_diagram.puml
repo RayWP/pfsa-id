@@ -1,0 +1,70 @@
+@startuml
+
+' Define Account class
+class Account {
+  +createAccount()
+}
+
+' Define Kiosk class
+class Kiosk {
+  +communicateWithSystem()
+}
+
+' Define User as an abstract base class
+abstract class User {
+  ' Common user attributes/methods can be placed here
+}
+
+' Define Customer as a subtype of User
+class Customer {
+  +initiateCardBlock()
+}
+Customer --|> User
+
+' Define Users as a container for User objects
+class Users {
+  +listUsers()
+}
+' Association: Users aggregates many User instances
+Users "1" *-- "many" User
+
+' Define Cards as a collection of Card objects
+class Cards {
+  +addCard(card : Card)
+  +removeCard(card : Card)
+}
+' Cards aggregates many Card objects
+Cards "1" *-- "many" Card
+
+' Define Card class with cardStatus attribute.
+class Card {
+  -cardStatus : String
+  +getCardStatus() : String
+  +setCardStatus(status : String)
+}
+' Association: A Customer can own multiple Cards (or a Cards collection)
+Customer "1" o-- "many" Card
+
+' Define System class (back-end communication, also responsible for card blocking)
+class System {
+  +checkCardStatus(card : Card) : Boolean
+  +blockCard(card : Card, reason : String)
+}
+' Kiosk communicates with System
+Kiosk --> System
+
+' Note on Card types and blocking reasons:
+note right of Card
+  Card types:
+    - Debit
+    - Credit
+    - Virtual
+    - Supplementary
+  
+  Blocking reasons:
+    - stolen
+    - missing
+    - others
+end note
+
+@enduml

@@ -1,0 +1,107 @@
+@startuml
+
+' Clinic class aggregates core modules
+class Clinic {
+  - name : String
+  + schedulePatient(p: Patient) : void
+  + processBilling() : void
+  + manageSuppliesInventory() : void
+}
+
+' Patient registration & information
+class Patient {
+  - name : String
+  - address : String
+  - telephoneNumbers : List<String>
+  - allergies : String
+  - stateOfMind : String
+  + fillForm() : Form
+  + requestAppointment() : void
+}
+
+' Form used by new patients for registration
+class Form {
+  - name : String
+  - address : String
+  - telephoneNumbers : List<String>
+  - allergies : String
+  - stateOfMind : String
+  + submit() : void
+}
+
+' AppointmentBook holds all schedules
+class AppointmentBook {
+  - schedules : List<Appointment>
+  + addAppointment(appt: Appointment) : void
+  + removeAppointment(appt: Appointment) : void
+  + getAppointments() : List<Appointment>
+}
+
+' Each appointment links a patient and a procedure
+class Appointment {
+  - date : Date
+  - time : Time
+  - procedure : Procedure
+  - patient : Patient
+  + schedule() : void
+  + cancel() : void
+}
+
+' PatientRecord keeping contact information and history
+class PatientRecord {
+  - contactInformation : String
+  + updateRecord() : void
+}
+
+' Abstract Procedure, with concrete procedure types used in appointments
+abstract class Procedure {
+  + preparePatient() : void
+  + collectSupplies() : void
+  + performProcedure() : void
+}
+
+' Concrete procedure classes
+class DentalHygiene
+class CavitiesAndFillings
+class OralSurgery
+
+DentalHygiene --|> Procedure
+CavitiesAndFillings --|> Procedure
+OralSurgery --|> Procedure
+
+' SuppliesInventory updated weekly by inspecting procedure rooms
+class SuppliesInventory {
+  - lastInspectionDate : Date
+  + updateInventory() : void
+}
+
+' Rooms holding supplies for procedures
+class Room {
+  - name : String
+  - supplies : List<String>
+  + inspectRoom() : void
+}
+
+' Relationships
+' A Clinic has an AppointmentBook, manages SuppliesInventory, and keeps PatientRecords
+Clinic "1" -- "1" AppointmentBook : contains
+Clinic "1" -- "1" SuppliesInventory : maintains
+Clinic "1" -- "*" PatientRecord : keeps
+
+' AppointmentBook aggregates many Appointments
+AppointmentBook "1" o-- "*" Appointment
+
+' Each Appointment is associated with one Patient and one Procedure
+Appointment "1" --> "1" Patient : for
+Appointment "1" --> "1" Procedure : involves
+
+' A Patient fills out a Form during registration
+Patient "1" --> "1" Form : fills
+
+' A Patient has (or is linked to) a PatientRecord
+Patient "1" -- "0..1" PatientRecord : has
+
+' SuppliesInventory inspects multiple Rooms
+SuppliesInventory "1" o-- "*" Room : inspects
+
+@enduml

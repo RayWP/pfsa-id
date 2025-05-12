@@ -1,0 +1,132 @@
+@startuml
+
+'============================
+' Store and Related Classes
+'============================
+class Store {
+  - storeID: int
+  - address: String
+  - phoneNumber: String
+  + getStoreDetails(): String
+  + updateStoreInfo(address: String, phone: String): void
+}
+
+' A store enrolls customers and employs employees.
+Store "1" <-- "many" Employee : employs
+Store "1" <-- "many" Customer : enrolls
+Store "1" <-- "many" RentalTransaction : handles
+
+'============================
+' Employee and PhoneNumber
+'============================
+class Employee {
+  - employeeID: int
+  - name: String
+  - address: String
+  + getEmployeeInfo(): String 
+  + updateEmployeeInfo(name: String, address: String): void
+}
+
+' Each employee has one employee type (manager, cashier, stocker)
+class EmployeeType {
+  - typeName: String
+  + getType(): String
+}
+Employee --> EmployeeType : classified as
+
+' Each employee can have many phone numbers.
+class PhoneNumber {
+  - number: String
+  - type: PhoneType
+  + getPhone(): String
+}
+
+enum PhoneType {
+  Office
+  Home
+  Beeper
+}
+
+Employee "1" *-- "*" PhoneNumber : has
+
+'============================
+' Title and Distributor
+'============================
+class Title {
+  - titleID: int
+  - name: String
+  - runTime: int
+  - rating: String
+  + getTitleInfo(): String
+}
+
+' A title is distributed by one distributor.
+class Distributor {
+  - distributorID: int
+  - name: String
+  - phoneNumber: String
+  + getDistributorInfo(): String
+}
+
+Title --> Distributor : distributed by
+
+' Many stores can carry many titles, but the inventory is maintained as cartridges.
+Store "*" -- "*" Title : carries
+
+'============================
+' Cartridge (Physical Copy)
+'============================
+class Cartridge {
+  - cartridgeID: int
+  - utilizationCount: int
+  - status: CartridgeStatus
+  + updateStatus(newStatus: CartridgeStatus): void
+  + getCartridgeInfo(): String
+}
+
+enum CartridgeStatus {
+  Available
+  Rented
+  Broken
+}
+
+' Each cartridge is a copy of one title.
+Cartridge --> Title : copy of
+' A cartridge is stocked at a store.
+Cartridge --> Store : stocked at
+
+'============================
+' Customer
+'============================
+class Customer {
+  - customerID: int
+  - name: String
+  - phoneNumber: String
+  + getCustomerInfo(): String
+  + updateCustomerInfo(name: String, phone: String): void
+}
+
+'============================
+' Rental Transaction and Detail
+'============================
+class RentalTransaction {
+  - rentalID: int
+  - rentalDate: Date
+  - totalRentalAmount: Decimal
+  + processRental(): void
+  + calculateTotal(): Decimal
+}
+
+' A rental transaction is composed of detail lines.
+class RentalTransactionDetail {
+  - dueDate: Date
+  - actualReturnDate: Date
+  + calculateLateFee(): Decimal
+}
+
+RentalTransaction "1" o-- "1..*" RentalTransactionDetail : contains
+
+' Each rental detail references one cartridge.
+RentalTransactionDetail --> Cartridge : references
+
+@enduml

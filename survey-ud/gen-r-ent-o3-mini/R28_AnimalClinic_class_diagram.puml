@@ -1,0 +1,84 @@
+@startuml
+' Define classes
+
+class Animal {
+  +int id
+  +String name
+  +boolean admitted
+  +Breed breed
+  +Owner owner
+  +admitAnimal() : void
+  +updateInfo() : void
+}
+
+class Owner {
+  +int id
+  +String name
+  +String address
+  +String phoneNumber
+  +updateInfo() : void
+}
+
+class Appointment {
+  +Date dateTime
+  +Animal animal
+  +Physician physician
+  +schedule() : void
+  +cancel() : void
+  +reschedule() : void
+}
+
+class Physician {
+  +int id
+  +String name
+  +String address
+  +String phoneNumber
+  +updateSchedule() : void
+}
+
+class Condition {
+  +String commonName
+  +String scientificName
+  +getDetails() : String
+}
+
+' Extra class to represent breed details and store common conditions for that breed
+class Breed {
+  +String name
+  +List<Condition> conditions
+  +addCondition(c : Condition) : void
+}
+
+' Database class that holds collections of all entities
+class Database {
+  +List<Animal> animals
+  +List<Owner> owners
+  +List<Appointment> appointments
+  +List<Physician> physicians
+  +List<Breed> breeds
+  +List<Condition> conditions
+  +addAnimal(a : Animal) : void
+  +addOwner(o : Owner) : void
+  +addAppointment(app : Appointment) : void
+  +addPhysician(p : Physician) : void
+  +addBreed(b : Breed) : void
+  +findAnimalById(id : int) : Animal
+  +findOwnerById(id : int) : Owner
+}
+
+' Relationships
+
+' Each Animal is owned by exactly one Owner; an Owner can have many Animals.
+Owner "1" <-- "0..*" Animal : owns
+
+' Each Animal has a Breed (if any) and a Breed can be associated with many Animals.
+Breed "1" <-- "0..*" Animal : "is of type"
+
+' Each Appointment has one Animal and one Physician.
+Animal "1" <-- "0..*" Appointment : "attended in"
+Physician "1" <-- "0..*" Appointment : "responsible for"
+
+' Each Breed can have multiple Conditions (common conditions)
+Breed "1" -- "0..*" Condition : "associated with"
+
+@enduml

@@ -1,0 +1,57 @@
+Java Programming Workshop
+
+Your job is to begin creating classes to support storing, retrieving, and tracking insurance information for Fireman’s Fund customers.
+You will start by tracking persons, then add policies, then contact info and vehicles and eventually be able to generalize the model and increase its flexibility. We want to get to a point where you can retrieve a person, their policies, vehicles, dwellings, addresses, and contact info. 
+
+
+Person and Policy
+Start by creating a Person class and attributes and getters and setters, as shown below. Assume a Person can be created with all this information at creation time.
+In a Tester class, create a main(). In the main(),  create three-person objects with differing information. 
+Print out the persons’ information using the getXXX() methods. 
+Create a Policy class and test that you can get and set its attributes correctly by creating a policy object.
+If you have time: See if you can calculate the age for the age() method using the birth date.
+
+Collections of Policies
+There is a link between Persons and Policies. A Person object can hold a collection of multiple policy objects.
+Add a java.util.List to your Person class to hold instances of Policy objects. Use an ArrayList object to implement the List interface.
+Add an addPolicy(Policy)  method to the Person class that will accept a policy object and stores it in the list. 
+Add a method: getPolicies() that returns a List of the Policy objects for that Person.
+Test this works in the main():
+Create two policy objects for each Person
+Add a policy object to the Person by calling addPolicy()
+Retrieve the policy object and print its details for each customer
+
+
+Policy Details
+Policies have additional information the company wishes to keep.
+Policies have the contact information: Phone Numbers, Addresses, and  Emails.
+Policies can cover things like Vehicles.
+Create classes, attributes, getters, and setters for these new things. Note that the contact classes have a method: contactPointAsString(), which returns a string representation of the contact information. 
+Verify you can create objects of these types in your main().
+Since the policy keeps track of these things, create separate list objects in the Policy class to track these items.
+Like the Person, you should create addEmail(), addPhone(), addAddress(), addVehicle() methods and getVehicles(), getPhones()… methods to store the objects in the policy and retrieve all objects of that type from the policy. Test that this works by adding some of the things you created to the policy and then printing:
+The Person info
+For Each policy, its info and a list of its contacts and vehicles.
+For simplicity, you can code a simple toString() method for Vehicles to print the vehicle. 
+
+Generalize the Model
+You do business with companies and persons, so add a class to track Company information.
+Create a common superclass called a party representing those (persons or companies) with policies.
+Move the collection of policies up to the Party superclass, along with the addPolicy() and getPolicies() methods.
+
+Note that the party has a name() method that returns a String representation of the name. You will need to override this in the Person class and return a concatenation of Last, First name.
+To test this, create an Array of Party (size 3) in your main().
+Create a new company, two polices and some contact info, and two vehicles for each policy.
+Add these to the Company object
+Do the same with a Person.
+Now, add the Person and company objects to the Party Array.
+You should now be able to loop through the party array and print the party, its name, its policies, and its details (try reusing some of the code you wrote earlier).
+Emails, Phones, and Addresses can be considered types of ContactPoints. Create a superclass to hold the common method contactPointAsString(). 
+Vehicles are just one type of thing that can be listed on a policy. Dwellings are another type of thing.
+Create a superclass PhysicalObject for these two classes, and factor out the common methods and attributes:
+Redesign your Policy class to hold a list of ContactPoints and a List of Dwellings.
+You will need to create these physical things in the main() and call a new addPhysicalObject() method to add the things to the list in the policy object.
+You will need to change the methods to add and retrieve contacts to addContactPoint() and getContactPoints().
+You should now be able to print out the policy, its contact points, and its physical things. When you print the physical things, print the description and names, which are the attributes common to the physical object class.
+Your main() should not have to change much to accommodate these changes.
+You have now implemented this non-trivial model.

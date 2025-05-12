@@ -1,0 +1,88 @@
+@startuml
+
+'---------------------------------------------
+' Classes
+'---------------------------------------------
+class Store {
+  +storeID: int
+  +address: string
+  +phone: string
+}
+
+class Employee {
+  +employeeID: int
+  +name: string
+  +address: string
+}
+
+class EmployeePhone {
+  +phoneNumber: string
+  +phoneType: string
+}
+
+class EmployeeType {
+  +typeName: string
+}
+
+class Title {
+  +titleID: int
+  +name: string
+  +runTime: int
+  +rating: string
+}
+
+class Distributor {
+  +distributorID: int
+  +name: string
+  +phone: string
+}
+
+class Cartridge {
+  +cartridgeID: int
+  +utilizationCount: int
+  +status: string
+}
+
+class Customer {
+  +customerID: int
+  +name: string
+  +phone: string
+}
+
+class RentalTransaction {
+  +rentalID: int
+  +rentalDate: Date
+  +totalRentalAmount: float
+}
+
+class RentalTransactionDetail {
+  +dueDate: Date
+  +actualReturnDate: Date
+}
+
+'---------------------------------------------
+' Associations
+'---------------------------------------------
+' Store relationships
+Store "1" -- "0..*" RentalTransaction : "originates"
+Store "1" -- "0..*" Customer : "enrolled at"
+Store "1" -- "0..*" Cartridge : "stocks"
+
+' Cartridge relationships
+Cartridge "*" -- "1" Store : "belongs to"
+Cartridge "*" -- "1" Title : "is a copy of"
+
+' Title relationships
+Title "1" -- "0..*" Cartridge : "supplied via copies"
+Distributor "1" -- "0..*" Title : "supplies"
+
+' Employee relationships
+Employee "1" -- "0..*" EmployeePhone : "has"
+Employee "1" -- "1" EmployeeType : "is a"
+EmployeeType "1" -- "0..*" Employee : "classifies"
+
+' Rental Transaction and Detail
+RentalTransaction "1" -- "1..*" RentalTransactionDetail : "includes"
+RentalTransactionDetail "1" -- "1" Cartridge : "rents"
+
+@enduml
