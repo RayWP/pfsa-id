@@ -1,0 +1,4 @@
+tokens,IOB_tag
+"['The', 'doctor', 'schedules', 'an', 'appointment', 'for', 'the', 'patient', '.']","[0, 0, 3, 0, 0, 0, 0, 0, 0]"
+"['The', 'system', 'notifies', 'the', 'user', 'of', 'new', 'messages', '.']","[0, 0, 3, 0, 0, 0, 0, 0, 0]"
+"['Admin', 'updates', 'the', 'records', 'weekly', '.']","[1, 3, 0, 0, 0, 0]"

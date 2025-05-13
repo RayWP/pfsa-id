@@ -1,0 +1,436 @@
+Total examples with errors: 249 out of 253 (98.42%)
+
+Example 0:
+Sentence: Systems supporting OM must provide the ability to publish investigation - specific questionnaires and implementation guides .
+Tokens with errors (true -> predicted):
+  **Systems (O -> B-actor)**
+  supporting (O -> O)
+  **OM (O -> B-actor)**
+  must (O -> O)
+  **provide (O -> B-usecase)**
+  the (O -> O)
+  ability (O -> O)
+  to (O -> O)
+  **publish (O -> B-usecase)**
+  **investigation (O -> I-usecase)**
+  - (O -> O)
+  specific (O -> O)
+  questionnaires (O -> O)
+  and (O -> O)
+  implementation (O -> O)
+  guides (O -> O)
+  . (O -> O)
+
+Example 1:
+Sentence: The system shall encrypt all sensitive information via https .
+Tokens with errors (true -> predicted):
+  The (O -> O)
+  system (O -> O)
+  shall (O -> O)
+  **encrypt (O -> B-usecase)**
+  all (O -> O)
+  sensitive (O -> O)
+  information (O -> O)
+  via (O -> O)
+  https (O -> O)
+  . (O -> O)
+
+Example 2:
+Sentence: " About Window " is displayed . The " About Windows " is composed of the following text " Qheadache 1.0 by JeanPhilippe Brossat jp_brossat@yahoo.fr "
+Tokens with errors (true -> predicted):
+  " (O -> O)
+  About (O -> O)
+  **Window (O -> B-actor)**
+  " (O -> O)
+  **is (O -> B-usecase)**
+  **displayed (O -> I-usecase)**
+  . (O -> O)
+  The (O -> O)
+  " (O -> O)
+  About (O -> O)
+  **Windows (O -> B-actor)**
+  " (O -> O)
+  **is (O -> B-usecase)**
+  **composed (O -> I-usecase)**
+  of (O -> O)
+  the (O -> O)
+  following (O -> O)
+  text (O -> O)
+  " (O -> O)
+  **Qheadache (O -> B-actor)**
+  1.0 (O -> O)
+  by (O -> O)
+  **JeanPhilippe (O -> B-actor)**
+  **Brossat (O -> I-actor)**
+  jp_brossat@yahoo.fr (O -> O)
+  **" (O -> B-actor)**
+
+Example 3:
+Sentence: The first is related to passing information to provide an association between a mobile ’s subscriber number and its functional number . The latter is concerned with ensuring that calls from a mobile terminal ( in particular , Cab radios ) are routed to the correct destination ( ie primary controller , secondary controller ) , based on the current location of the mobile . ( I )
+Tokens with errors (true -> predicted):
+  The (O -> O)
+  first (O -> O)
+  **is (O -> B-usecase)**
+  **related (O -> I-usecase)**
+  to (O -> O)
+  passing (O -> O)
+  information (O -> O)
+  to (O -> O)
+  **provide (O -> B-usecase)**
+  an (O -> O)
+  association (O -> O)
+  between (O -> O)
+  a (O -> O)
+  mobile (O -> O)
+  ’s (O -> O)
+  subscriber (O -> O)
+  number (O -> O)
+  and (O -> O)
+  its (O -> O)
+  functional (O -> O)
+  number (O -> O)
+  . (O -> O)
+  The (O -> O)
+  latter (O -> O)
+  is (O -> O)
+  **concerned (O -> B-usecase)**
+  **with (O -> I-usecase)**
+  ensuring (O -> O)
+  that (O -> O)
+  **calls (B-usecase -> O)**
+  **from (O -> B-usecase)**
+  a (O -> O)
+  mobile (O -> O)
+  terminal (O -> O)
+  ( (O -> O)
+  in (O -> O)
+  particular (O -> O)
+  , (O -> O)
+  Cab (O -> O)
+  **radios (O -> B-actor)**
+  ) (O -> O)
+  are (O -> O)
+  **routed (O -> B-usecase)**
+  **to (O -> I-usecase)**
+  the (O -> O)
+  correct (O -> O)
+  destination (O -> O)
+  ( (O -> O)
+  ie (O -> O)
+  primary (O -> O)
+  controller (O -> O)
+  , (O -> O)
+  secondary (O -> O)
+  controller (O -> O)
+  ) (O -> O)
+  , (O -> O)
+  based (O -> O)
+  **on (O -> B-usecase)**
+  the (O -> O)
+  current (O -> O)
+  location (O -> O)
+  of (O -> O)
+  the (O -> O)
+  mobile (O -> O)
+  . (O -> O)
+  ( (O -> O)
+  I (O -> O)
+  ) (O -> O)
+
+Example 4:
+Sentence: The network shall send the SET - PARAMETER message with the attribute “ D - ATT = T”1 [ EN 301 515 , Index [ 6 ] ] to the mobile station of the talking subscriber if it receives the 3- digit sequence “ # # # ” transmitted via DTMF or the group call SETUP message2 from a controller terminal . However , receiving the 3 - digit sequence “ # # # ” or the group call SETUP message related to an additional controller while any other controller is talking shall not result in sending another SET - PARAMETER message with the attribute “ DATT = T ” . ( M )
+Tokens with errors (true -> predicted):
+  The (O -> O)
+  network (O -> O)
+  shall (O -> O)
+  **send (O -> B-usecase)**
+  the (O -> O)
+  **SET (O -> B-actor)**
+  - (O -> O)
+  PARAMETER (O -> O)
+  message (O -> O)
+  with (O -> O)
+  the (O -> O)
+  attribute (O -> O)
+  **“ (O -> B-actor)**
+  **D (O -> I-actor)**
+  - (O -> O)
+  **ATT (O -> B-actor)**
+  **= (O -> I-actor)**
+  **T”1 (O -> I-actor)**
+  **[ (O -> B-usecase)**
+  EN (O -> O)
+  **301 (O -> B-actor)**
+  **515 (O -> I-actor)**
+  , (O -> O)
+  Index (O -> O)
+  [ (O -> O)
+  **6 (O -> B-actor)**
+  **] (O -> B-usecase)**
+  ] (O -> O)
+  **to (O -> B-actor)**
+  the (O -> O)
+  mobile (O -> O)
+  station (O -> O)
+  of (O -> O)
+  the (O -> O)
+  talking (O -> O)
+  subscriber (O -> O)
+  if (O -> O)
+  it (O -> O)
+  receives (O -> O)
+  the (O -> O)
+  **3- (O -> B-usecase)**
+  digit (O -> O)
+  sequence (O -> O)
+  “ (O -> O)
+  # (O -> O)
+  **# (O -> B-actor)**
+  # (O -> O)
+  ” (O -> O)
+  transmitted (O -> O)
+  **via (O -> B-actor)**
+  **DTMF (O -> B-usecase)**
+  or (O -> O)
+  **the (O -> B-actor)**
+  group (O -> O)
+  call (O -> O)
+  SETUP (O -> O)
+  message2 (O -> O)
+  **from (O -> B-actor)**
+  a (O -> O)
+  controller (O -> O)
+  terminal (O -> O)
+  . (O -> O)
+  However (O -> O)
+  , (O -> O)
+  receiving (O -> O)
+  the (O -> O)
+  3 (O -> O)
+  - (O -> O)
+  digit (O -> O)
+  sequence (O -> O)
+  “ (O -> O)
+  # (O -> O)
+  **# (O -> B-actor)**
+  # (O -> O)
+  ” (O -> O)
+  or (O -> O)
+  the (O -> O)
+  group (O -> O)
+  call (O -> O)
+  SETUP (O -> O)
+  message (O -> O)
+  **related (O -> B-actor)**
+  to (O -> O)
+  **an (O -> B-usecase)**
+  additional (O -> O)
+  controller (O -> O)
+  while (O -> O)
+  any (O -> O)
+  other (O -> O)
+  controller (O -> O)
+  is (O -> O)
+  talking (O -> O)
+  **shall (O -> B-usecase)**
+  **not (O -> I-usecase)**
+  result (O -> O)
+  in (O -> O)
+  **sending (O -> B-usecase)**
+  another (O -> O)
+  SET (O -> O)
+  - (O -> O)
+  **PARAMETER (O -> B-actor)**
+  message (O -> O)
+  with (O -> O)
+  the (O -> O)
+  attribute (O -> O)
+  “ (O -> O)
+  DATT (O -> O)
+  **= (O -> B-actor)**
+  **T (O -> I-actor)**
+  **” (O -> I-actor)**
+  **. (O -> I-actor)**
+  **( (O -> I-actor)**
+  M (O -> O)
+  ) (O -> O)
+
+Example 5:
+Sentence: Only the development systems are considered here . Installed systems are to be chosen later , based on available technology and experiences with the development systems .
+Tokens with errors (true -> predicted):
+  Only (O -> O)
+  the (O -> O)
+  development (O -> O)
+  systems (O -> O)
+  **are (O -> B-usecase)**
+  **considered (O -> I-usecase)**
+  here (O -> O)
+  . (O -> O)
+  **Installed (O -> B-usecase)**
+  systems (O -> O)
+  **are (O -> B-usecase)**
+  to (O -> O)
+  **be (O -> B-usecase)**
+  **chosen (O -> I-usecase)**
+  later (O -> O)
+  , (O -> O)
+  **based (O -> B-usecase)**
+  on (O -> O)
+  available (O -> O)
+  technology (O -> O)
+  and (O -> O)
+  experiences (O -> O)
+  with (O -> O)
+  the (O -> O)
+  development (O -> O)
+  systems (O -> O)
+  . (O -> O)
+
+Example 6:
+Sentence: Reports generated by systems supporting OM should clearly indicate the number of cases , the number of contacts per case , the number of cases with no known epi - link at the time of diagnosis , the laboratory results , and the number of vaccinations and/or treatments administered .
+Tokens with errors (true -> predicted):
+  Reports (O -> O)
+  **generated (O -> B-usecase)**
+  by (O -> O)
+  systems (O -> O)
+  supporting (O -> O)
+  **OM (O -> B-actor)**
+  should (O -> O)
+  clearly (O -> O)
+  **indicate (O -> B-usecase)**
+  the (O -> O)
+  number (O -> O)
+  of (O -> O)
+  cases (O -> O)
+  , (O -> O)
+  the (O -> O)
+  number (O -> O)
+  of (O -> O)
+  contacts (O -> O)
+  per (O -> O)
+  case (O -> O)
+  , (O -> O)
+  the (O -> O)
+  number (O -> O)
+  of (O -> O)
+  cases (O -> O)
+  with (O -> O)
+  no (O -> O)
+  **known (O -> B-usecase)**
+  epi (O -> O)
+  - (O -> O)
+  link (O -> O)
+  at (O -> O)
+  the (O -> O)
+  time (O -> O)
+  of (O -> O)
+  diagnosis (O -> O)
+  , (O -> O)
+  the (O -> O)
+  laboratory (O -> O)
+  results (O -> O)
+  , (O -> O)
+  and (O -> O)
+  the (O -> O)
+  number (O -> O)
+  of (O -> O)
+  vaccinations (O -> O)
+  **and/or (O -> B-usecase)**
+  treatments (O -> O)
+  **administered (O -> B-usecase)**
+  . (O -> O)
+
+Example 7:
+Sentence: Stop the game
+Tokens with errors (true -> predicted):
+  Stop (B-usecase -> B-usecase)
+  **the (I-usecase -> O)**
+  **game (I-usecase -> O)**
+
+Example 8:
+Sentence: The General purpose radio should comply with [ EN 50081 ] ( generic EMC for residential , commercial and light industry ) . ( O )
+Tokens with errors (true -> predicted):
+  The (O -> O)
+  **General (O -> B-actor)**
+  purpose (O -> O)
+  radio (O -> O)
+  should (O -> O)
+  **comply (O -> B-usecase)**
+  with (O -> O)
+  **[ (O -> B-actor)**
+  **EN (O -> I-actor)**
+  50081 (O -> O)
+  **] (O -> B-actor)**
+  ( (O -> O)
+  generic (O -> O)
+  **EMC (O -> B-actor)**
+  for (O -> O)
+  residential (O -> O)
+  , (O -> O)
+  commercial (O -> O)
+  and (O -> O)
+  light (O -> O)
+  industry (O -> O)
+  ) (O -> O)
+  . (O -> O)
+  ( (O -> O)
+  **O (O -> B-actor)**
+  ) (O -> O)
+
+Example 9:
+Sentence: Once an appropriate number has been obtained , the radio shall initiate a call to this number with ‘ Railway operation ’ priority ( see section 10.2 ) . Any functional number associated with the user shall be passed to the network using UUS1 ( see section 11.5 ) . ( M )
+Tokens with errors (true -> predicted):
+  Once (O -> O)
+  an (O -> O)
+  appropriate (O -> O)
+  number (O -> O)
+  **has (O -> B-usecase)**
+  **been (O -> I-usecase)**
+  **obtained (O -> I-usecase)**
+  , (O -> O)
+  the (O -> O)
+  radio (O -> O)
+  shall (O -> O)
+  **initiate (O -> B-usecase)**
+  a (O -> O)
+  call (O -> O)
+  to (O -> O)
+  this (O -> O)
+  number (O -> O)
+  with (O -> O)
+  ‘ (O -> O)
+  **Railway (O -> B-actor)**
+  operation (O -> O)
+  **’ (O -> B-actor)**
+  priority (O -> O)
+  ( (O -> O)
+  **see (O -> B-usecase)**
+  **section (O -> I-usecase)**
+  10.2 (O -> O)
+  ) (O -> O)
+  . (O -> O)
+  Any (O -> O)
+  functional (O -> O)
+  number (O -> O)
+  **associated (O -> B-usecase)**
+  with (O -> O)
+  the (O -> O)
+  user (O -> O)
+  shall (O -> O)
+  **be (O -> B-usecase)**
+  **passed (O -> I-usecase)**
+  to (O -> O)
+  the (O -> O)
+  network (O -> O)
+  using (O -> O)
+  **UUS1 (O -> B-actor)**
+  ( (O -> O)
+  **see (O -> B-usecase)**
+  **section (O -> I-usecase)**
+  11.5 (O -> O)
+  ) (O -> O)
+  . (O -> O)
+  ( (O -> O)
+  **M (O -> B-actor)**
+  ) (O -> O)
+
