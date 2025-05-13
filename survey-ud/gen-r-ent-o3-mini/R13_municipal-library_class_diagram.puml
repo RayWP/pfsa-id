@@ -1,22 +1,24 @@
 @startuml
-actor "Member" as Member
+actor Member
 
-' Main use cases related to book lending
+' Main use case covering borrowing and returning operations
 usecase "Borrow or Return a Book" as BorrowReturn
-usecase "Borrow Books" as BorrowBooks
 
-' Additional use case for extending the loan period
-usecase "Extend Return Date" as ExtendDate
+' Decomposed use cases for more granular operations
+usecase "Borrow Books" as Borrow
+usecase "Return Book" as Return
+usecase "Extend Loan" as Extend
+usecase "Subscribe/Unsubscribe" as Subscription
+usecase "Add New Document" as AddDoc
 
-' Additional use case for membership management
-usecase "Subscribe/Unsubscribe Membership" as Subscription
-
-' Relationships between the actor and the use cases
+' Relationships from actor to use cases
 Member --> BorrowReturn
-Member --> BorrowBooks
+Member --> Extend
 Member --> Subscription
+Member --> AddDoc
 
-' The extension of functionality for a book loan
-BorrowReturn .> ExtendDate : <<include>>
+' The composite use case includes borrowing and returning details
+BorrowReturn --> Borrow : <<include>>
+BorrowReturn --> Return : <<include>>
 
 @enduml

@@ -1,52 +1,49 @@
 @startuml
-actor Customer
 actor Chief
-actor Controller
+actor Controllers
+actor Customers
 actor Cashier
 
-' ---------------------------
-' Inventory Management Use Cases
-' ---------------------------
-usecase "Record Incoming Stock" as UC1
-usecase "Record Shelf Inventory" as UC2
-usecase "Verify Stock Count" as UC3
+' Inventory Management use cases
+usecase "Record New Products" as UC1
+usecase "Record Products on Shelf" as UC2
+usecase "Verify Inventory Count" as UC3
 
-' ---------------------------
-' Sales Transaction Use Cases
-' ---------------------------
+' Sales Process use cases
 usecase "Select Products" as UC4
-usecase "Process Sale Transaction" as UC5
-usecase "Calculate Payment & Generate Invoice" as UC6
-usecase "Process Payment (Cash/Cheque)" as UC7
+usecase "Review Product Details" as UC5
+usecase "Process Checkout" as UC6
+usecase "Accept Payment" as UC7
+usecase "Generate Invoice" as UC8
 
-' ---------------------------
-' Shelf and Order Control Use Cases
-' ---------------------------
-usecase "Control Shelf Inventory" as UC9
-usecase "Prepare and Verify Order Delivery" as UC8
+' Order Fulfillment use cases
+usecase "Prepare Order" as UC9
+usecase "Verify & Package Order" as UC10
+usecase "Deliver Order" as UC11
 
-' ---------------------------
-' Actor to Use Case Associations
-' ---------------------------
+' Relationships: Inventory Management
 Chief --> UC1
 Chief --> UC2
 Chief --> UC3
-Chief --> UC8
+Controllers --> UC3
 
-Customer --> UC4
-Customer --> UC5
-
-Cashier --> UC5
-Cashier --> UC6
+' Relationships: Sales Process
+Customers --> UC4
+Customers --> UC5
+Customers --> UC6
 Cashier --> UC7
+Cashier --> UC8
 
-Controller --> UC9
-Controller --> UC8
+' Inclusion relationships for checkout process
+UC6 .> UC7 : <<include>>
+UC6 .> UC8 : <<include>>
+Cashier <-- UC6
 
-' ---------------------------
-' Use Case Relationships (Includes)
-' ---------------------------
-UC5 .> UC6 : <<include>>
-UC5 .> UC7 : <<include>>
+' Relationships: Order Fulfillment
+Chief --> UC9
+UC9 .> UC10 : <<include>>
+UC10 .> UC11 : <<include>>
+Customers --> UC11
+Controllers --> UC10
 
 @enduml

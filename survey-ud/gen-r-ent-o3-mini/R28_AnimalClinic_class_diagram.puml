@@ -1,37 +1,24 @@
 @startuml
-actor "Receptionist" as Receptionist
-actor "Veterinarian" as Veterinarian
-actor "Administrator" as Administrator
+actor Receptionist
+actor Physician
 
-usecase "Store Information" as SI
-usecase "Register Animal" as RA
-usecase "Register Owner" as RO
-usecase "Register Breed" as RB
-usecase "Register Physician" as RP
-usecase "Schedule Appointment" as SA
-usecase "Record Medical Conditions" as RMC
-usecase "Rescue Abandoned Animal" as RAA
+usecase "Store Animal Information" as UC1
+usecase "Store Owner Information" as UC2
+usecase "Store Breed Information" as UC3
+usecase "Schedule Appointment" as UC4
+usecase "Record Medical Condition" as UC5
+usecase "Store Common Breed Conditions" as UC6
 
-' Include relationships: all registration and appointment activities include storing information
-RA --> SI : <<include>>
-RO --> SI : <<include>>
-RB --> SI : <<include>>
-RP --> SI : <<include>>
-SA --> SI : <<include>>
-RMC --> SI : <<include>>
+Receptionist --> UC1
+Receptionist --> UC2
+Receptionist --> UC3
+Receptionist --> UC4
+Physician   --> UC5
 
-' "Rescue Abandoned Animal" reuses animal registration functionality
-RAA --> RA
+' The breed information use case includes storing common conditions for that breed
+UC3 .> UC6 : <<include>>
 
-' Actor associations
-Receptionist --> RA
-Receptionist --> RO
-Receptionist --> SA
-Receptionist --> RAA
-
-Veterinarian --> RMC
-
-Administrator --> RB
-Administrator --> RP
+' When scheduling an appointment, recording medical conditions may occur as an extension
+UC4 .> UC5 : <<extend>>
 
 @enduml

@@ -1,19 +1,19 @@
 @startuml
-actor "Insurance Agent" as Agent
+actor "User" as User
 
-' Use cases based on provided description and additional ones to support functionality
 usecase "Retrieve a Person" as UC_Retrieve
-usecase "Manage Policy" as UC_Policy
-usecase "Print Person Info" as UC_PrintPerson
-usecase "Print Policy Details" as UC_PrintPolicy
+usecase "Policy" as UC_Policy
+usecase "Print" as UC_Print
+usecase "Print out the policy" as UC_PrintPolicy
 
-' Actor interactions
-Agent --> UC_Retrieve
-Agent --> UC_Policy
-Agent --> UC_PrintPerson
-Agent --> UC_PrintPolicy
+' Associate the actor with the use cases
+User --> UC_Retrieve
+User --> UC_Policy
+User --> UC_Print
+User --> UC_PrintPolicy
 
-' Relationships between use cases
-UC_PrintPolicy --> UC_Policy : «include»
-
+' Define relationships among use cases
+UC_Policy --> UC_PrintPolicy : «include»
+UC_PrintPolicy --> UC_Print : «include»
+ 
 @enduml

@@ -3,31 +3,26 @@ actor Customer
 actor "Store Employee" as Employee
 actor Manager
 
-rectangle "SchlockBuster Video System" {
+' Customer use cases
+Customer --> (Register as Member)
+Customer --> (Rent a Video)
+Customer --> (Return a Video)
 
-  usecase "Rent a Video" as UC_Rent
-  usecase "Return a Video" as UC_Return
-  usecase "Record Rental Transaction" as UC_Record
-  usecase "Update Cartridge & Inventory Status" as UC_Inventory
-  usecase "Set Rental Price for Title" as UC_SetPrice
-  usecase "Manage Video Titles & Distributors" as UC_Titles
-  usecase "Manage Employee & Store Records" as UC_ManageRecords
+' Employee use cases
+Employee --> (Rent a Video)
+Employee --> (Return a Video)
+Employee --> (Manage Inventory)
 
-  UC_Rent --> UC_Record : «include»
-  UC_Return --> UC_Record : «include»
-}
+' Manager use cases
+Manager --> (Manage Store & Employee Info)
+Manager --> (Manage Video Titles & Distributors)
+Manager --> (Set Rental Rates)
 
-' Relationships between Actors and Use Cases
-Customer --> UC_Rent
-Customer --> UC_Return
+' Common processes included in rental actions
+(Rent a Video) .> (Record Rental Transaction) : <<include>>
+(Return a Video) .> (Record Rental Transaction) : <<include>>
 
-Employee --> UC_Rent
-Employee --> UC_Return
-Employee --> UC_Record
-Employee --> UC_Inventory
-
-Manager --> UC_SetPrice
-Manager --> UC_Titles
-Manager --> UC_ManageRecords
+' Inventory update as part of transaction processing
+(Record Rental Transaction) .> (Update Cartridge Status) : <<include>>
 
 @enduml

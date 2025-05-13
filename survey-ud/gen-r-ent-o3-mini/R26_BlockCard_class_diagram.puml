@@ -1,22 +1,27 @@
 @startuml
-actor User
+actor "User" as user
 
-' Main use case representing the complete process for blocking a card
-(User) --> (Block Any Card)
+usecase "Block any card" as BlockAnyCard
+usecase "Initiate Card Blocking" as InitiateBlocking
+usecase "Check Card Status" as CheckStatus
+usecase "Select Blocking Reason" as SelectReason
+usecase "Provide Further Explanation\n(if 'Other' is selected)" as ProvideExplanation
+usecase "Block Card Immediately" as BlockImmediately
+usecase "Notify on Blocked Card Usage" as NotifyUsage
 
-' Include: Before blocking, the system must verify the card can be blocked.
-(Block Any Card) ..> (Check Card Status) : <<include>>
+' Relationships from the actor
+user --> BlockAnyCard
+user --> InitiateBlocking
 
-' Include: The user must provide a reason for blocking the card.
-(Block Any Card) ..> (Provide Blocking Reason) : <<include>>
+' Relationship between use cases
+BlockAnyCard --> InitiateBlocking
 
-' Extend: If the user selects "other," provide additional explanation.
-(Provide Blocking Reason) ..> (Enter Additional Explanation) : <<extend>> [if reason == "other"]
+InitiateBlocking --> CheckStatus : <<include>>
+InitiateBlocking --> SelectReason : <<include>>
+InitiateBlocking --> BlockImmediately : <<include>>
 
-' Include: Once validated, the system will disable the card immediately.
-(Block Any Card) ..> (Disable Card Usage) : <<include>>
+SelectReason --> ProvideExplanation : <<extend>>
 
-' Additional optional use case: if a blocked card is used, notify banking staff.
-(Block Any Card) ..> (Notify on Blocked Card Usage) : <<include>>
+BlockImmediately --> NotifyUsage : <<include>>
 
 @enduml

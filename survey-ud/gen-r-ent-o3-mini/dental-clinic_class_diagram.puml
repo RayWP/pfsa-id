@@ -1,29 +1,40 @@
 @startuml
-left to right direction
-
 actor "Patient" as Patient
-actor "Desk Worker" as Desk
-actor "Inventory Worker" as InventoryWorker
+actor "Desk" as Desk
+actor "Worker" as Worker
+actor "Clinician" as Clinician
 
-usecase "Fill Out Registration Form" as UC1
+' Use cases related to patient registration and scheduling
+usecase "Fill Out New Patient Form" as UC1
 usecase "Schedule Appointment" as UC2
-usecase "Call Patient to Schedule" as UC3 <<extend>>
-usecase "Generate Reimbursement Request" as UC4
-usecase "Process Billing" as UC5
-usecase "Update Supplies Inventory" as UC6
+usecase "Enter Appointment in Book" as UC3
+usecase "Call Patient for Scheduling" as UC4
 
-' Associations
+' Use cases for clinical procedures and billing
+usecase "Perform Procedure" as UC5
+usecase "Process Copayment" as UC6
+usecase "Generate Monthly Bill" as UC7
+usecase "Generate Reimbursement Request" as UC8
+
+' Use case for inventory management
+usecase "Update Supplies Inventory" as UC9
+
+' Associations for patient-related activities
 Patient --> UC1
-Patient --> UC4
+Patient --> UC2
+Patient --> UC7
+Patient --> UC8
 
-Desk --> UC2
-Desk --> UC3
-Desk --> UC5
+' Scheduling workflow
+UC2 --> UC3 : <<include>>
+Desk --> UC4
+UC4 --> UC2 : <<extend>>
 
-InventoryWorker --> UC6
+' Clinical procedure and billing
+Clinician --> UC5
+UC5 --> UC6 : <<extend>>
 
-' Extension Relationship: when the appointment is not scheduled at exit,
-' the desk worker calls the patient as an extension of scheduling.
-UC3 .> UC2 : <<extend>>
+' Inventory update by worker
+Worker --> UC9
 
 @enduml
