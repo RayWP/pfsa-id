@@ -1,4 +1,4 @@
-tokens,tags
+tokens,IOB_tag
 "['The', 'clinic', 'basically', 'schedules', 'patients', ',', 'provides', 'services', 'for', 'them', ',', 'and', 'bills', 'them', 'for', 'those', 'services', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['New', 'patients', 'fill', 'out', 'a', 'form', 'listing', 'their', 'name', ',', 'address', ',', 'telephone', 'numbers', ',', 'allergies', ',', 'and', 'state', 'of', 'mind', 'prior', 'to', 'scheduling', 'their', 'first', 'appointment', '.']","[1, 2, 3, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
 "['Existing', 'patients', 'are', 'normally', 'scheduled', 'for', 'their', 'next', 'appointment', 'as', 'they', 'depart', 'from', 'their', 'current', 'appointment', '.']","[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
