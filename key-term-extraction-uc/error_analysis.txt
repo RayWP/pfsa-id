@@ -1,436 +1,278 @@
-Total examples with errors: 249 out of 253 (98.42%)
+Total examples with errors: 126 out of 128 (98.44%)
 
 Example 0:
-Sentence: Systems supporting OM must provide the ability to publish investigation - specific questionnaires and implementation guides .
+Sentence: The clinic basically schedules patients , provides services for them , and bills them for those services .
 Tokens with errors (true -> predicted):
-  **Systems (O -> B-actor)**
-  supporting (O -> O)
-  **OM (O -> B-actor)**
-  must (O -> O)
-  **provide (O -> B-usecase)**
-  the (O -> O)
-  ability (O -> O)
-  to (O -> O)
-  **publish (O -> B-usecase)**
-  **investigation (O -> I-usecase)**
-  - (O -> O)
-  specific (O -> O)
-  questionnaires (O -> O)
+  The (O -> O)
+  clinic (O -> O)
+  basically (O -> O)
+  **schedules (O -> B-usecase)**
+  patients (O -> O)
+  , (O -> O)
+  **provides (O -> B-usecase)**
+  services (O -> O)
+  for (O -> O)
+  them (O -> O)
+  , (O -> O)
   and (O -> O)
-  implementation (O -> O)
-  guides (O -> O)
+  bills (O -> O)
+  them (O -> O)
+  for (O -> O)
+  those (O -> O)
+  services (O -> O)
   . (O -> O)
 
 Example 1:
-Sentence: The system shall encrypt all sensitive information via https .
+Sentence: New patients fill out a form listing their name , address , telephone numbers , allergies , and state of mind prior to scheduling their first appointment .
 Tokens with errors (true -> predicted):
-  The (O -> O)
-  system (O -> O)
-  shall (O -> O)
-  **encrypt (O -> B-usecase)**
-  all (O -> O)
-  sensitive (O -> O)
-  information (O -> O)
-  via (O -> O)
-  https (O -> O)
+  New (B-actor -> B-actor)
+  **patients (I-actor -> O)**
+  fill (B-usecase -> B-usecase)
+  **out (I-usecase -> O)**
+  **a (I-usecase -> O)**
+  **form (I-usecase -> O)**
+  **listing (I-usecase -> O)**
+  their (O -> O)
+  name (O -> O)
+  , (O -> O)
+  address (O -> O)
+  , (O -> O)
+  telephone (O -> O)
+  numbers (O -> O)
+  , (O -> O)
+  allergies (O -> O)
+  , (O -> O)
+  and (O -> O)
+  state (O -> O)
+  of (O -> O)
+  mind (O -> O)
+  prior (O -> O)
+  to (O -> O)
+  scheduling (O -> O)
+  their (O -> O)
+  first (O -> O)
+  appointment (O -> O)
   . (O -> O)
 
 Example 2:
-Sentence: " About Window " is displayed . The " About Windows " is composed of the following text " Qheadache 1.0 by JeanPhilippe Brossat jp_brossat@yahoo.fr "
+Sentence: Existing patients are normally scheduled for their next appointment as they depart from their current appointment .
 Tokens with errors (true -> predicted):
-  " (O -> O)
-  About (O -> O)
-  **Window (O -> B-actor)**
-  " (O -> O)
-  **is (O -> B-usecase)**
-  **displayed (O -> I-usecase)**
+  Existing (O -> O)
+  **patients (B-actor -> O)**
+  **are (O -> B-usecase)**
+  normally (O -> O)
+  **scheduled (O -> B-usecase)**
+  for (O -> O)
+  their (O -> O)
+  next (O -> O)
+  appointment (O -> O)
+  as (O -> O)
+  they (O -> O)
+  **depart (O -> B-usecase)**
+  from (O -> O)
+  their (O -> O)
+  current (O -> O)
+  appointment (O -> O)
   . (O -> O)
-  The (O -> O)
-  " (O -> O)
-  About (O -> O)
-  **Windows (O -> B-actor)**
-  " (O -> O)
-  **is (O -> B-usecase)**
-  **composed (O -> I-usecase)**
-  of (O -> O)
-  the (O -> O)
-  following (O -> O)
-  text (O -> O)
-  " (O -> O)
-  **Qheadache (O -> B-actor)**
-  1.0 (O -> O)
-  by (O -> O)
-  **JeanPhilippe (O -> B-actor)**
-  **Brossat (O -> I-actor)**
-  jp_brossat@yahoo.fr (O -> O)
-  **" (O -> B-actor)**
 
 Example 3:
-Sentence: The first is related to passing information to provide an association between a mobile ’s subscriber number and its functional number . The latter is concerned with ensuring that calls from a mobile terminal ( in particular , Cab radios ) are routed to the correct destination ( ie primary controller , secondary controller ) , based on the current location of the mobile . ( I )
+Sentence: When the office staff forget to do this , a desk worker has to call the patient to set up a date .
 Tokens with errors (true -> predicted):
-  The (O -> O)
-  first (O -> O)
-  **is (O -> B-usecase)**
-  **related (O -> I-usecase)**
+  When (O -> O)
+  the (O -> O)
+  office (O -> O)
+  staff (O -> O)
+  forget (O -> O)
   to (O -> O)
-  passing (O -> O)
-  information (O -> O)
+  **do (O -> B-usecase)**
+  this (O -> O)
+  , (O -> O)
+  a (O -> O)
+  desk (O -> O)
+  worker (O -> O)
+  **has (O -> B-usecase)**
   to (O -> O)
-  **provide (O -> B-usecase)**
-  an (O -> O)
-  association (O -> O)
-  between (O -> O)
+  **call (O -> B-usecase)**
+  the (O -> O)
+  patient (O -> O)
+  to (O -> O)
+  **set (O -> B-usecase)**
+  up (O -> O)
   a (O -> O)
-  mobile (O -> O)
-  ’s (O -> O)
-  subscriber (O -> O)
-  number (O -> O)
-  and (O -> O)
-  its (O -> O)
-  functional (O -> O)
-  number (O -> O)
+  date (O -> O)
   . (O -> O)
-  The (O -> O)
-  latter (O -> O)
-  is (O -> O)
-  **concerned (O -> B-usecase)**
-  **with (O -> I-usecase)**
-  ensuring (O -> O)
-  that (O -> O)
-  **calls (B-usecase -> O)**
-  **from (O -> B-usecase)**
-  a (O -> O)
-  mobile (O -> O)
-  terminal (O -> O)
-  ( (O -> O)
-  in (O -> O)
-  particular (O -> O)
-  , (O -> O)
-  Cab (O -> O)
-  **radios (O -> B-actor)**
-  ) (O -> O)
-  are (O -> O)
-  **routed (O -> B-usecase)**
-  **to (O -> I-usecase)**
-  the (O -> O)
-  correct (O -> O)
-  destination (O -> O)
-  ( (O -> O)
-  ie (O -> O)
-  primary (O -> O)
-  controller (O -> O)
-  , (O -> O)
-  secondary (O -> O)
-  controller (O -> O)
-  ) (O -> O)
-  , (O -> O)
-  based (O -> O)
-  **on (O -> B-usecase)**
-  the (O -> O)
-  current (O -> O)
-  location (O -> O)
-  of (O -> O)
-  the (O -> O)
-  mobile (O -> O)
-  . (O -> O)
-  ( (O -> O)
-  I (O -> O)
-  ) (O -> O)
 
 Example 4:
-Sentence: The network shall send the SET - PARAMETER message with the attribute “ D - ATT = T”1 [ EN 301 515 , Index [ 6 ] ] to the mobile station of the talking subscriber if it receives the 3- digit sequence “ # # # ” transmitted via DTMF or the group call SETUP message2 from a controller terminal . However , receiving the 3 - digit sequence “ # # # ” or the group call SETUP message related to an additional controller while any other controller is talking shall not result in sending another SET - PARAMETER message with the attribute “ DATT = T ” . ( M )
+Sentence: Schedules are entered into a central appointment book ; patient records ( including contact information ) are kept in paper files .
 Tokens with errors (true -> predicted):
-  The (O -> O)
-  network (O -> O)
-  shall (O -> O)
-  **send (O -> B-usecase)**
-  the (O -> O)
-  **SET (O -> B-actor)**
-  - (O -> O)
-  PARAMETER (O -> O)
-  message (O -> O)
-  with (O -> O)
-  the (O -> O)
-  attribute (O -> O)
-  **“ (O -> B-actor)**
-  **D (O -> I-actor)**
-  - (O -> O)
-  **ATT (O -> B-actor)**
-  **= (O -> I-actor)**
-  **T”1 (O -> I-actor)**
-  **[ (O -> B-usecase)**
-  EN (O -> O)
-  **301 (O -> B-actor)**
-  **515 (O -> I-actor)**
-  , (O -> O)
-  Index (O -> O)
-  [ (O -> O)
-  **6 (O -> B-actor)**
-  **] (O -> B-usecase)**
-  ] (O -> O)
-  **to (O -> B-actor)**
-  the (O -> O)
-  mobile (O -> O)
-  station (O -> O)
-  of (O -> O)
-  the (O -> O)
-  talking (O -> O)
-  subscriber (O -> O)
-  if (O -> O)
-  it (O -> O)
-  receives (O -> O)
-  the (O -> O)
-  **3- (O -> B-usecase)**
-  digit (O -> O)
-  sequence (O -> O)
-  “ (O -> O)
-  # (O -> O)
-  **# (O -> B-actor)**
-  # (O -> O)
-  ” (O -> O)
-  transmitted (O -> O)
-  **via (O -> B-actor)**
-  **DTMF (O -> B-usecase)**
-  or (O -> O)
-  **the (O -> B-actor)**
-  group (O -> O)
-  call (O -> O)
-  SETUP (O -> O)
-  message2 (O -> O)
-  **from (O -> B-actor)**
+  Schedules (O -> O)
+  **are (O -> B-usecase)**
+  **entered (O -> I-usecase)**
+  into (O -> O)
   a (O -> O)
-  controller (O -> O)
-  terminal (O -> O)
-  . (O -> O)
-  However (O -> O)
-  , (O -> O)
-  receiving (O -> O)
-  the (O -> O)
-  3 (O -> O)
-  - (O -> O)
-  digit (O -> O)
-  sequence (O -> O)
-  “ (O -> O)
-  # (O -> O)
-  **# (O -> B-actor)**
-  # (O -> O)
-  ” (O -> O)
-  or (O -> O)
-  the (O -> O)
-  group (O -> O)
-  call (O -> O)
-  SETUP (O -> O)
-  message (O -> O)
-  **related (O -> B-actor)**
-  to (O -> O)
-  **an (O -> B-usecase)**
-  additional (O -> O)
-  controller (O -> O)
-  while (O -> O)
-  any (O -> O)
-  other (O -> O)
-  controller (O -> O)
-  is (O -> O)
-  talking (O -> O)
-  **shall (O -> B-usecase)**
-  **not (O -> I-usecase)**
-  result (O -> O)
-  in (O -> O)
-  **sending (O -> B-usecase)**
-  another (O -> O)
-  SET (O -> O)
-  - (O -> O)
-  **PARAMETER (O -> B-actor)**
-  message (O -> O)
-  with (O -> O)
-  the (O -> O)
-  attribute (O -> O)
-  “ (O -> O)
-  DATT (O -> O)
-  **= (O -> B-actor)**
-  **T (O -> I-actor)**
-  **” (O -> I-actor)**
-  **. (O -> I-actor)**
-  **( (O -> I-actor)**
-  M (O -> O)
+  central (O -> O)
+  appointment (O -> O)
+  book (O -> O)
+  ; (O -> O)
+  patient (O -> O)
+  records (O -> O)
+  ( (O -> O)
+  including (O -> O)
+  contact (O -> O)
+  information (O -> O)
   ) (O -> O)
+  **are (O -> B-usecase)**
+  **kept (O -> I-usecase)**
+  in (O -> O)
+  paper (O -> O)
+  files (O -> O)
+  . (O -> O)
 
 Example 5:
-Sentence: Only the development systems are considered here . Installed systems are to be chosen later , based on available technology and experiences with the development systems .
+Sentence: Appointments are for one of three procedures : dental hygiene , cavities and fillings , and oral surgery ( including root canals and tooth extractions ) .
 Tokens with errors (true -> predicted):
-  Only (O -> O)
-  the (O -> O)
-  development (O -> O)
-  systems (O -> O)
+  Appointments (O -> O)
   **are (O -> B-usecase)**
-  **considered (O -> I-usecase)**
-  here (O -> O)
-  . (O -> O)
-  **Installed (O -> B-usecase)**
-  systems (O -> O)
-  **are (O -> B-usecase)**
-  to (O -> O)
-  **be (O -> B-usecase)**
-  **chosen (O -> I-usecase)**
-  later (O -> O)
+  for (O -> O)
+  one (O -> O)
+  of (O -> O)
+  three (O -> O)
+  procedures (O -> O)
+  : (O -> O)
+  dental (O -> O)
+  hygiene (O -> O)
   , (O -> O)
-  **based (O -> B-usecase)**
-  on (O -> O)
-  available (O -> O)
-  technology (O -> O)
+  cavities (O -> O)
   and (O -> O)
-  experiences (O -> O)
-  with (O -> O)
-  the (O -> O)
-  development (O -> O)
-  systems (O -> O)
+  fillings (O -> O)
+  , (O -> O)
+  and (O -> O)
+  oral (O -> O)
+  surgery (O -> O)
+  ( (O -> O)
+  including (O -> O)
+  root (O -> O)
+  canals (O -> O)
+  and (O -> O)
+  tooth (O -> O)
+  extractions (O -> O)
+  ) (O -> O)
   . (O -> O)
 
 Example 6:
-Sentence: Reports generated by systems supporting OM should clearly indicate the number of cases , the number of contacts per case , the number of cases with no known epi - link at the time of diagnosis , the laboratory results , and the number of vaccinations and/or treatments administered .
+Sentence: For each procedure the patient needs to be prepared and supplies need to be collected ( e.g. , probes , drill bits , cements , resins , etc . ) .
 Tokens with errors (true -> predicted):
-  Reports (O -> O)
-  **generated (O -> B-usecase)**
-  by (O -> O)
-  systems (O -> O)
-  supporting (O -> O)
-  **OM (O -> B-actor)**
-  should (O -> O)
-  clearly (O -> O)
-  **indicate (O -> B-usecase)**
+  For (O -> O)
+  each (O -> O)
+  procedure (O -> O)
   the (O -> O)
-  number (O -> O)
-  of (O -> O)
-  cases (O -> O)
-  , (O -> O)
-  the (O -> O)
-  number (O -> O)
-  of (O -> O)
-  contacts (O -> O)
-  per (O -> O)
-  case (O -> O)
-  , (O -> O)
-  the (O -> O)
-  number (O -> O)
-  of (O -> O)
-  cases (O -> O)
-  with (O -> O)
-  no (O -> O)
-  **known (O -> B-usecase)**
-  epi (O -> O)
-  - (O -> O)
-  link (O -> O)
-  at (O -> O)
-  the (O -> O)
-  time (O -> O)
-  of (O -> O)
-  diagnosis (O -> O)
-  , (O -> O)
-  the (O -> O)
-  laboratory (O -> O)
-  results (O -> O)
-  , (O -> O)
+  patient (O -> O)
+  **needs (O -> B-usecase)**
+  to (O -> O)
+  **be (O -> B-usecase)**
+  **prepared (O -> I-usecase)**
   and (O -> O)
-  the (O -> O)
-  number (O -> O)
-  of (O -> O)
-  vaccinations (O -> O)
-  **and/or (O -> B-usecase)**
-  treatments (O -> O)
-  **administered (O -> B-usecase)**
+  supplies (O -> O)
+  **need (O -> B-usecase)**
+  to (O -> O)
+  **be (O -> B-usecase)**
+  **collected (O -> I-usecase)**
+  ( (O -> O)
+  e.g. (O -> O)
+  , (O -> O)
+  probes (O -> O)
+  , (O -> O)
+  drill (O -> O)
+  **bits (O -> B-usecase)**
+  , (O -> O)
+  cements (O -> O)
+  , (O -> O)
+  resins (O -> O)
+  , (O -> O)
+  etc (O -> O)
+  . (O -> O)
+  ) (O -> O)
   . (O -> O)
 
 Example 7:
-Sentence: Stop the game
+Sentence: For a hygienist 's appointment , preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck .
 Tokens with errors (true -> predicted):
-  Stop (B-usecase -> B-usecase)
-  **the (I-usecase -> O)**
-  **game (I-usecase -> O)**
+  For (O -> O)
+  a (O -> O)
+  hygienist (O -> O)
+  's (O -> O)
+  appointment (O -> O)
+  , (O -> O)
+  preparation (O -> O)
+  could (O -> O)
+  **be (O -> B-usecase)**
+  as (O -> O)
+  simple (O -> O)
+  as (O -> O)
+  seating (O -> O)
+  the (O -> O)
+  patient (O -> O)
+  in (O -> O)
+  dental (O -> O)
+  chair (O -> O)
+  and (O -> O)
+  putting (O -> O)
+  a (O -> O)
+  bib (O -> O)
+  around (O -> O)
+  his (O -> O)
+  or (O -> O)
+  her (O -> O)
+  neck (O -> O)
+  . (O -> O)
 
 Example 8:
-Sentence: The General purpose radio should comply with [ EN 50081 ] ( generic EMC for residential , commercial and light industry ) . ( O )
+Sentence: For oral surgery , anesthesia of various strengths are normally administered prior to operation .
 Tokens with errors (true -> predicted):
-  The (O -> O)
-  **General (O -> B-actor)**
-  purpose (O -> O)
-  radio (O -> O)
-  should (O -> O)
-  **comply (O -> B-usecase)**
-  with (O -> O)
-  **[ (O -> B-actor)**
-  **EN (O -> I-actor)**
-  50081 (O -> O)
-  **] (O -> B-actor)**
-  ( (O -> O)
-  generic (O -> O)
-  **EMC (O -> B-actor)**
-  for (O -> O)
-  residential (O -> O)
+  For (O -> O)
+  oral (O -> O)
+  surgery (O -> O)
   , (O -> O)
-  commercial (O -> O)
-  and (O -> O)
-  light (O -> O)
-  industry (O -> O)
-  ) (O -> O)
+  anesthesia (O -> O)
+  of (O -> O)
+  various (O -> O)
+  strengths (O -> O)
+  **are (O -> B-usecase)**
+  normally (O -> O)
+  **administered (O -> B-usecase)**
+  prior (O -> O)
+  to (O -> O)
+  operation (O -> O)
   . (O -> O)
-  ( (O -> O)
-  **O (O -> B-actor)**
-  ) (O -> O)
 
 Example 9:
-Sentence: Once an appropriate number has been obtained , the radio shall initiate a call to this number with ‘ Railway operation ’ priority ( see section 10.2 ) . Any functional number associated with the user shall be passed to the network using UUS1 ( see section 11.5 ) . ( M )
+Sentence: Only for oral surgery procedures is it necessary to ask the patient to wait for up to twenty minutes before performing a post  operative check .
 Tokens with errors (true -> predicted):
-  Once (O -> O)
-  an (O -> O)
-  appropriate (O -> O)
-  number (O -> O)
-  **has (O -> B-usecase)**
-  **been (O -> I-usecase)**
-  **obtained (O -> I-usecase)**
-  , (O -> O)
+  Only (O -> O)
+  for (O -> O)
+  oral (O -> O)
+  surgery (O -> O)
+  procedures (O -> O)
+  **is (O -> B-usecase)**
+  it (O -> O)
+  necessary (O -> O)
+  to (O -> O)
+  **ask (O -> B-usecase)**
   the (O -> O)
-  radio (O -> O)
-  shall (O -> O)
-  **initiate (O -> B-usecase)**
+  patient (O -> O)
+  to (O -> O)
+  **wait (O -> B-usecase)**
+  for (O -> O)
+  up (O -> O)
+  to (O -> O)
+  **twenty (O -> B-usecase)**
+  minutes (O -> O)
+  before (O -> O)
+  performing (O -> O)
   a (O -> O)
-  call (O -> O)
-  to (O -> O)
-  this (O -> O)
-  number (O -> O)
-  with (O -> O)
-  ‘ (O -> O)
-  **Railway (O -> B-actor)**
-  operation (O -> O)
-  **’ (O -> B-actor)**
-  priority (O -> O)
-  ( (O -> O)
-  **see (O -> B-usecase)**
-  **section (O -> I-usecase)**
-  10.2 (O -> O)
-  ) (O -> O)
+  post (O -> O)
+   (O -> O)
+  operative (O -> O)
+  check (O -> O)
   . (O -> O)
-  Any (O -> O)
-  functional (O -> O)
-  number (O -> O)
-  **associated (O -> B-usecase)**
-  with (O -> O)
-  the (O -> O)
-  user (O -> O)
-  shall (O -> O)
-  **be (O -> B-usecase)**
-  **passed (O -> I-usecase)**
-  to (O -> O)
-  the (O -> O)
-  network (O -> O)
-  using (O -> O)
-  **UUS1 (O -> B-actor)**
-  ( (O -> O)
-  **see (O -> B-usecase)**
-  **section (O -> I-usecase)**
-  11.5 (O -> O)
-  ) (O -> O)
-  . (O -> O)
-  ( (O -> O)
-  **M (O -> B-actor)**
-  ) (O -> O)
 

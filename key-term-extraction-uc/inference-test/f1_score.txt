@@ -1,0 +1,27 @@
+Test F1 score: 0.9792
+
+Classification Report (token-level):
+              precision    recall  f1-score   support
+
+     B-actor     0.2353    0.4000    0.2963        10
+   B-usecase     0.2500    0.2000    0.2222        10
+     I-actor     0.1667    1.0000    0.2857         1
+   I-usecase     0.3889    0.4375    0.4118        16
+           O     0.9916    0.9873    0.9894      2753
+
+    accuracy                         0.9792      2790
+   macro avg     0.4065    0.6050    0.4411      2790
+weighted avg     0.9825    0.9792    0.9806      2790
+
+
+Sequence-level F1 score: 0.2500
+
+Seqeval Classification Report (entity-level):
+              precision    recall  f1-score   support
+
+       actor       0.21      0.40      0.28        10
+     usecase       0.22      0.20      0.21        10
+
+   micro avg       0.21      0.30      0.25        20
+   macro avg       0.22      0.30      0.24        20
+weighted avg       0.22      0.30      0.24        20
